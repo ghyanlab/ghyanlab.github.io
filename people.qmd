@@ -1,0 +1,84 @@
+---
+title: "People"
+subtitle: "The people behind our research"
+page-layout: full
+---
+
+```{=html}
+<div class="people-page">
+
+  <!-- TEAM LEADER SIDEBAR -->
+  <div class="leader-sidebar">
+    <div class="leader-sticky">
+      <div class="leader-label">TEAM LEADER</div>
+      <div class="leader-photo">
+        <img src="images/profile.jpg" alt="Dr. Rahul Gupta">
+      </div>
+      <h2>Dr. Rahul Gupta</h2>
+      <p class="leader-role">Assistant Professor</p>
+      <div class="leader-divider"></div>
+      <p class="leader-bio">
+        Research interests include magnetism, spin-orbitronics, terahertz spintronics, and magnetic devices.
+      </p>
+      <div class="leader-details">
+        <p><span>Research</span> Spintronics & Magnetism</p>
+        <p><span>Department</span> Department of Physics</p>
+        <p><span>Institution</span> IIT (ISM) Dhanbad</p>
+      </div>
+      <a class="leader-email" href="mailto:gupta.hyq@gmail.com">
+        Contact the PI ↗
+      </a>
+    </div>
+  </div>
+
+  <!-- TEAM MEMBERS -->
+  <div class="team-section">
+    <div class="team-heading">
+      <div>
+        <h2>The Team</h2>
+      </div>
+    </div>
+
+    <div class="team-grid">
+
+      <div class="member-card">
+        <div class="member-photo">
+          <img src="images/Amar-pic.JPG" alt="Dr Amar Kumar">
+        </div>
+        <div class="member-info">
+          <h3>Dr Amar Kumar</h3>
+          <p class="member-position">Centenary Early Faculty Fellow</p>
+          <p class="member-department">Department of Physics</p>
+          <a href="mailto:8048@iitism.ac.in">Email ↗</a>
+        </div>
+      </div>
+
+      <div class="member-card">
+        <div class="member-photo">
+          <img src="images/Anirudh.jpeg" alt="Aniruddha Rana">
+        </div>
+        <div class="member-info">
+          <h3>Aniruddha Rana</h3>
+          <p class="member-position">PhD Researcher</p>
+          <p class="member-department">Department of Physics</p>
+          <a href="mailto:26dr0062@iitism.ac.in">Email ↗</a>
+        </div>
+      </div>
+
+      <div class="member-card">
+        <div class="member-photo">
+          <img src="images/Aditya.jpeg" alt="Aditya Kumar">
+        </div>
+        <div class="member-info">
+          <h3>Aditya Kumar</h3>
+          <p class="member-position">MSc Student</p>
+          <p class="member-department">Department of Physics</p>
+          <a href="mailto:26ms0010@iitism.ac.in">Email ↗</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+```

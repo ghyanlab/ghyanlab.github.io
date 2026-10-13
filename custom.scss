@@ -1,0 +1,83 @@
+/*-- scss:defaults --*/
+// Kinto Astro Theme Palette (HEX approximations)
+$background: #f6f5f0;
+$foreground: #373531;
+$primary-color: #c26a4b; // Terracotta
+$muted: #ecebe5;
+$muted-foreground: #7a7771;
+$border-color: #e0ddd7;
+
+// Map to Bootstrap variables
+$primary: $primary-color;
+$secondary: $muted-foreground;
+$dark: $foreground;
+$light: $background;
+$body-bg: $background;
+$body-color: $foreground;
+$headings-color: $foreground;
+$link-color: $primary-color;
+
+/*-- scss:rules --*/
+
+/* Kinto Style Floating Navbar */
+.navbar {
+  /* Reset Quarto's 100% width and detach it */
+  top: 15px !important;
+  margin: 0 auto !important;
+  width: auto !important;
+  max-width: max-content !important;
+  
+  /* Glassmorphism background */
+  background-color: rgba(246, 245, 240, 0.9) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  
+  /* Borders and shadow */
+  border: 1px solid #e0ddd7 !important;
+  border-radius: 50px !important;
+  padding: 6px 8px !important;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -2px rgba(0,0,0,0.05) !important;
+  z-index: 1030;
+}
+
+/* Navbar Brand (Logo/Title) */
+.navbar-brand {
+  border-radius: 50px;
+  padding: 8px 16px !important;
+  color: #373531 !important;
+  font-weight: 600;
+}
+.navbar-brand:hover {
+  background-color: #ecebe5;
+}
+
+/* Nav Links Container */
+#navbarCollapse {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+.navbar-nav {
+  margin: 0 16px !important;
+  flex-direction: row !important;
+  gap: 4px;
+}
+
+/* Nav Links */
+.nav-link {
+  border-radius: 50px;
+  padding: 8px 16px !important;
+  color: #7a7771 !important;
+  font-size: 0.875rem !important;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+.nav-link:hover {
+  background-color: #ecebe5;
+  color: #373531 !important;
+}
+
+/* Ensure body padding is enough for the floating navbar */
+body {
+  padding-top: 100px !important; 
+}

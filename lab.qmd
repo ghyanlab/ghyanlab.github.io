@@ -1,0 +1,46 @@
+---
+title: "Lab & Facilities"
+page-layout: full
+---
+
+<p style="text-align: center; font-size: 1.2rem; color: #555; max-width: 800px; margin: 0 auto 4rem;">
+The GHYAN Laboratory is equipped with state-of-the-art facilities for sample preparation, characterization, and high-frequency quantum measurements.
+</p>
+
+```{=html}
+<div class="home-grid">
+  <!-- Thin Film -->
+  <div class="home-card">
+    <img src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&w=800&q=80" alt="Thin Film Deposition">
+    <div class="home-card-content">
+      <h3>Thin Film Deposition</h3>
+      <p>Capabilities for growing high-quality magnetic and topological thin films with atomic precision.</p>
+    </div>
+  </div>
+
+  <!-- MOKE -->
+  <div class="home-card">
+    <img src="https://images.unsplash.com/photo-1563206767-5b18f218e8de?auto=format&fit=crop&w=800&q=80" alt="MOKE Setup">
+    <div class="home-card-content">
+      <h3>Magneto-Optic Kerr Effect</h3>
+      <p>Custom setup for studying surface magnetization and ultrafast domain dynamics.</p>
+    </div>
+  </div>
+
+  <!-- THz -->
+  <div class="home-card">
+    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" alt="Terahertz Spectroscopy">
+    <div class="home-card-content">
+      <h3>Terahertz Spectroscopy</h3>
+      <p>Time-domain systems for high-frequency spintronic emission and broad-band characterization.</p>
+    </div>
+  </div>
+</div>
+```
+
+<div style="margin-top: 4rem; padding: 2rem; background: #fff; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
+  <h3>Central Research Facilities</h3>
+  <p style="color: #666; margin-bottom: 0;">
+    Our lab maintains active collaborations with the Central Research Facility at IIT (ISM) Dhanbad, granting our researchers access to advanced structural characterization tools including High-Resolution TEM, FESEM, XRD, and XPS.
+  </p>
+</div>

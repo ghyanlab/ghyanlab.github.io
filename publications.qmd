@@ -1,0 +1,63 @@
+---
+title: "Publications"
+page-layout: full
+---
+
+<p style="text-align: center; font-size: 1.2rem; color: #555; margin-bottom: 4rem;">
+Selected publications by the Principal Investigator and collaborators.
+</p>
+
+```{=html}
+<!-- PAPER 1 -->
+<a href="https://doi.org/10.1038/s41467-024-55437-x" target="_blank" class="pub-card">
+  <div class="pub-img-wrapper" style="background: #fff;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Nature_Communications_Logo.svg" alt="Nature Communications" style="object-fit: contain;">
+  </div>
+  <div class="pub-content">
+    <h3 class="pub-title">Harnessing orbital Hall effect in spin-orbit torque MRAM</h3>
+    <div class="pub-journal">Nature Communications 16, 130 (2025)</div>
+    <p class="pub-authors"><strong style="color: #27ae60;">R. Gupta</strong>, C. Bouard, F. Kammerbauer, et al.</p>
+  </div>
+</a>
+
+<!-- PAPER 2 -->
+<a href="https://doi.org/10.1103/PhysRevB.108.064427" target="_blank" class="pub-card">
+  <div class="pub-img-wrapper" style="background: #fff;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Image_of_front_cover_of_the_journal_Physical_Review_B.jpg" alt="Physical Review B" style="object-fit: contain;">
+  </div>
+  <div class="pub-content">
+    <h3 class="pub-title">Element-resolved evidence of superdiffusive spin current arising from ultrafast demagnetization process</h3>
+    <div class="pub-journal">Physical Review B 108, 064427 (2023)</div>
+    <p class="pub-authors"><strong style="color: #27ae60;">R. Gupta</strong>, F. Cosco, R. S. Malik, et al.</p>
+  </div>
+</a>
+
+<!-- PAPER 3 -->
+<a href="https://doi.org/10.1038/s41598-023-33143-w" target="_blank" class="pub-card">
+  <div class="pub-img-wrapper" style="background: #fff;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Scientific_Reports_Logo.svg" alt="Scientific Reports" style="object-fit: contain;">
+  </div>
+  <div class="pub-content">
+    <h3 class="pub-title">Direct evidence of terahertz emission arising from anomalous Hall effect</h3>
+    <div class="pub-journal">Scientific Reports 13, 5988 (2023)</div>
+    <p class="pub-authors">V. Mottamchetty, P. Rani, R. Brucas, A. Rydberg, P. Svedlindh and <strong style="color: #27ae60;">R. Gupta</strong></p>
+  </div>
+</a>
+
+<!-- PAPER 4 -->
+<a href="https://doi.org/10.1002/adom.202001987" target="_blank" class="pub-card">
+  <div class="pub-img-wrapper" style="background: #fff;">
+    <img src="https://upload.wikimedia.org/wikipedia/en/8/87/Cover_Advanced_Optical_Materials_01-2013.jpeg" alt="Advanced Optical Materials" style="object-fit: contain;">
+  </div>
+  <div class="pub-content">
+    <h3 class="pub-title">Co2FeAl full Heusler compound based spintronic terahertz emitter</h3>
+    <div class="pub-journal">Advanced Optical Materials 9, 2001987 (2021)</div>
+    <p class="pub-authors"><strong style="color: #27ae60;">R. Gupta</strong>, S. Husain, A. Kumar, R. Brucas, A. Rydberg and P. Svedlindh</p>
+  </div>
+</a>
+```
+
+<hr style="margin: 4rem auto; border: 0; border-top: 1px solid #eaeaea; max-width: 900px;">
+<p style="font-size: 1rem; color: #666; text-align: center;">
+  A full list of publications will be updated soon. Please visit Dr. Gupta's <a href="https://scholar.google.com/" target="_blank" style="color: #3498db; text-decoration: none;">Google Scholar profile</a> for complete details.
+</p>

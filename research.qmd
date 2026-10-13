@@ -1,0 +1,50 @@
+---
+title: "Research"
+page-layout: full
+---
+
+<div style="text-align: center; margin-bottom: 4rem;">
+  <p style="font-size: 1.25rem; color: #555; max-width: 800px; margin: 0 auto;">
+    The <b>Gupta Laboratory for Hybrid Quantum Systems & Spintronics (GHYAN)</b> focuses on the intersection of fundamental quantum physics and next-generation device applications.
+  </p>
+</div>
+
+:::: {.research-row}
+::: {.research-text}
+## Magnetism & Spintronics
+We study the fundamental magnetic properties of novel materials and how electron spin can be utilized for energy-efficient memory and logic devices. By understanding spin transport and dynamics, we aim to design next-generation magnetic RAM and spin-logic architectures that drastically reduce power consumption.
+:::
+::: {.research-image}
+![](https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80)
+:::
+::::
+
+:::: {.research-row}
+::: {.research-text}
+## Orbitronics
+Beyond spin, orbital angular momentum offers a new degree of freedom for information processing. We are pioneering research into orbitally-driven transport phenomena in light metals and transition metal oxides, unlocking pathways for devices that do not rely on heavy spin-orbit coupling.
+:::
+::: {.research-image}
+![](https://images.unsplash.com/photo-1614729939124-03290b56c9ce?auto=format&fit=crop&w=800&q=80)
+:::
+::::
+
+:::: {.research-row}
+::: {.research-text}
+## Terahertz Spintronics
+Exploring the generation and manipulation of terahertz (THz) radiation using spintronic emitters. These ultra-broadband, low-cost THz sources have immense potential for high-speed communication, imaging, and sensing applications.
+:::
+::: {.research-image}
+![](https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=800&q=80)
+:::
+::::
+
+:::: {.research-row}
+::: {.research-text}
+## Ultrafast Phenomena
+Using ultrafast optical techniques to understand spin and magnetization dynamics at the femtosecond timescale. We investigate how magnetic systems respond to intense femtosecond laser pulses, revealing the fundamental speed limits of magnetic switching.
+:::
+::: {.research-image}
+![](https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80)
+:::
+::::

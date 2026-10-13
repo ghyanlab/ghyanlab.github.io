@@ -1,0 +1,39 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "GHYAN"
+  description: "Gupta Laboratory for Hybrid Quantum Systems & Spintronics, IIT (ISM) Dhanbad."
+  favicon: images/profile.jpg
+  navbar:
+    background: dark
+    search: false
+    right:
+      - href: index.qmd
+        text: Home
+      - href: research.qmd
+        text: Research
+      - href: publications.qmd
+        text: Publications
+      - href: people.qmd
+        text: People
+      - href: teaching.qmd
+        text: Teaching
+      - href: gallery.qmd
+        text: Gallery
+      - href: news.qmd
+        text: News
+      - href: contact.qmd
+        text: Contact
+  page-footer:
+    left: "© 2026 Dr. Rahul Gupta | GHYAN Lab"
+    right: "Indian Institute of Technology (Indian School of Mines), Dhanbad"
+    background: light
+
+format:
+  html:
+    theme: [flatly, custom.scss]
+    css: styles.css
+    toc: false
+    mainfont: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
