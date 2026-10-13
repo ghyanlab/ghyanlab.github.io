@@ -7,7 +7,7 @@ website:
   description: "Gupta Laboratory for Hybrid Quantum Systems & Spintronics, IIT (ISM) Dhanbad."
   favicon: images/profile.jpg
   navbar:
-    background: dark
+    background: light
     search: false
     right:
       - href: index.qmd

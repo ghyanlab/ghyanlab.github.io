@@ -30,7 +30,23 @@ h1, h2, h3, h4, h5 {
 
 .home-left {
   flex: 0 0 350px;
+  max-width: 100%;
   text-align: center;
+}
+
+@media (max-width: 767.98px) {
+  .home-left {
+    flex: 1 1 auto;
+    width: 100%;
+    max-width: 340px;
+  }
+  .home-layout {
+    gap: 2.5rem;
+    margin-bottom: 3.5rem;
+  }
+  .welcome-title {
+    font-size: 2rem !important;
+  }
 }
 
 .home-right {
@@ -46,6 +62,7 @@ h1, h2, h3, h4, h5 {
   padding: 4px;
   margin-bottom: 1.5rem;
   display: inline-block;
+  max-width: 100%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 4px;
 }
@@ -55,7 +72,9 @@ h1, h2, h3, h4, h5 {
 }
 .profile-img-container img {
   width: 330px;
+  max-width: 100%;
   height: 330px;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   object-position: center 15%; /* Adjust this percentage to shift the image up or down (0% is top, 100% is bottom) */
   display: block;
@@ -228,8 +247,8 @@ h1, h2, h3, h4, h5 {
 .people-page {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
-  margin-top: 3rem;
+  gap: 3.5rem;
+  margin-top: 2rem;
   margin-bottom: 5rem;
 }
 
@@ -237,25 +256,53 @@ h1, h2, h3, h4, h5 {
   .people-page {
     flex-direction: row;
     align-items: flex-start;
+    gap: 2.5rem;
   }
 }
 
-/* TEAM LEADER SIDEBAR */
+/* TEAM LEADER SIDEBAR - static on mobile, sticky on desktop */
 .leader-sidebar {
-  flex: 0 0 340px;
-  align-self: flex-start;
-  position: sticky;
-  top: 40px;
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+  position: static;
+  flex: 1 1 auto;
+}
+
+@media (min-width: 992px) {
+  .leader-sidebar {
+    flex: 0 0 320px;
+    max-width: 320px;
+    margin: 0;
+    align-self: flex-start;
+    position: sticky;
+    top: 90px;
+  }
 }
 
 .leader-sticky {
-  
-  
   background: #fff;
   border-radius: 16px;
   padding: 2rem;
   border: 1px solid #eaeaea;
   box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+}
+
+@media (max-width: 767.98px) {
+  .leader-sticky {
+    padding: 1.5rem 1.25rem;
+    border-radius: 14px;
+  }
+  .people-page {
+    gap: 2.5rem;
+    margin-top: 1.25rem;
+    margin-bottom: 3.5rem;
+  }
+}
+
+.leader-sticky h2 .anchorjs-link,
+.member-info h3 .anchorjs-link {
+  display: none !important;
 }
 
 .leader-label {
@@ -348,6 +395,16 @@ h1, h2, h3, h4, h5 {
   margin-bottom: 2rem;
 }
 
+@media (max-width: 767.98px) {
+  .team-heading {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  .team-heading h2 {
+    font-size: 1.75rem !important;
+  }
+}
+
 .section-eyebrow {
   font-size: 0.8rem;
   font-weight: 700;
@@ -372,12 +429,18 @@ h1, h2, h3, h4, h5 {
 
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
 }
-@media (max-width: 1200px) { .team-grid { grid-template-columns: repeat(3, 1fr); } }
-@media (max-width: 900px) { .team-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 600px) { .team-grid { grid-template-columns: 1fr; } }
+
+@media (max-width: 991.98px) {
+  .team-grid {
+    grid-template-columns: 1fr !important;
+    max-width: 380px;
+    margin: 0 auto;
+    gap: 1.5rem;
+  }
+}
 
 .member-card {
   display: flex;
@@ -526,6 +589,13 @@ h1, h2, h3, h4, h5 {
   }
 }
 
+@media (max-width: 767.98px) {
+  .contact-grid {
+    padding: 1.5rem;
+    gap: 2rem;
+  }
+}
+
 /* Publication Page Styles */
 .pub-card {
   display: flex;
@@ -563,9 +633,14 @@ h1, h2, h3, h4, h5 {
   padding: 2rem;
   flex: 0 0 200px;
 }
-@media (max-width: 767px) {
+@media (max-width: 767.98px) {
   .pub-img-wrapper {
     height: 120px;
+    padding: 1rem;
+    flex: none;
+  }
+  .pub-content {
+    padding: 1.25rem !important;
   }
 }
 
