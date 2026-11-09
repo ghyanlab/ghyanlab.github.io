@@ -5,8 +5,10 @@ project:
 website:
   title: "GHYAN"
   description: "Gupta Laboratory for Hybrid Quantum Systems & Spintronics, IIT (ISM) Dhanbad."
-  favicon: images/profile.jpg
+  favicon: images/Favicon_Dark.png
   navbar:
+    title: false
+    logo: images/Main Logo.png
     background: light
     search: false
     right:

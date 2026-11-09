@@ -1,11 +1,13 @@
 ---
-title: " "
+title: "Home"
 page-layout: custom
 toc: false
 ---
 
 ```{=html}
 <style>
+  #title-block-header { display: none; }
+  
   /* Natural body scrolling */
   html { 
     scroll-padding-top: 100px; /* Accounts for floating Quarto navbar */
