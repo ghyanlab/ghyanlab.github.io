@@ -55,6 +55,18 @@ Selected publications by the Principal Investigator and collaborators.
     <p class="pub-authors"><strong style="color: #27ae60;">R. Gupta</strong>, S. Husain, A. Kumar, R. Brucas, A. Rydberg and P. Svedlindh</p>
   </div>
 </a>
+
+<!-- PAPER 5 -->
+<a href="https://doi.org/10.1002/adom.202001987" target="_blank" class="pub-card">
+  <div class="pub-img-wrapper" style="background: #fff;">
+    <img src="https://upload.wikimedia.org/wikipedia/en/8/87/Cover_Advanced_Optical_Materials_01-2013.jpeg" alt="Advanced Optical Materials" style="object-fit: contain;">
+  </div>
+  <div class="pub-content">
+    <h3 class="pub-title">Co2FeAl full Heusler compound based spintronic terahertz emitter</h3>
+    <div class="pub-journal">Advanced Optical Materials 9, 2001987 (2021)</div>
+    <p class="pub-authors"><strong style="color: #27ae60;">R. Gupta</strong>, S. Husain, A. Kumar, R. Brucas, A. Rydberg and P. Svedlindh</p>
+  </div>
+</a>
 ```
 
 <hr style="margin: 4rem auto; border: 0; border-top: 1px solid #eaeaea; max-width: 900px;">
