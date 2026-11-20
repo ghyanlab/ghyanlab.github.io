@@ -15,7 +15,7 @@ Get in touch with us regarding research opportunities, collaborations, and scien
     <div style="margin-bottom: 2rem;">
       <h4 style="color: #666; margin-bottom: 0.5rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em;">Principal Investigator</h4>
       <p style="font-size: 1.1rem; font-weight: 500; margin-bottom: 0.25rem;">Dr. Rahul Gupta</p>
-      <a href="mailto:rahulgupta@iitism.com" style="color: #2c3e50; text-decoration: none;">rahulgupta@iitism.com &rarr;</a>
+      <a href="mailto:rahulgupta@iitism.ac.in" style="color: #2c3e50; text-decoration: none;">rahulgupta@iitism.ac.in &rarr;</a>
     </div>
 
     <div>

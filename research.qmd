@@ -41,6 +41,32 @@ page-layout: full
 ::: {.research-text}
 ### Magnetism &amp; Spintronics
 We study the fundamental magnetic properties of novel materials and how electron spin can be utilized for energy-efficient memory and logic devices. By understanding spin transport, spin-orbit torque (SOT), and magnetization dynamics, we aim to design next-generation magnetic RAM (SOT-MRAM) and spin-logic architectures that drastically reduce standby and switching power consumption.
+
+```{=html}
+<div class="research-pubs">
+  <div class="research-pubs-heading">Key Publications</div>
+  <ul class="research-pubs-list">
+    <li class="research-pub-item">
+      <a href="https://doi.org/10.1038/s41467-024-55437-x" target="_blank" rel="noopener noreferrer">
+        Harnessing orbital Hall effect in spin-orbit torque MRAM ↗
+      </a>
+      <div class="research-pub-journal">Nature Communications 16, 130 (2025)</div>
+    </li>
+    <li class="research-pub-item">
+      <a href="https://doi.org/10.1021/acsnano.3c10649" target="_blank" rel="noopener noreferrer">
+        Strong In-Plane Magnetization and Spin Polarization in CFGT/Graphene Heterostructure Spin-Valve ↗
+      </a>
+      <div class="research-pub-journal">ACS Nano 18 (7), 5240–5248 (2024)</div>
+    <li class="research-pub-item">
+      <a href="https://doi.org/10.1063/5.0025318" target="_blank" rel="noopener noreferrer">
+        Emergence of spin–orbit torques in 2D transition metal dichalcogenides: A status update ↗
+      </a>
+      <div class="research-pub-journal">Applied Physics Reviews 7, 041312 (2020)</div>
+    </li>
+    </li>
+  </ul>
+</div>
+```
 :::
 ::: {.research-image}
 ![](https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80)
@@ -51,6 +77,32 @@ We study the fundamental magnetic properties of novel materials and how electron
 ::: {.research-text}
 ### Orbitronics
 Beyond the spin degree of freedom, orbital angular momentum offers an exciting, energy-efficient dimension for information processing. We investigate orbitally-driven transport phenomena, including the orbital Hall effect (OHE) and orbital Rashba-Edelstein effect, in light metals (such as vanadium and titanium) and transition metal oxides, unlocking pathways for high-efficiency torque generation without relying on heavy or scarce elements.
+
+```{=html}
+<div class="research-pubs">
+  <div class="research-pubs-heading">Key Publications</div>
+  <ul class="research-pubs-list">
+    <li class="research-pub-item">
+      <a href="https://doi.org/10.1021/acs.nanolett.5c02641" target="_blank" rel="noopener noreferrer">
+        Identification of orbital pumping from spin pumping and rectification effects ↗
+      </a>
+      <div class="research-pub-journal">Nano Letters 25 (36), 13462–13467 (2025)</div>
+    </li>
+    <li class="research-pub-item">
+      <a href="https://arxiv.org/abs/2508.16339" target="_blank" rel="noopener noreferrer">
+        Itinerant orbital Hall effect mechanism leading to large negative orbital torques from light metal vanadium ↗
+      </a>
+      <div class="research-pub-journal">arXiv:2508.16339 (2025)</div>
+    </li>
+    <li class="research-pub-item">
+      <a href="https://doi.org/10.1021/acs.nanolett.4c06056" target="_blank" rel="noopener noreferrer">
+        Nonreciprocity in magnon mediated charge-spin-orbital current interconversion ↗
+      </a>
+      <div class="research-pub-journal">Nano Letters 25 (8), 3247–3252 (2025)</div>
+    </li>
+  </ul>
+</div>
+```
 :::
 ::: {.research-image}
 ![](https://images.unsplash.com/photo-1614729939124-03290b56c9ce?auto=format&fit=crop&w=800&q=80)
@@ -61,6 +113,32 @@ Beyond the spin degree of freedom, orbital angular momentum offers an exciting, 
 ::: {.research-text}
 ### Terahertz Spintronics
 Exploring the generation, manipulation, and detection of terahertz (THz) radiation using ultrafast spintronic heterostructures. By exploiting inverse spin Hall effects, anomalous Hall phenomena, and novel full Heusler compounds (such as Co₂FeAl), we develop ultra-broadband, low-cost spintronic THz emitters (STEs) and terahertz spin Hall nano-oscillators for high-speed wireless communication, radar, and non-destructive spectroscopic imaging.
+
+```{=html}
+<div class="research-pubs">
+  <div class="research-pubs-heading">Key Publications</div>
+  <ul class="research-pubs-list">
+        <li class="research-pub-item">
+      <a href="https://arxiv.org/abs/2401.10123" target="_blank" rel="noopener noreferrer">
+        Terahertz emission from β-W/CoFe epitaxial spintronic emitters ↗
+      </a>
+      <div class="research-pub-journal">arXiv:2401.10123 (2024) (accepted in Scientific Reports)</div>
+    </li>
+    <li class="research-pub-item">
+      <a href="https://doi.org/10.1002/adom.202001987" target="_blank" rel="noopener noreferrer">
+        Co2FeAl Full Heusler Compound Based Spintronic Terahertz Emitter ↗
+      </a>
+      <div class="research-pub-journal">Advanced Optical Materials 9 (10), 2001987 (2021)</div>
+    </li>
+    <li class="research-pub-item">
+      <a href="https://doi.org/10.1103/PhysRevB.104.L100408" target="_blank" rel="noopener noreferrer">
+        Ultrafast magnetization dynamics in the half-metallic Heusler alloy Co2FeAl ↗
+      </a>
+      <div class="research-pub-journal">Physical Review B 104, L100408 (2021)</div>
+    </li>
+  </ul>
+</div>
+```
 :::
 ::: {.research-image}
 ![](https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=800&q=80)
@@ -71,6 +149,26 @@ Exploring the generation, manipulation, and detection of terahertz (THz) radiati
 ::: {.research-text}
 ### Quantum Sensing (NV Sensing)
 We aim to utilize nitrogen-vacancy (NV) diamond center magnetometry and atomic-scale quantum sensors to non-invasively probe nanoscale spin configurations, stray magnetic fields, and spin currents with high spatial resolution and sensitivity. By integrating NV center quantum defects with magnetic heterostructures, 2D quantum materials, and spintronic devices, we investigate local spin-orbit torque switching, magnon dynamics, and topological spin textures (such as domain walls and skyrmions) from cryogenic to room temperatures.
+
+```{=html}
+<div class="research-pubs">
+  <div class="research-pubs-heading">Key Publications in Quantum-Enabled Spintronic Sensing</div>
+  <ul class="research-pubs-list">
+    <li class="research-pub-item">
+      <a href="https://doi.org/10.1002/adfm.202600059" target="_blank" rel="noopener noreferrer">
+        Three‐Dimensional Anomalous Hall Sensing Enabled By Spin–Orbit Torque Driven Domain Reconfiguration ↗
+      </a>
+      <div class="research-pub-journal">Advanced Functional Materials 36 (70), 2600059 (2026)</div>
+    </li>
+    <li class="research-pub-item">
+      <a href="https://doi.org/10.1103/PhysRevApplied.20.044079" target="_blank" rel="noopener noreferrer">
+        Single-device offset-free magnetic field sensing with tunable sensitivity and linear range ↗
+      </a>
+      <div class="research-pub-journal">Physical Review Applied 20, 044079 (2023)</div>
+    </li>
+  </ul>
+</div>
+```
 :::
 ::: {.research-image}
 ![](https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=800&q=80)
