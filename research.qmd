@@ -69,11 +69,11 @@ Exploring the generation, manipulation, and detection of terahertz (THz) radiati
 
 :::: {.research-row}
 ::: {.research-text}
-### Ultrafast Phenomena
-Using ultrafast femtosecond optical and X-ray techniques to probe non-equilibrium spin and magnetization dynamics on sub-picosecond timescales. We investigate how magnetic systems respond to intense femtosecond laser excitation, revealing the fundamental microscopic physics of superdiffusive spin currents, optical demagnetization, and the fundamental speed limits of magnetic state manipulation.
+### Quantum Sensing (NV Sensing)
+We aim to utilize nitrogen-vacancy (NV) diamond center magnetometry and atomic-scale quantum sensors to non-invasively probe nanoscale spin configurations, stray magnetic fields, and spin currents with high spatial resolution and sensitivity. By integrating NV center quantum defects with magnetic heterostructures, 2D quantum materials, and spintronic devices, we investigate local spin-orbit torque switching, magnon dynamics, and topological spin textures (such as domain walls and skyrmions) from cryogenic to room temperatures.
 :::
 ::: {.research-image}
-![](https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80)
+![](https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=800&q=80)
 :::
 ::::
 
@@ -141,7 +141,7 @@ Using ultrafast femtosecond optical and X-ray techniques to probe non-equilibriu
   </div>
 
   <!-- GRANT 3: Royal Swedish Academy of Sciences Scholarship -->
-  <div class="grant-card">
+  <div class="grant-card" style="margin-top: 1.5rem;">
     <div class="grant-header">
       <div>
         <h3 class="grant-title">General Physics Scholarship, Project QRBIT-Q</h3>
@@ -154,11 +154,11 @@ Using ultrafast femtosecond optical and X-ray techniques to probe non-equilibriu
     <div class="grant-meta">
       <div class="grant-meta-item"><strong>Recipient:</strong> Dr. Rahul Gupta</div>
       <div class="grant-meta-item"><strong>Funding Body:</strong> The Royal Swedish Academy of Sciences, Sweden</div>
-      <div class="grant-meta-item"><strong>Timeline:</strong> December 2025</div>
-      <div class="grant-meta-item"><strong>Amount:</strong> €5,000</div>
+      <div class="grant-meta-item"><strong>Period:</strong> 2025-2026</div>
+      <div class="grant-meta-item"><strong>Domain:</strong> Quantum Sensing (Nitrogen-Vacancy Centers)</div>
     </div>
     <p class="grant-desc">
-      General Physics Scholarship awarded by The Royal Swedish Academy of Sciences for research activities and investigations within Project QRBIT-Q, focusing on quantum and orbital spintronic phenomena.
+      General Physics Scholarship awarded by The Royal Swedish Academy of Sciences for research activities and investigations within Project QRBIT-Q, focusing on quantum sensing and orbitronic phenomena.
     </p>
   </div>
 

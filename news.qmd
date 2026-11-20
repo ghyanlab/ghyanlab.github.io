@@ -8,17 +8,86 @@ The latest updates, publications, and announcements from the group.
 </p>
 
 ```{=html}
-<div style="max-width: 800px; margin: 0 auto;">
+<div style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.75rem;">
   
-  <div style="background: #fff; padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 1rem; border-left: 4px solid #3498db;">
+  <!-- August 2026 -->
+  <div style="background: #fff; padding: 2.25rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border: 1px solid #eaeaea; display: flex; flex-direction: column; gap: 1rem; border-left: 4px solid #3498db;">
     <div style="color: #666; font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.05em;">
       August 2026 &nbsp;&bull;&nbsp; <span style="color: #3498db;">Lab Update</span>
     </div>
     <div>
-      <h3 style="margin: 0 0 0.5rem 0; font-size: 1.4rem; color: #111;">GHYAN is Established at IIT (ISM) Dhanbad</h3>
+      <h3 style="margin: 0 0 0.5rem 0; font-size: 1.35rem; color: #111;">GHYAN is Established at IIT (ISM) Dhanbad</h3>
       <p style="color: #444; margin: 0; line-height: 1.7;">
-        The Gupta Laboratory for Hybrid Quantum Systems & Spintronics is officially established at the Department of Physics, Indian Institute of Technology (Indian School of Mines) Dhanbad. We are looking forward to building our experimental capabilities and welcoming new researchers to the group.
+        The Gupta Laboratory for Hybrid Quantum Systems &amp; Spintronics is officially established at the Department of Physics, Indian Institute of Technology (Indian School of Mines) Dhanbad. We are looking forward to building our experimental capabilities and welcoming new researchers to the group.
       </p>
+    </div>
+  </div>
+
+  <!-- February 2025 -->
+  <div style="background: #fff; padding: 2.25rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border: 1px solid #eaeaea; display: flex; flex-direction: column; gap: 1rem; border-left: 4px solid #27ae60;">
+    <div style="color: #666; font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.05em;">
+      February 2025 &nbsp;&bull;&nbsp; <span style="color: #27ae60;">Research Highlight &amp; Press Release</span>
+    </div>
+    <div>
+      <h3 style="margin: 0 0 0.5rem 0; font-size: 1.35rem; color: #111;">Toward Sustainable Computing: Energy-Efficient SOT-MRAM Memory Innovation</h3>
+      <p style="color: #444; margin: 0 0 1rem 0; line-height: 1.7;">
+        A major breakthrough in Spin-Orbit Torque Magnetic Random-Access Memory (SOT-MRAM) led by Dr. Rahul Gupta and collaborators at Johannes Gutenberg University Mainz (JGU) in partnership with Antaios has been featured internationally. Published in <em>Nature Communications</em> (<em>"Harnessing orbital Hall effect in spin-orbit torque MRAM"</em>), the research demonstrates an over 50% reduction in energy consumption by utilizing orbital currents rather than expensive, heavy metals.
+      </p>
+      <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+        <a href="https://www.research-in-germany.org/idw-news/en_US/2025/2/2025-02-06_Toward_sustainable_computing__Energy-efficient_memory_innovation.html" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.85rem; font-weight: 600; color: #1e40af; background: #eff6ff; border: 1px solid #bfdbfe; padding: 0.35rem 0.8rem; border-radius: 6px; text-decoration: none;">
+          Federal Ministry of Education and Research in Germany ↗
+        </a>
+        <a href="https://idw-online.de/en/news847130" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.85rem; font-weight: 600; color: #1e40af; background: #eff6ff; border: 1px solid #bfdbfe; padding: 0.35rem 0.8rem; border-radius: 6px; text-decoration: none;">
+          idw News ↗
+        </a>
+        <a href="https://www.eurekalert.org/news-releases/1072875" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.85rem; font-weight: 600; color: #1e40af; background: #eff6ff; border: 1px solid #bfdbfe; padding: 0.35rem 0.8rem; border-radius: 6px; text-decoration: none;">
+          EurekAlert! (AAAS) ↗
+        </a>
+        <a href="https://quantumzeitgeist.com/sot-mram-memory-innovation-boosts-energy-efficiency/" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.85rem; font-weight: 600; color: #1e40af; background: #eff6ff; border: 1px solid #bfdbfe; padding: 0.35rem 0.8rem; border-radius: 6px; text-decoration: none;">
+          Quantum Zeitgeist ↗
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- May 2021 -->
+  <div style="background: #fff; padding: 2.25rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border: 1px solid #eaeaea; display: flex; flex-direction: column; gap: 1rem; border-left: 4px solid #e67e22;">
+    <div style="color: #666; font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.05em;">
+      May 2021 &nbsp;&bull;&nbsp; <span style="color: #e67e22;">Video Feature &amp; Media Coverage</span>
+    </div>
+    <div>
+      <h3 style="margin: 0 0 0.5rem 0; font-size: 1.35rem; color: #111;">Successful Spintronics Terahertz Emission with Full Heusler Compounds</h3>
+      <p style="color: #444; margin: 0 0 1rem 0; line-height: 1.7;">
+        Our study on full Heusler compound-based spintronic terahertz emitters (<em>Co₂FeAl Full Heusler Compound Based Spintronic Terahertz Emitter</em>, published in <em>Advanced Optical Materials</em>) was spotlighted by <em>Advanced Science News</em> (Wiley) with a dedicated feature video and highlighted by <em>Physics of Magnetism</em>, illustrating how high-amplitude THz emission is achieved across 0.2 to 4.0 THz bandwidths.
+      </p>
+      <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+        <a href="https://youtu.be/pcZ6aS9B9_4?si=SzKJ8KifWR3-eE31" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.85rem; font-weight: 600; color: #c2410c; background: #fff7ed; border: 1px solid #fed7aa; padding: 0.35rem 0.8rem; border-radius: 6px; text-decoration: none;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          Watch Feature on YouTube ↗
+        </a>
+        <a href="https://www.facebook.com/share/p/1EvWzEQu7w/" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.85rem; font-weight: 600; color: #1d4ed8; background: #eff6ff; border: 1px solid #bfdbfe; padding: 0.35rem 0.8rem; border-radius: 6px; text-decoration: none;">
+          Physics of Magnetism Post ↗
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- December 2020 -->
+  <div style="background: #fff; padding: 2.25rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border: 1px solid #eaeaea; display: flex; flex-direction: column; gap: 1rem; border-left: 4px solid #8e44ad;">
+    <div style="color: #666; font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.05em;">
+      December 2020 &nbsp;&bull;&nbsp; <span style="color: #8e44ad;">Journal Spotlight</span>
+    </div>
+    <div>
+      <h3 style="margin: 0 0 0.5rem 0; font-size: 1.35rem; color: #111;">Applied Physics Reviews Highlights Review on Spin–Orbit Torques in 2D Materials</h3>
+      <p style="color: #444; margin: 0 0 1rem 0; line-height: 1.7;">
+        The comprehensive status update review <em>"Emergence of spin–orbit torques in 2D transition metal dichalcogenides: A status update"</em> (Husain, Gupta et al.) was published in <em>Applied Physics Reviews</em> (AIP Publishing) and officially featured for its survey of 2D layered materials enabling efficient SOT manipulation in magnetic nanodevices.
+      </p>
+      <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+        <a href="https://twitter.com/AppliedPhysRev/status/1339947235765792768?s=20" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.85rem; font-weight: 600; color: #0f172a; background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.35rem 0.8rem; border-radius: 6px; text-decoration: none;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          View Spotlight on X / Twitter ↗
+        </a>
+      </div>
     </div>
   </div>
 

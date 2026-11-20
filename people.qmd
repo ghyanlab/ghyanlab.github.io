@@ -18,14 +18,14 @@ page-layout: full
       <p class="leader-role">Assistant Professor</p>
       <div class="leader-divider"></div>
       <p class="leader-bio">
-        Research interests include magnetism, spin-orbitronics, terahertz spintronics, and magnetic devices.
+        Research interests include magnetism, spin-orbitronics, terahertz spintronics, quantum magnetic devices, and NV sensing.
       </p>
       <div class="leader-details">
         <p><span>Research</span> Spintronics & Magnetism</p>
         <p><span>Department</span> Department of Physics</p>
         <p><span>Institution</span> IIT (ISM) Dhanbad</p>
       </div>
-      <a class="leader-email" href="mailto:gupta.hyq@gmail.com">
+      <a class="leader-email" href="mailto:rahulgupta@iitism.ac.in">
         Contact the PI ↗
       </a>
     </div>
