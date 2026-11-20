@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80" width="240" height="80">
+  <rect width="100%" height="100%" fill="none"/>
+  <rect x="15" y="16" width="38" height="48" rx="3" fill="#1e293b"/>
+  <path d="M 23 52 L 34 26 L 45 52 Z" fill="none" stroke="#38bdf8" stroke-width="3"/>
+  <line x1="27" y1="44" x2="41" y2="44" stroke="#38bdf8" stroke-width="2.5"/>
+  <text x="64" y="33" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="800" fill="#64748b" letter-spacing="1">WILEY-VCH</text>
+  <text x="64" y="49" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="900" fill="#0f172a" letter-spacing="0.5">ADVANCED</text>
+  <text x="64" y="65" font-family="'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="800" fill="#0284c7" letter-spacing="0.5">MATERIALS</text>
+</svg>

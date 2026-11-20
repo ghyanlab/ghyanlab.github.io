@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80" width="240" height="80">
+  <rect width="100%" height="100%" fill="none"/>
+  <rect x="15" y="18" width="40" height="44" rx="4" fill="#0284c7"/>
+  <text x="35" y="47" font-family="'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="900" fill="#fff" text-anchor="middle">PRA</text>
+  <text x="66" y="34" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="800" fill="#00356b" letter-spacing="1.2">PHYSICAL REVIEW</text>
+  <text x="66" y="52" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" fill="#0284c7">APPLIED</text>
+  <text x="66" y="65" font-family="'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="600" fill="#a00" letter-spacing="0.5">APS PHYSICS</text>
+</svg>

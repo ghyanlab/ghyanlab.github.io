@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80" width="240" height="80">
+  <rect width="100%" height="100%" fill="none"/>
+  <polygon points="35,16 55,27 55,51 35,62 15,51 15,27" fill="#e0532c"/>
+  <polygon points="35,23 48,31 48,47 35,55 22,47 22,31" fill="#fff"/>
+  <polygon points="35,29 42,34 42,44 35,49 28,44 28,34" fill="#e0532c"/>
+  <text x="68" y="38" font-family="'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="700" fill="#222">scientific</text>
+  <text x="68" y="58" font-family="'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="400" fill="#555">reports</text>
+</svg>

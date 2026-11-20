@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80" width="240" height="80">
+  <rect width="100%" height="100%" fill="none"/>
+  <rect x="15" y="18" width="40" height="44" rx="4" fill="#003e6b"/>
+  <text x="35" y="47" font-family="'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">VR</text>
+  <text x="66" y="34" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="800" fill="#003e6b">Vetenskapsrådet</text>
+  <text x="66" y="51" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#475569">Swedish Research Council</text>
+  <text x="66" y="65" font-family="'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="700" fill="#0284c7" letter-spacing="0.5">RESEARCH GRANT</text>
+</svg>

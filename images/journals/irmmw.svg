@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80" width="240" height="80">
+  <rect width="100%" height="100%" fill="none"/>
+  <rect x="15" y="18" width="40" height="44" rx="4" fill="#00629b"/>
+  <text x="35" y="46" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="900" fill="#fff" text-anchor="middle">IEEE</text>
+  <text x="66" y="34" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="800" fill="#00629b" letter-spacing="0.5">IEEE PROCEEDINGS</text>
+  <text x="66" y="52" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="800" fill="#1e293b">IRMMW-THz</text>
+  <text x="66" y="66" font-family="'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="500" fill="#64748b">Conference on THz Waves</text>
+</svg>

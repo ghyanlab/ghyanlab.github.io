@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80" width="240" height="80">
+  <rect width="100%" height="100%" fill="none"/>
+  <rect x="15" y="18" width="42" height="44" rx="4" fill="#0f766e"/>
+  <text x="36" y="47" font-family="'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="900" fill="#fff" text-anchor="middle">AELM</text>
+  <text x="68" y="31" font-family="'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="700" fill="#0f766e" letter-spacing="0.8">ACS APPLIED</text>
+  <text x="68" y="48" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="800" fill="#1e293b">ELECTRONIC</text>
+  <text x="68" y="63" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="800" fill="#0f766e">MATERIALS</text>
+</svg>
