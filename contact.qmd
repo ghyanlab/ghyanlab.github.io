@@ -23,18 +23,13 @@ Get in touch with us regarding research opportunities, collaborations, and scien
       <div style="display: flex; flex-direction: column; gap: 0.75rem; line-height: 1.6; color: #444;">
         <div>
           <strong style="color: #1e293b;">Office:</strong><br>
-          Room 527B, Academic Complex Building
-        </div>
-        <div>
-          <strong style="color: #1e293b;">Laboratory:</strong><br>
-          GHYAN Laboratory (Gupta Laboratory for Hybrid Quantum Systems &amp; Spintronics)
-        </div>
-        <div>
-          <strong style="color: #1e293b;">Address:</strong><br>
-          Department of Physics<br>
-          Academic Complex Building<br>
-          Indian Institute of Technology (Indian School of Mines), Dhanbad<br>
-          Dhanbad, Jharkhand – 826004, India
+          Office: Room 527B
+          Lab: GHYAN Laboratory
+          New Academic Complex
+          Department of Physics
+          Indian Institute of Technology (ISM) Dhanbad
+          Sardar Patel Nagar, Dhanbad
+          Jharkhand – 826004, India
         </div>
       </div>
     </div>
