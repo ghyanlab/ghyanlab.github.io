@@ -345,10 +345,9 @@ External and institutional sponsored research projects supporting our experiment
       <div class="grant-meta-item"><strong>Principal Investigator:</strong> Dr. Rahul Gupta</div>
       <div class="grant-meta-item"><strong>Funding Agency:</strong> Vetenskapsrådet (VR), Sweden</div>
       <div class="grant-meta-item"><strong>Domain:</strong> Terahertz Spintronics &amp; Nano-Devices</div>
-      <div class="grant-meta-item"><strong>Timeline:</strong> 2024 – Present</div>
+      <div class="grant-meta-item"><strong>Timeline:</strong> 2024 – 2026</div>
     </div>
     <p class="grant-desc">
-      This project focuses on the design, nanofabrication, and experimental demonstration of terahertz spin Hall nano-oscillators (T-SHNOs). The research explores spin-transfer and spin-orbit torques to drive high-frequency magnetic oscillations in nanoscale metallic heterostructures, targeting ultra-broadband coherent emission and synchronization phenomena in the sub-THz and THz spectral regimes.
     </p>
     <div>
       <a href="https://www.vr.se/english/swecris.html#/project/2023-06605_VR" target="_blank" rel="noopener noreferrer" class="grant-link">
@@ -372,10 +371,9 @@ External and institutional sponsored research projects supporting our experiment
       <div class="grant-meta-item"><strong>Principal Investigator:</strong> Dr. Rahul Gupta</div>
       <div class="grant-meta-item"><strong>Funding Body:</strong> IIT (ISM) Dhanbad</div>
       <div class="grant-meta-item"><strong>Department:</strong> Department of Physics</div>
-      <div class="grant-meta-item"><strong>Timeline:</strong> 2024 – Present</div>
+      <div class="grant-meta-item"><strong>Timeline:</strong> 2026 – Present</div>
     </div>
     <p class="grant-desc">
-      Institutional initiation grant dedicated to establishing experimental infrastructure for the Gupta Laboratory for Hybrid Quantum Systems &amp; Spintronics (GHYAN) at IIT (ISM) Dhanbad. This grant supports the setup of experimental Magneto-Optic Kerr Effect (MOKE) magnetometry, electrical transport probing, and thin-film characterization capabilities for research on novel magnetic and quantum heterostructures.
     </p>
   </div>
 
@@ -397,7 +395,6 @@ External and institutional sponsored research projects supporting our experiment
       <div class="grant-meta-item"><strong>Domain:</strong> Quantum Sensing (Nitrogen-Vacancy Centers)</div>
     </div>
     <p class="grant-desc">
-      General Physics Scholarship awarded by The Royal Swedish Academy of Sciences for research activities and investigations within Project QRBIT-Q, focusing on quantum sensing and orbitronic phenomena.
     </p>
   </div>
 
@@ -416,10 +413,8 @@ External and institutional sponsored research projects supporting our experiment
       <div class="grant-meta-item"><strong>Recipient:</strong> Dr. Rahul Gupta</div>
       <div class="grant-meta-item"><strong>Funding Body:</strong> International Office, Uppsala University, Sweden</div>
       <div class="grant-meta-item"><strong>Timeline:</strong> May 2022</div>
-      <div class="grant-meta-item"><strong>Amount:</strong> €1,151</div>
     </div>
     <p class="grant-desc">
-      Staff mobility and exchange fellowship under the European Union Erasmus+ programme through Uppsala University, facilitating academic collaboration, research exchange, and specialized engagement in experimental physics.
     </p>
   </div>
 
@@ -436,105 +431,626 @@ Collaborations
 Our group actively collaborates with leading international and national research institutions, university departments, and industry partners
 </p>
 </div>
+<!-- Leaflet CSS and JS CDN -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+<!-- Global Collaboration Map Component -->
+<div class="collab-map-container" id="collab-map-container">
+  <div class="collab-map-header">
+    <div>
+      <div class="collab-map-badge">
+        <span class="collab-pulse-dot"></span> Active Research Network
+      </div>
+      <h3 class="collab-map-title anchored">Global Collaboration Network</h3>
+      <p class="collab-map-subtitle">
+        Our research group maintains a vibrant network of collaborators across Europe, North America, and Asia. The map below visualizes our international partnerships, highlighting the locations of our collaborators and their respective institutions.
+      </p>
+    </div>
+    
+    <!-- Region Preset Buttons and Label Toggle -->
+    <div class="collab-map-actions">
+      <button class="collab-region-btn active" id="btn-view-world" type="button" title="View Full World Map">🌍 World View</button>
+      <button class="collab-region-btn" id="btn-view-europe" type="button" title="Zoom into European Collaborators">🇪🇺 Europe</button>
+      <button class="collab-region-btn" id="btn-view-india" type="button" title="Zoom into Indian Collaborators">🇮🇳 India</button>
+      <button class="collab-region-btn" id="btn-view-usa" type="button" title="Zoom into US Collaborators">🇺🇸 USA</button>
+      <button class="collab-toggle-btn" id="btn-toggle-labels" type="button" title="Toggle Professor Names On/Off">🏷️ Show Names</button>
+    </div>
+  </div>
+
+  <!-- The Map Canvas -->
+  <div id="collab-map"></div>
+
+  <!-- Status & Legend Bar -->
+  <div class="collab-map-status-bar">
+    <div class="collab-map-status-text" id="map-zoom-status">
+      🌍 World View • Zoom in or click a region to see more details
+    </div>
+    <div class="collab-map-legend">
+      <div class="legend-item">
+        <span class="legend-dot home-dot"></span>
+        <span><strong>Primary Hub:</strong> GHYAN Lab, IIT (ISM) Dhanbad</span>
+      </div>
+      <div class="legend-item">
+        <span class="legend-dot partner-dot"></span>
+        <span><strong>Collaborators:</strong> Global Partners</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ======================================================================= -->
+<!-- COLLABORATORS LIST                                                      -->
+<!-- Note: The map above automatically discovers every .collab-card below.   -->
+<!-- When you add a new card with data-country="..." (and optional data-lat  -->
+<!-- & data-lng), the dot and arrow from Dhanbad are added automatically!    -->
+<!-- ======================================================================= -->
 <div class="collab-grid">
 
-  <!-- COLLAB 1 -->
-  <div class="collab-card">
-    <div>
-      <div class="collab-country-tag">Germany</div>
-      <h3 class="collab-institution anchored">Johannes Gutenberg University Mainz</h3>
-      <div class="collab-group">Prof. Mathias Kläui &amp; Dr. Gerhard Jakob</div>
-      <p class="collab-topics">
-        Joint investigations on orbitronics, orbital Hall torques in light metals, spin-orbit torque MRAM architectures, and chiral domain wall reconfiguration.
-      </p>
-    </div>
+  <!-- COLLAB 1: Johannes Gutenberg University Mainz -->
+  <div class="collab-card" id="collab-jgu-mainz" data-country="Germany" data-city="Mainz" data-institution="Johannes Gutenberg University Mainz" data-lat="49.9929" data-lng="8.2473" data-label-pos="right">
+    <div class="collab-country-tag">Germany</div>
+    <h3 class="collab-institution anchored">Johannes Gutenberg University Mainz</h3>
+    <div class="collab-group">Prof. Mathias Kläui &amp; Dr. Gerhard Jakob</div>
   </div>
 
-  <!-- COLLAB 2 -->
-  <div class="collab-card">
-    <div>
-      <div class="collab-country-tag">Sweden</div>
-      <h3 class="collab-institution anchored">Uppsala University</h3>
-      <div class="collab-group">Prof. Peter Svedlindh &amp; Dr. Rimantas Brucas</div>
-      <p class="collab-topics">
-        Collaborative research on spintronic terahertz emitters (STEs), ultrafast superdiffusive spin transport, and spin dynamics in epitaxial thin-film heterostructures.
-      </p>
-    </div>
+  <!-- COLLAB 2: Uppsala University -->
+  <div class="collab-card" id="collab-uu" data-country="Sweden" data-city="Uppsala" data-institution="Uppsala University" data-lat="59.8586" data-lng="17.6389" data-label-pos="top">
+    <div class="collab-country-tag">Sweden</div>
+    <h3 class="collab-institution anchored">Uppsala University</h3>
+    <div class="collab-group">Prof. Peter Svedlindh, Prof. Peter M. Oppeneer, Prof. Olle Eriksson, Prof. Olof Karis, Prof. Biplab Sanyal, Dr. M. Venkata Kamalakar, Dr. Ronny Knut &amp; Dr. Rimantas Brucas</div>
   </div>
 
-  <!-- COLLAB 3 -->
-  <div class="collab-card">
-    <div>
-      <div class="collab-country-tag">Austria</div>
-      <h3 class="collab-institution anchored">University of Vienna</h3>
-      <div class="collab-group">Prof. Dieter Suess</div>
-      <p class="collab-topics">
-        Micromagnetic simulations and finite-element modeling of 3D anomalous Hall sensors, magnetization switching dynamics, and topological domain textures.
-      </p>
-    </div>
+  <!-- COLLAB 3: University of Gothenburg -->
+  <div class="collab-card" id="collab-gu" data-country="Sweden" data-city="Gothenburg" data-institution="University of Gothenburg" data-lat="57.7089" data-lng="11.9746" data-label-pos="bottom">
+    <div class="collab-country-tag">Sweden</div>
+    <h3 class="collab-institution anchored">University of Gothenburg</h3>
+    <div class="collab-group">Prof. Johan Åkerman</div>
   </div>
 
-  <!-- COLLAB 4 -->
-  <div class="collab-card">
-    <div>
-      <div class="collab-country-tag">India</div>
-      <h3 class="collab-institution anchored">Indian Institute of Technology Delhi</h3>
-      <div class="collab-group">Prof. Sujeet Chaudhary</div>
-      <p class="collab-topics">
-        Exploration of spin pumping and damping-like spin-orbit torques in 2D transition metal dichalcogenides (TMDs) and topological insulator heterostructures.
-      </p>
-    </div>
+  <!-- COLLAB 4: Aix-Marseille University -->
+  <div class="collab-card" id="collab-amu" data-country="France" data-city="Marseille" data-institution="Aix-Marseille University" data-lat="43.2965" data-lng="5.3698" data-label-pos="bottom">
+    <div class="collab-country-tag">France</div>
+    <h3 class="collab-institution anchored">Aix-Marseille University</h3>
+    <div class="collab-group">Prof. Aurélien Manchon</div>
   </div>
 
-  <!-- COLLAB 5 -->
-  <div class="collab-card">
-    <div>
-      <div class="collab-country-tag">Sweden</div>
-      <h3 class="collab-institution anchored">Chalmers University of Technology</h3>
-      <div class="collab-group">Prof. Saroj P. Dash</div>
-      <p class="collab-topics">
-        Room-temperature spin-valve devices and quantum transport in van der Waals ferromagnet / graphene heterostructures.
-      </p>
-    </div>
+  <!-- COLLAB 5: University of Vienna -->
+  <div class="collab-card" id="collab-univie" data-country="Austria" data-city="Vienna" data-institution="University of Vienna" data-lat="48.2082" data-lng="16.3738" data-label-pos="right">
+    <div class="collab-country-tag">Austria</div>
+    <h3 class="collab-institution anchored">University of Vienna</h3>
+    <div class="collab-group">Prof. Dieter Suess</div>
   </div>
 
-  <!-- COLLAB 6 -->
-  <div class="collab-card">
-    <div>
-      <div class="collab-country-tag">India</div>
-      <h3 class="collab-institution anchored">S. N. Bose National Centre for Basic Sciences</h3>
-      <div class="collab-group">Prof. Anjan Barman</div>
-      <p class="collab-topics">
-        Ultrafast magnetization dynamics, interfacial Dzyaloshinskii-Moriya interactions (DMI), and high-frequency spin wave dynamics.
-      </p>
-    </div>
+  <!-- COLLAB 6: University of Central Florida -->
+  <div class="collab-card" id="collab-ucf" data-country="United States" data-city="Orlando" data-institution="University of Central Florida" data-lat="28.6024" data-lng="-81.2001" data-label-pos="top">
+    <div class="collab-country-tag">United States</div>
+    <h3 class="collab-institution anchored">University of Central Florida</h3>
+    <div class="collab-group">Prof. Enrique del Barco</div>
   </div>
 
-  <!-- COLLAB 7 -->
-  <div class="collab-card">
-    <div>
-      <div class="collab-country-tag">Switzerland</div>
-      <h3 class="collab-institution anchored">Empa – Swiss Federal Laboratories</h3>
-      <div class="collab-group">Dr. Hans Josef Hug &amp; Dr. Andrada Oana Mandru</div>
-      <p class="collab-topics">
-        High-resolution magnetic force microscopy (MFM) and nanoscale imaging of chiral magnetic multilayers and spin-orbit driven spin textures.
-      </p>
-    </div>
+  <!-- COLLAB 7: University of South Florida -->
+  <div class="collab-card" id="collab-usf" data-country="United States" data-city="Tampa" data-institution="University of South Florida" data-lat="28.0587" data-lng="-82.4139" data-label-pos="bottom">
+    <div class="collab-country-tag">United States</div>
+    <h3 class="collab-institution anchored">University of South Florida</h3>
+    <div class="collab-group">Prof. Dario A. Arena</div>
   </div>
 
-  <!-- COLLAB 8 -->
-  <div class="collab-card">
-    <div>
-      <div class="collab-country-tag">India • Internal</div>
-      <h3 class="collab-institution anchored">Central Research Facility (CRF), IIT (ISM)</h3>
-      <div class="collab-group">IIT (ISM) Dhanbad Facilities</div>
-      <p class="collab-topics">
-        Advanced characterization utilizing High-Resolution Transmission Electron Microscopy (HR-TEM), Field-Emission SEM, X-ray Photoelectron Spectroscopy (XPS), and XRD.
-      </p>
-    </div>
+  <!-- COLLAB 8: Indian Institute of Technology Delhi -->
+  <div class="collab-card" id="collab-iitd" data-country="India" data-city="New Delhi" data-institution="Indian Institute of Technology Delhi" data-lat="28.5450" data-lng="77.1926" data-label-pos="top">
+    <div class="collab-country-tag">India</div>
+    <h3 class="collab-institution anchored">Indian Institute of Technology Delhi</h3>
+    <div class="collab-group">Prof. Sujeet Chaudhary &amp; Prof. Pranaba Kishor Muduli</div>
+  </div>
+
+  <!-- COLLAB 9: Örebro University -->
+  <div class="collab-card" id="collab-oru" data-country="Sweden" data-city="Örebro" data-institution="Örebro University" data-lat="59.2753" data-lng="15.2134" data-label-pos="right">
+    <div class="collab-country-tag">Sweden</div>
+    <h3 class="collab-institution anchored">Örebro University</h3>
+    <div class="collab-group">Dr. Danny Thonig</div>
+  </div>
+
+  <!-- COLLAB 10: Chalmers University of Technology -->
+  <div class="collab-card" id="collab-chalmers" data-country="Sweden" data-city="Gothenburg" data-institution="Chalmers University of Technology" data-lat="57.6888" data-lng="11.9782" data-label-pos="top">
+    <div class="collab-country-tag">Sweden</div>
+    <h3 class="collab-institution anchored">Chalmers University of Technology</h3>
+    <div class="collab-group">Prof. Saroj P. Dash</div>
+  </div>
+
+  <!-- COLLAB 11: S. N. Bose National Centre for Basic Sciences -->
+  <div class="collab-card" id="collab-snbose" data-country="India" data-city="Kolkata" data-institution="S. N. Bose National Centre for Basic Sciences" data-lat="22.5697" data-lng="88.4069" data-label-pos="right">
+    <div class="collab-country-tag">India</div>
+    <h3 class="collab-institution anchored">S. N. Bose National Centre for Basic Sciences</h3>
+    <div class="collab-group">Prof. Anjan Barman</div>
+  </div>
+
+  <!-- COLLAB 12: Empa – Swiss Federal Laboratories -->
+  <div class="collab-card" id="collab-empa" data-country="Switzerland" data-city="Dübendorf" data-institution="Empa – Swiss Federal Laboratories" data-lat="47.3769" data-lng="8.5417" data-label-pos="bottom">
+    <div class="collab-country-tag">Switzerland</div>
+    <h3 class="collab-institution anchored">Empa – Swiss Federal Laboratories</h3>
+    <div class="collab-group">Dr. Hans Josef Hug &amp; Dr. Andrada Oana Mandru</div>
+  </div>
+
+  <!-- COLLAB 13: Central Research Facility (CRF), IIT (ISM) -->
+  <div class="collab-card" id="collab-crf" data-country="India" data-city="Dhanbad" data-institution="Central Research Facility (CRF), IIT (ISM)" data-lat="23.8144" data-lng="86.4412">
+    <div class="collab-country-tag">India • Internal</div>
+    <h3 class="collab-institution anchored">Central Research Facility (CRF), IIT (ISM)</h3>
+    <div class="collab-group">IIT (ISM) Dhanbad Facilities</div>
   </div>
 
 </div>
+
+<!-- World Map Script with Zoom-Dependent Labels and Auto-Arrow Generator -->
+<script>
+(function() {
+  const DHANBAD = [23.8144, 86.4412];
+
+  // Geocoding dictionary for automatic future collaborator addition
+  const GEO_LOOKUP = {
+    // Countries
+    "sweden": [59.8586, 17.6389],
+    "germany": [50.1109, 8.6821],
+    "france": [46.6033, 1.8883],
+    "austria": [48.2082, 16.3738],
+    "united states": [37.0902, -95.7129],
+    "usa": [37.0902, -95.7129],
+    "us": [37.0902, -95.7129],
+    "india": [28.6139, 77.2090],
+    "switzerland": [46.8182, 8.2275],
+    "japan": [36.2048, 138.2529],
+    "united kingdom": [55.3781, -3.4360],
+    "uk": [55.3781, -3.4360],
+    "canada": [56.1304, -106.3468],
+    "australia": [-25.2744, 133.7751],
+    "singapore": [1.3521, 103.8198],
+    "south korea": [35.9078, 127.7669],
+    "korea": [35.9078, 127.7669],
+    "taiwan": [23.6978, 120.9605],
+    "china": [35.8617, 104.1954],
+    "spain": [40.4637, -3.7492],
+    "italy": [41.8719, 12.5674],
+    "netherlands": [52.1326, 5.2913],
+    "belgium": [50.5039, 4.4699],
+    "norway": [60.4720, 8.4689],
+    "denmark": [56.2639, 9.5018],
+    "finland": [61.9241, 25.7482],
+    "poland": [51.9194, 19.1451],
+    "czech republic": [49.8175, 15.4730],
+    "czechia": [49.8175, 15.4730],
+    "portugal": [39.3999, -8.2245],
+    "ireland": [53.1424, -7.6921],
+    "israel": [31.0461, 34.8516],
+    "brazil": [-14.2350, -51.9253],
+    // Known Institutions
+    "uppsala university": [59.8586, 17.6389],
+    "university of gothenburg": [57.7089, 11.9746],
+    "chalmers university of technology": [57.6888, 11.9782],
+    "orebro university": [59.2753, 15.2134],
+    "örebro university": [59.2753, 15.2134],
+    "johannes gutenberg university mainz": [49.9929, 8.2473],
+    "university of vienna": [48.2082, 16.3738],
+    "aix-marseille university": [43.2965, 5.3698],
+    "university of south florida": [28.0587, -82.4139],
+    "university of central florida": [28.6024, -81.2001],
+    "indian institute of technology delhi": [28.5450, 77.1926],
+    "iit delhi": [28.5450, 77.1926],
+    "s. n. bose national centre for basic sciences": [22.5697, 88.4069],
+    "empa": [47.3769, 8.5417],
+    "tohoku university": [38.2554, 140.8739],
+    "tokyo university": [35.7128, 139.7620],
+    "kyoto university": [35.0262, 135.7808]
+  };
+
+  let mapInstance = null;
+  let arcPaths = [];
+  let partnerMarkers = [];
+  let homeMarker = null;
+  let worldBounds = null;
+  let forceShowLabels = false;
+
+  function resolveCoords(card) {
+    let lat = parseFloat(card.getAttribute('data-lat'));
+    let lng = parseFloat(card.getAttribute('data-lng'));
+    if (!isNaN(lat) && !isNaN(lng)) return [lat, lng];
+
+    const country = (card.getAttribute('data-country') || card.querySelector('.collab-country-tag')?.textContent || '').toLowerCase().trim();
+    const inst = (card.getAttribute('data-institution') || card.querySelector('.collab-institution')?.textContent || '').toLowerCase().trim();
+
+    if (GEO_LOOKUP[inst]) return GEO_LOOKUP[inst];
+    if (GEO_LOOKUP[country]) return GEO_LOOKUP[country];
+
+    for (let key in GEO_LOOKUP) {
+      if (country.includes(key) || inst.includes(key)) {
+        return GEO_LOOKUP[key];
+      }
+    }
+    return null;
+  }
+
+  function initMap() {
+    const mapEl = document.getElementById('collab-map');
+    if (!mapEl || typeof L === 'undefined') return;
+
+    if (mapInstance) {
+      mapInstance.remove();
+      mapInstance = null;
+    }
+
+    // Initialize Leaflet map with clean world projection
+    mapInstance = L.map('collab-map', {
+      center: [34, 15],
+      zoom: 1.85,
+      minZoom: 1.4,
+      maxZoom: 11,
+      zoomSnap: 0.1,
+      zoomDelta: 0.5,
+      scrollWheelZoom: true,
+      worldCopyJump: false,
+      maxBounds: [[-65, -170], [80, 170]],
+      attributionControl: false
+    });
+
+    // Academic Standard World Basemap (Esri World Light Gray Canvas)
+    // 100% Free, open, zero API key required, crisp country boundaries without street/town clutter
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+      attribution: 'Tiles &copy; Esri',
+      maxZoom: 16,
+      noWrap: true
+    }).addTo(mapInstance);
+
+    // SVG Overlay layer for curved arrows
+    const overlayPane = mapInstance.getPanes().overlayPane;
+    let svgLayer = overlayPane.querySelector('.collab-svg-layer');
+    if (!svgLayer) {
+      svgLayer = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      svgLayer.setAttribute('class', 'collab-svg-layer');
+      svgLayer.innerHTML = `
+        <defs>
+          <marker id="collab-arrow-head" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+            <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#16a34a"></path>
+          </marker>
+          <marker id="collab-arrow-head-active" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+            <path d="M 0 1 L 9 5 L 0 9 z" fill="#0284c7"></path>
+          </marker>
+        </defs>
+        <g id="collab-arcs-group"></g>
+      `;
+      overlayPane.appendChild(svgLayer);
+    }
+
+    // Home Hub Marker (Dhanbad, IIT ISM)
+    const homeIcon = L.divIcon({
+      className: '',
+      html: `
+        <div class="home-marker-wrap">
+          <div class="home-marker-pulse"></div>
+          <div class="home-marker-core" title="GHYAN Lab, IIT (ISM) Dhanbad">★</div>
+          <div class="home-marker-label">IIT (ISM) Dhanbad</div>
+        </div>
+      `,
+      iconSize: [24, 24],
+      iconAnchor: [12, 12]
+    });
+
+    homeMarker = L.marker(DHANBAD, { icon: homeIcon, zIndexOffset: 1000 }).addTo(mapInstance);
+    homeMarker.bindPopup(`
+      <div class="collab-popup-card">
+        <div class="collab-popup-country">Primary Hub &bull; India</div>
+        <h4 class="collab-popup-title">GHYAN Lab</h4>
+        <div class="collab-popup-group">IIT (ISM) Dhanbad</div>
+        <div style="font-size: 0.8rem; color: #64748b; margin-top: 0.35rem;">Origin hub of national and international collaborative research programs.</div>
+      </div>
+    `);
+
+    // Parse all collaborator cards and generate dots + dynamic labels + arrows
+    syncCollaborators();
+
+    // Zoom-dependent label visibility management
+    function updateZoomState() {
+      const currentZoom = mapInstance.getZoom();
+      const container = document.getElementById('collab-map');
+      const statusEl = document.getElementById('map-zoom-status');
+      
+      const isZoomed = currentZoom >= 3.25 || forceShowLabels;
+      if (container) {
+        if (isZoomed) {
+          container.classList.add('map-zoomed-in');
+        } else {
+          container.classList.remove('map-zoomed-in');
+        }
+      }
+
+      if (statusEl) {
+        if (isZoomed) {
+          statusEl.innerHTML = `🔍 <strong>Zoomed In (${currentZoom.toFixed(1)}x)</strong> &bull; Showing Professor Names &amp; Affiliations`;
+        } else {
+          statusEl.innerHTML = `🌍 <strong>World View (${currentZoom.toFixed(1)}x)</strong> &bull; Zoom in or click a region to see more details`;
+        }
+      }
+
+      renderCurves();
+    }
+
+    mapInstance.on('zoom zoomend viewreset move moveend resize', updateZoomState);
+
+    // Initial Zoom State
+    updateZoomState();
+
+    // Region Controls Wiring
+    setupRegionButtons();
+  }
+
+  function syncCollaborators() {
+    if (!mapInstance) return;
+
+    partnerMarkers.forEach(m => mapInstance.removeLayer(m));
+    partnerMarkers = [];
+    arcPaths = [];
+
+    const arcsGroup = document.getElementById('collab-arcs-group');
+    if (arcsGroup) arcsGroup.innerHTML = '';
+
+    const cards = document.querySelectorAll('.collab-grid .collab-card');
+    const bounds = L.latLngBounds([DHANBAD]);
+
+    cards.forEach((card, idx) => {
+      if (!card.id) card.id = 'collab-card-' + idx;
+
+      const coords = resolveCoords(card);
+      if (!coords) return;
+
+      const country = (card.getAttribute('data-country') || card.querySelector('.collab-country-tag')?.textContent || '').trim();
+      const institution = (card.getAttribute('data-institution') || card.querySelector('.collab-institution')?.textContent || '').trim();
+      const group = (card.getAttribute('data-group') || card.querySelector('.collab-group')?.textContent || '').trim();
+      const labelPos = card.getAttribute('data-label-pos') ? `pos-${card.getAttribute('data-label-pos')}` : '';
+
+      const distFromHome = Math.hypot(coords[0] - DHANBAD[0], coords[1] - DHANBAD[1]);
+      bounds.extend(coords);
+
+      // Create Collaborator Dot Marker with Dynamic Floating Label
+      const dotHtml = `
+        <div class="collab-marker-wrap" id="marker-wrap-${card.id}">
+          <div class="collab-marker-dot" title="${group} (${institution})"></div>
+          <div class="collab-marker-label ${labelPos}">
+            <span class="collab-label-name">${group}</span>
+            <span class="collab-label-inst">${institution}</span>
+          </div>
+        </div>
+      `;
+
+      const partnerIcon = L.divIcon({
+        className: '',
+        html: dotHtml,
+        iconSize: [14, 14],
+        iconAnchor: [7, 7]
+      });
+
+      const marker = L.marker(coords, { icon: partnerIcon }).addTo(mapInstance);
+      partnerMarkers.push(marker);
+
+      // Popup
+      marker.bindPopup(`
+        <div class="collab-popup-card">
+          <div class="collab-popup-country">${country}</div>
+          <h4 class="collab-popup-title">${institution}</h4>
+          <div class="collab-popup-group">${group}</div>
+          <a href="#${card.id}" class="collab-popup-link">Scroll to collaborator card &darr;</a>
+        </div>
+      `);
+
+      // Draw curved arrow from Dhanbad if location is outside Dhanbad
+      if (distFromHome > 0.1 && arcsGroup) {
+        const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        path.setAttribute('class', 'collab-arc-path');
+        path.setAttribute('id', 'arc-' + card.id);
+        path.setAttribute('marker-end', 'url(#collab-arrow-head)');
+        arcsGroup.appendChild(path);
+
+        arcPaths.push({
+          element: path,
+          targetCoords: coords,
+          cardId: card.id,
+          marker: marker
+        });
+
+        // Hover events on Arc
+        path.addEventListener('mouseenter', () => highlightNode(card, marker, path, true));
+        path.addEventListener('mouseleave', () => highlightNode(card, marker, path, false));
+        path.addEventListener('click', () => {
+          marker.openPopup();
+          card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+      }
+
+      // Card Click/Hover Interactivity
+      card.addEventListener('mouseenter', () => {
+        const pair = arcPaths.find(p => p.cardId === card.id);
+        if (pair) highlightNode(card, marker, pair.element, true);
+      });
+      card.addEventListener('mouseleave', () => {
+        const pair = arcPaths.find(p => p.cardId === card.id);
+        if (pair) highlightNode(card, marker, pair.element, false);
+      });
+      card.addEventListener('click', () => {
+        mapInstance.flyTo(coords, Math.max(mapInstance.getZoom(), 4.5), { duration: 1 });
+        marker.openPopup();
+      });
+    });
+
+    worldBounds = bounds;
+    // Fit entire world network neatly into the window
+    mapInstance.fitBounds(bounds, { padding: [35, 35], maxZoom: 2.8 });
+    renderCurves();
+  }
+
+  function highlightNode(card, marker, path, isActive) {
+    if (card) {
+      if (isActive) card.classList.add('active-card');
+      else card.classList.remove('active-card');
+    }
+    if (marker && marker._icon) {
+      const wrap = marker._icon.querySelector('.collab-marker-wrap');
+      if (wrap) {
+        if (isActive) wrap.classList.add('active');
+        else wrap.classList.remove('active');
+      }
+    }
+    if (path) {
+      if (isActive) {
+        path.classList.add('active');
+        path.setAttribute('marker-end', 'url(#collab-arrow-head-active)');
+      } else {
+        path.classList.remove('active');
+        path.setAttribute('marker-end', 'url(#collab-arrow-head)');
+      }
+    }
+  }
+
+  function renderCurves() {
+    if (!mapInstance) return;
+    const pHome = mapInstance.latLngToLayerPoint(DHANBAD);
+
+    arcPaths.forEach(arc => {
+      const pTarget = mapInstance.latLngToLayerPoint(arc.targetCoords);
+      const dx = pTarget.x - pHome.x;
+      const dy = pTarget.y - pHome.y;
+      const dist = Math.hypot(dx, dy);
+
+      if (dist < 2) {
+        arc.element.setAttribute('d', '');
+        return;
+      }
+
+      const mx = (pHome.x + pTarget.x) / 2;
+      const my = (pHome.y + pTarget.y) / 2;
+
+      // Normal vector
+      let px = -dy / dist;
+      let py = dx / dist;
+
+      // Curve upward (northward / negative py in screen coordinates)
+      if (py > 0) {
+        px = -px;
+        py = -py;
+      }
+      if (Math.abs(py) < 0.15) {
+        px = -0.7;
+        py = -0.5;
+      }
+
+      const arcHeight = Math.min(dist * 0.22, 105);
+      const cpx = mx + px * arcHeight;
+      const cpy = my + py * arcHeight;
+
+      // Tangent end point: stops 8px before target center so arrowhead sits outside the dot
+      const tdx = pTarget.x - cpx;
+      const tdy = pTarget.y - cpy;
+      const tdist = Math.hypot(tdx, tdy);
+      const offset = 8;
+      const endX = pTarget.x - (tdx / tdist) * offset;
+      const endY = pTarget.y - (tdy / tdist) * offset;
+
+      const d = `M ${pHome.x} ${pHome.y} Q ${cpx} ${cpy} ${endX} ${endY}`;
+      arc.element.setAttribute('d', d);
+    });
+  }
+
+  function setupRegionButtons() {
+    const btnWorld = document.getElementById('btn-view-world');
+    const btnEurope = document.getElementById('btn-view-europe');
+    const btnIndia = document.getElementById('btn-view-india');
+    const btnUSA = document.getElementById('btn-view-usa');
+    const btnToggleLabels = document.getElementById('btn-toggle-labels');
+
+    const regionBtns = [btnWorld, btnEurope, btnIndia, btnUSA];
+
+    function setActiveBtn(activeBtn) {
+      regionBtns.forEach(b => { if (b) b.classList.remove('active'); });
+      if (activeBtn) activeBtn.classList.add('active');
+    }
+
+    if (btnWorld) {
+      btnWorld.onclick = function() {
+        setActiveBtn(btnWorld);
+        if (mapInstance && worldBounds) {
+          mapInstance.fitBounds(worldBounds, { padding: [35, 35], maxZoom: 2.8 });
+        }
+      };
+    }
+
+    if (btnEurope) {
+      btnEurope.onclick = function() {
+        setActiveBtn(btnEurope);
+        if (mapInstance) {
+          // Zooms into European cluster (Sweden, Germany, France, Austria, Switzerland)
+          mapInstance.fitBounds([[41.5, -4.5], [61.5, 21.5]], { padding: [40, 40] });
+        }
+      };
+    }
+
+    if (btnIndia) {
+      btnIndia.onclick = function() {
+        setActiveBtn(btnIndia);
+        if (mapInstance) {
+          // Zooms into Indian institutions (IIT Delhi, Dhanbad, Kolkata)
+          mapInstance.fitBounds([[21.0, 75.0], [30.5, 89.5]], { padding: [40, 40] });
+        }
+      };
+    }
+
+    if (btnUSA) {
+      btnUSA.onclick = function() {
+        setActiveBtn(btnUSA);
+        if (mapInstance) {
+          // Zooms into US collaborators (UCF Orlando, USF Tampa)
+          mapInstance.fitBounds([[26.5, -84.5], [30.5, -79.5]], { padding: [50, 50] });
+        }
+      };
+    }
+
+    if (btnToggleLabels) {
+      btnToggleLabels.onclick = function() {
+        forceShowLabels = !forceShowLabels;
+        const container = document.getElementById('collab-map');
+        if (container) {
+          if (forceShowLabels) {
+            container.classList.add('show-all-labels');
+            btnToggleLabels.classList.add('active');
+            btnToggleLabels.innerHTML = '🏷️ Hide Names';
+          } else {
+            container.classList.remove('show-all-labels');
+            btnToggleLabels.classList.remove('active');
+            btnToggleLabels.innerHTML = '🏷️ Show Names';
+          }
+        }
+        renderCurves();
+      };
+    }
+  }
+
+  // Automatic observer: Whenever the user adds a new collaborator card to .collab-grid,
+  // the map automatically detects it, places a dot, and draws the arrow from Dhanbad!
+  function setupAutoObserver() {
+    const grid = document.querySelector('.collab-grid');
+    if (!grid || !window.MutationObserver) return;
+    const observer = new MutationObserver(() => {
+      syncCollaborators();
+    });
+    observer.observe(grid, { childList: true, subtree: true });
+  }
+
+  function start() {
+    initMap();
+    setupAutoObserver();
+  }
+
+  if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    setTimeout(start, 50);
+  } else {
+    document.addEventListener('DOMContentLoaded', start);
+  }
+})();
+</script>
 <div style="text-align: center; margin-bottom: 4rem;">
 <p style="font-size: 1.05rem; color: #666; margin-bottom: 1rem;">
 Interested in collaborating or pursuing graduate / postdoctoral research with GHYAN Lab?
