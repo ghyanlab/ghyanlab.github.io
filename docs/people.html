@@ -163,6 +163,148 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<style>
+/* Responsive 2-column layout for team members with full details */
+.team-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 1.5rem !important;
+}
+
+@media (max-width: 900px) {
+  .team-grid {
+    grid-template-columns: 1fr !important;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
+
+.member-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+  border-color: #cbd5e1;
+}
+
+.member-photo {
+  width: 130px !important;
+  height: 130px !important;
+  padding-bottom: 0 !important;
+  margin: 1.5rem auto 0 auto !important;
+  position: relative;
+  border: 3px solid #f1f5f9;
+  border-radius: 50% !important;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  flex-shrink: 0;
+}
+
+.member-photo img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.member-info {
+  padding: 1.25rem 1.4rem 1.4rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.member-info h3 {
+  margin: 0 0 0.35rem 0;
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #1e293b;
+  text-align: center;
+}
+
+.member-position {
+  font-size: 0.88rem;
+  color: #2563eb;
+  font-weight: 600;
+  margin: 0 0 0.25rem 0;
+  text-align: center;
+}
+
+.member-department {
+  font-size: 0.82rem;
+  color: #64748b;
+  margin: 0 0 0.75rem 0;
+  text-align: center;
+  line-height: 1.35;
+}
+
+.member-bio {
+  font-size: 0.84rem;
+  color: #475569;
+  line-height: 1.55;
+  margin: 0.25rem 0 0.85rem 0;
+  text-align: justify;
+}
+
+.member-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 1.1rem;
+  margin-top: auto;
+}
+
+.member-tag {
+  font-size: 0.73rem;
+  font-weight: 600;
+  padding: 0.22rem 0.55rem;
+  border-radius: 12px;
+  background: #f1f5f9;
+  color: #334155;
+  border: 1px solid #e2e8f0;
+  line-height: 1.3;
+}
+
+.member-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.85rem;
+  border-top: 1px solid #f1f5f9;
+  margin-top: auto;
+}
+
+.member-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: #0284c7 !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease;
+}
+
+.member-link-btn:hover {
+  color: #0369a1 !important;
+  text-decoration: underline !important;
+}
+</style>
+
 <div class="people-page">
 
   <!-- TEAM LEADER SIDEBAR -->
@@ -217,6 +359,7 @@ ul.task-list li input[type="checkbox"] {
 
     <div class="team-grid">
 
+      <!-- Member 1: Dr. Amar Kumar -->
       <div class="member-card">
         <div class="member-photo">
           <img src="images/Amar-pic.JPG" alt="Dr Amar Kumar">
@@ -224,11 +367,53 @@ ul.task-list li input[type="checkbox"] {
         <div class="member-info">
           <h3 class="anchored">Dr Amar Kumar</h3>
           <p class="member-position">Centenary Early Faculty Fellow</p>
-          <p class="member-department">Department of Physics</p>
-          <a href="mailto:8048@iitism.ac.in">Email ↗</a>
+          <p class="member-department">Department of Physics • IIT (ISM) Dhanbad</p>
+          <p class="member-bio">
+            Dr. Amar Kumar received his Ph.D. in Physics from IIT Delhi, India, in 2026, where he investigated the structural, electronic, and magnetic properties of Co-based Heusler alloys using first-principles methods. He is currently a Centenary Early Faculty Fellow in the GHYAN Lab, Department of Physics, IIT (ISM) Dhanbad. His research primarily focuses on computational condensed matter physics and multifunctional materials—such as Heusler alloys, perovskites, and altermagnets—for next-generation spintronic memories, neuromorphic computing, and artificial intelligence hardware.
+          </p>
+          <div class="member-tags">
+            <span class="member-tag">Altermagnetic Materials</span>
+            <span class="member-tag">Heusler Alloys</span>
+            <span class="member-tag">Density Functional Theory</span>
+            <span class="member-tag">Spintronic Memories &amp; AI Hardware</span>
+            <span class="member-tag">Quantum Computing</span>
+          </div>
+          <div class="member-links">
+            <a class="member-link-btn" href="mailto:8048@iitism.ac.in">
+              <svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+              Email ↗
+            </a>
+          </div>
         </div>
       </div>
 
+      <!-- Member 2: Dr. Chandan Vishwakarma (Visiting Scientist, after Amar) -->
+      <div class="member-card">
+        <div class="member-photo">
+          <img src="images/Chandan.jpg" alt="Dr. Chandan Vishwakarma">
+        </div>
+        <div class="member-info">
+          <h3 class="anchored">Dr. Chandan Vishwakarma</h3>
+          <p class="member-position">Visiting Scientist</p>
+          <p class="member-department">Postdoctoral Researcher, UC Santa Barbara (UCSB)</p>
+          <p class="member-bio">
+            Dr. Chandan Kumar Vishwakarma received his Ph.D. from IIT Delhi, India, and subsequently joined the University of California, Santa Barbara (UCSB) as a postdoctoral researcher. He is currently a Visiting Scientist in the GHYAN Lab, Department of Physics, IIT (ISM) Dhanbad. His research primarily focuses on computational condensed matter physics, with a particular emphasis on solid-state qubits—such as nitrogen-vacancy (NV) centers in diamond—and the exploration of novel functional materials.
+          </p>
+          <div class="member-tags">
+            <span class="member-tag">First Principles Calculations</span>
+            <span class="member-tag">Density Functional Theory</span>
+            <span class="member-tag">NV sensing</span>
+          </div>
+          <div class="member-links">
+            <a class="member-link-btn" href="https://scholar.google.com/citations?user=CDpywfwAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">
+              <svg width="14" height="14" viewbox="0 0 24 24" fill="#4285F4"><path d="M12 24a12 12 0 1 1 0-24 12 12 0 0 1 0 24zm-.354-18.736a.65.65 0 0 0-.292.071L3.896 9.2a.652.652 0 0 0 0 1.144l7.458 3.865a.652.652 0 0 0 .592 0l6.762-3.504v5.42a.652.652 0 1 0 1.304 0v-6.07a.652.652 0 0 0-.356-.582L12.238 5.335a.65.65 0 0 0-.592 0zm.354 7.02l-5.632-2.918 5.632-2.919 5.632 2.919-5.632 2.918zm0 2.133a8.877 8.877 0 0 0-4.372 1.127.652.652 0 1 0 .668 1.122 7.575 7.575 0 0 1 7.408 0 .652.652 0 1 0 .668-1.122 8.877 8.877 0 0 0-4.372-1.127z"></path></svg>
+              Google Scholar ↗
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Member 3: Aniruddha Rana -->
       <div class="member-card">
         <div class="member-photo">
           <img src="images/Anirudh.jpeg" alt="Aniruddha Rana">
@@ -236,11 +421,23 @@ ul.task-list li input[type="checkbox"] {
         <div class="member-info">
           <h3 class="anchored">Aniruddha Rana</h3>
           <p class="member-position">PhD Researcher</p>
-          <p class="member-department">Department of Physics</p>
-          <a href="mailto:26dr0062@iitism.ac.in">Email ↗</a>
+          <p class="member-department">Department of Physics • IIT (ISM) Dhanbad</p>
+          <p class="member-bio">
+            Conducting experimental and computational research in condensed matter physics, focusing on spin-orbit torque (SOT) phenomena, thin-film heterostructures, and device engineering.
+          </p>
+          <div class="member-tags">
+            <span class="member-tag">Spin-Orbitronics</span>
+          </div>
+          <div class="member-links">
+            <a class="member-link-btn" href="mailto:26dr0062@iitism.ac.in">
+              <svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+              Email ↗
+            </a>
+          </div>
         </div>
       </div>
 
+      <!-- Member 4: Aditya Kumar -->
       <div class="member-card">
         <div class="member-photo">
           <img src="images/Aditya.jpeg" alt="Aditya Kumar">
@@ -248,8 +445,19 @@ ul.task-list li input[type="checkbox"] {
         <div class="member-info">
           <h3 class="anchored">Aditya Kumar</h3>
           <p class="member-position">MSc Student</p>
-          <p class="member-department">Department of Physics</p>
-          <a href="mailto:26ms0010@iitism.ac.in">Email ↗</a>
+          <p class="member-department">Department of Physics • IIT (ISM) Dhanbad</p>
+          <p class="member-bio">
+            Engaged in master's thesis research exploring high-frequency and microwave electromagnetic design for advanced spintronic devices and quantum systems.
+          </p>
+          <div class="member-tags">
+            <span class="member-tag">Desiging of resonator/antenna for spin-orbitronic and quantum technology</span>
+          </div>
+          <div class="member-links">
+            <a class="member-link-btn" href="mailto:26ms0010@iitism.ac.in">
+              <svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+              Email ↗
+            </a>
+          </div>
         </div>
       </div>
 
