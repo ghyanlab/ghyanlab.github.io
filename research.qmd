@@ -188,33 +188,6 @@ We aim to utilize nitrogen-vacancy (NV) diamond center magnetometry and atomic-s
 
 ```{=html}
 <div class="grant-grid">
-
-  <!-- GRANT 1: Swedish Research Council (VR) -->
-  <div class="grant-card">
-    <div class="grant-header">
-      <div>
-        <h3 class="grant-title">T-SHNO: Terahertz Spin Hall Nano Oscillator</h3>
-        <p style="margin: 0.35rem 0 0 0; color: #003e6b; font-weight: 600; font-size: 0.95rem;">
-          Swedish Research Council (Vetenskapsrådet - VR) &bull; Project ID: 2023-06605
-        </p>
-      </div>
-      <span class="grant-status-badge">Funded Project</span>
-    </div>
-    <div class="grant-meta">
-      <div class="grant-meta-item"><strong>Principal Investigator:</strong> Dr. Rahul Gupta</div>
-      <div class="grant-meta-item"><strong>Funding Agency:</strong> Vetenskapsrådet (VR), Sweden</div>
-      <div class="grant-meta-item"><strong>Domain:</strong> Terahertz Spintronics &amp; Nano-Devices</div>
-      <div class="grant-meta-item"><strong>Timeline:</strong> 2024 – 2026</div>
-    </div>
-    <p class="grant-desc">
-    </p>
-    <div>
-      <a href="https://www.vr.se/english/swecris.html#/project/2023-06605_VR" target="_blank" rel="noopener noreferrer" class="grant-link">
-        View Project Details on Swecris (Swedish Research Council Portal) ↗
-      </a>
-    </div>
-  </div>
-
   <!-- GRANT 2: IIT ISM Initiation Grant -->
   <div class="grant-card">
     <div class="grant-header">
@@ -236,7 +209,7 @@ We aim to utilize nitrogen-vacancy (NV) diamond center magnetometry and atomic-s
     </p>
   </div>
 
-  <!-- GRANT 3: Royal Swedish Academy of Sciences Scholarship -->
+<!-- GRANT 2: Royal Swedish Academy of Sciences Scholarship -->
   <div class="grant-card" style="margin-top: 1.5rem;">
     <div class="grant-header">
       <div>
@@ -250,11 +223,37 @@ We aim to utilize nitrogen-vacancy (NV) diamond center magnetometry and atomic-s
     <div class="grant-meta">
       <div class="grant-meta-item"><strong>Recipient:</strong> Dr. Rahul Gupta</div>
       <div class="grant-meta-item"><strong>Funding Body:</strong> The Royal Swedish Academy of Sciences, Sweden</div>
-      <div class="grant-meta-item"><strong>Period:</strong> 2025-2026</div>
+      <div class="grant-meta-item"><strong>Period:</strong> 2025-Present</div>
       <div class="grant-meta-item"><strong>Domain:</strong> Quantum Sensing (Nitrogen-Vacancy Centers)</div>
     </div>
     <p class="grant-desc">
     </p>
+  </div>
+
+  <!-- GRANT 3: Swedish Research Council (VR) -->
+  <div class="grant-card">
+    <div class="grant-header">
+      <div>
+        <h3 class="grant-title">T-SHNO: Terahertz Spin Hall Nano Oscillator</h3>
+        <p style="margin: 0.35rem 0 0 0; color: #003e6b; font-weight: 600; font-size: 0.95rem;">
+          Swedish Research Council (Vetenskapsrådet - VR) &bull; Project ID: 2023-06605
+        </p>
+      </div>
+      <span class="grant-status-badge">Funded Project</span>
+    </div>
+    <div class="grant-meta">
+      <div class="grant-meta-item"><strong>Principal Investigator:</strong> Dr. Rahul Gupta</div>
+      <div class="grant-meta-item"><strong>Funding Agency:</strong> Swedish Research Council (Vetenskapsrådet), Sweden</div>
+      <div class="grant-meta-item"><strong>Domain:</strong> Terahertz Spintronics &amp; Nano-Devices</div>
+      <div class="grant-meta-item"><strong>Timeline:</strong> 2024 – 2026</div>
+    </div>
+    <p class="grant-desc">
+    </p>
+    <div>
+      <a href="https://www.vr.se/english/swecris.html#/project/2023-06605_VR" target="_blank" rel="noopener noreferrer" class="grant-link">
+        View Project Details on Swecris (Swedish Research Council Portal) ↗
+      </a>
+    </div>
   </div>
 
   <!-- GRANT 4: Erasmus+ Staff Exchange Fellowship -->

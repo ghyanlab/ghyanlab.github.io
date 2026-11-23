@@ -53,7 +53,7 @@ page-layout: full
   <div class="team-section">
     <div class="team-heading">
       <div>
-        <h2>The Team</h2>
+        <h2>Team Members</h2>
       </div>
     </div>
 
