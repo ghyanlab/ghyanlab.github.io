@@ -16,11 +16,19 @@ page-layout: full
     </a>
     <a href="#research-grants" class="section-jump-link">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-      Research Grants &amp; Funding
+      Grants &amp; Funding
     </a>
-    <a href="#collaborations" class="section-jump-link">
+    <a href="#collaborations" class="section-jump-link tab-collab">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
-      Collaborations, Talks &amp; Visits
+      Collaborations
+    </a>
+    <a href="#invited-talks" class="section-jump-link tab-talks">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg>
+      Invited &amp; Oral Talks
+    </a>
+    <a href="#academic-visits" class="section-jump-link tab-visits">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+      Academic Visits
     </a>
   </div>
 </div>
@@ -286,8 +294,8 @@ We aim to utilize nitrogen-vacancy (NV) diamond center magnetometry and atomic-s
 <!-- ======================================================== -->
 
 <div id="collaborations" class="research-section-header">
-  <h2>Collaborations, Talks &amp; Academic Visits</h2>
-  <p>Our group actively engages with leading research institutions, international conferences, and scientific facilities worldwide</p>
+  <h2>Global Collaborations &amp; Research Network</h2>
+  <p>Our group actively collaborates with leading international and national research institutions, university departments, and facilities worldwide</p>
 </div>
 
 ```{=html}
@@ -296,7 +304,55 @@ We aim to utilize nitrogen-vacancy (NV) diamond center magnetometry and atomic-s
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
 <style>
-/* Self-contained styling for Collaboration Map (immune to browser CSS caching) */
+/* Self-contained styling for Collaboration Map & Jump Tabs (immune to browser CSS caching) */
+.section-jump-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 1.5rem auto 0.5rem auto;
+}
+.section-jump-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 50px;
+  background: #ffffff;
+  color: #334155;
+  text-decoration: none !important;
+  font-weight: 600;
+  font-size: 0.90rem;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+.section-jump-link:hover {
+  background: #f8fafc;
+  border-color: #94a3b8;
+  color: #0f172a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.section-jump-link.tab-collab:hover {
+  background: #f0f9ff;
+  border-color: #0284c7;
+  color: #0369a1;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.15);
+}
+.section-jump-link.tab-talks:hover {
+  background: #f5f3ff;
+  border-color: #8b5cf6;
+  color: #6d28d9;
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.15);
+}
+.section-jump-link.tab-visits:hover {
+  background: #fffbf5;
+  border-color: #e67e22;
+  color: #b45309;
+  box-shadow: 0 4px 12px rgba(230, 126, 34, 0.15);
+}
 .collab-map-container {
   max-width: 1020px;
   margin: 0 auto 3rem auto;
@@ -1138,13 +1194,9 @@ We aim to utilize nitrogen-vacancy (NV) diamond center magnetometry and atomic-s
 <!-- INVITED & ORAL TALKS                                                    -->
 <!-- ======================================================================= -->
 <div class="talks-section" id="invited-talks">
-  <div style="text-align: center; margin-bottom: 1.75rem; margin-top: 3.5rem;">
-    <h3 style="font-size: 1.6rem; font-weight: 800; color: #1e293b; margin-bottom: 0.4rem;">
-      Invited &amp; Oral Talks
-    </h3>
-    <p style="color: #64748b; font-size: 0.95rem; max-width: 720px; margin: 0 auto;">
-      Invited keynotes, oral presentations, and seminars delivered at international conferences, university colloquia, and advanced workshops. Click any talk to locate it on the map above.
-    </p>
+  <div class="research-section-header" style="margin-top: 4.5rem; margin-bottom: 2.5rem;">
+    <h2>Invited &amp; Oral Talks</h2>
+    <p>Invited keynotes, oral presentations, and seminars delivered at international conferences, university colloquia, and advanced workshops. Click any talk to locate it on the map above.</p>
   </div>
 
   <div class="talks-grid">
@@ -1432,14 +1484,12 @@ We aim to utilize nitrogen-vacancy (NV) diamond center magnetometry and atomic-s
   </div>
 </div>
 <!-- ======================================================================= -->
+<!-- ACADEMIC VISITS & SCIENTIFIC EXCHANGES                                   -->
+<!-- ======================================================================= -->
 <div class="visits-section" id="academic-visits">
-  <div style="text-align: center; margin-bottom: 1.75rem; margin-top: 3.5rem;">
-    <h3 style="font-size: 1.6rem; font-weight: 800; color: #1e293b; margin-bottom: 0.4rem;">
-      Academic Visits &amp; Scientific Exchanges
-    </h3>
-    <p style="color: #64748b; font-size: 0.95rem; max-width: 720px; margin: 0 auto;">
-      International research visits, conferences, advanced schools, and workshops. Click any visit to locate it on the map above.
-    </p>
+  <div class="research-section-header" style="margin-top: 4.5rem; margin-bottom: 2.5rem;">
+    <h2>Academic Visits &amp; Scientific Exchanges</h2>
+    <p>International research visits, conferences, advanced schools, and workshops. Click any visit to locate it on the map above.</p>
   </div>
 
   <div class="visits-grid">
