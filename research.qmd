@@ -20,7 +20,7 @@ page-layout: full
     </a>
     <a href="#collaborations" class="section-jump-link">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
-      Collaborations
+      Collaborations &amp; Visits
     </a>
   </div>
 </div>
@@ -40,7 +40,7 @@ page-layout: full
 :::: {.research-row}
 ::: {.research-text}
 ### Magnetism &amp; Spintronics
-We study the fundamental magnetic properties of novel materials and how electron spin can be utilized for energy-efficient memory and logic devices. By understanding spin transport, spin-orbit torque (SOT), and magnetization dynamics, we aim to design next-generation magnetic RAM (SOT-MRAM) and spin-logic architectures that drastically reduce standby and switching power consumption.
+We study the fundamental magnetic properties of novel quantum materials and how electron spin can be utilized for energy-efficient memory and logic devices. By understanding spin transport, spin-orbit torque (SOT), and spin dynamics, we aim to design next-generation magnetic RAM (SOT-MRAM) and spin-logic architectures that drastically reduce standby and switching power consumption.
 
 ```{=html}
 <div class="research-pubs">
@@ -76,7 +76,7 @@ We study the fundamental magnetic properties of novel materials and how electron
 :::: {.research-row}
 ::: {.research-text}
 ### Orbitronics
-Beyond the spin degree of freedom, orbital angular momentum offers an exciting, energy-efficient dimension for information processing. We investigate orbitally-driven transport phenomena, including the orbital Hall effect (OHE) and orbital Rashba-Edelstein effect, in light metals (such as Ru, Cr, etc.) and transition metal oxides, unlocking pathways for high-efficiency torque generation without relying on heavy or scarce elements.
+Beyond the spin degree of freedom, orbital angular momentum offers an exciting, energy-efficient dimension for information processing. We investigate orbital angular momentum-driven transport phenomena, including the orbital Hall effect (OHE) and orbital Rashba-Edelstein effect, in light metals (such as Ru, Cr, etc.) and transition metal oxides, unlocking pathways for high-efficiency torque generation without relying on heavy or scarce elements.
 
 ```{=html}
 <div class="research-pubs">
@@ -111,8 +111,8 @@ Beyond the spin degree of freedom, orbital angular momentum offers an exciting, 
 
 :::: {.research-row}
 ::: {.research-text}
-### Terahertz Spintronics
-Exploring the generation, manipulation, and detection of terahertz (THz) radiation using ultrafast spintronic heterostructures. By exploiting inverse spin and orbital Hall effects, anomalous Hall phenomena, we develop ultra-broadband, low-cost spintronic THz emitters (STEs) for high-speed wireless communication, radar, and non-destructive spectroscopic imaging.
+### Terahertz Spin-Orbitronics
+Exploring the generation, manipulation, and detection of terahertz (THz) radiation using ultrafast spin-orbitronic heterostructures. By exploiting inverse spin and orbital Hall effects, anomalous Hall phenomena, we develop ultra-broadband, low-cost spintronic THz emitters (STEs) for high-speed wireless communication, radar, and non-destructive spectroscopic imaging.
 
 ```{=html}
 <div class="research-pubs">
@@ -147,7 +147,7 @@ Exploring the generation, manipulation, and detection of terahertz (THz) radiati
 
 :::: {.research-row}
 ::: {.research-text}
-### Quantum Sensing (NV Sensing)
+### Quantum Sensing: Spin-Orbit Torque (SOT) and Nitrogen-Vacancy (NV) Centers
 We aim to utilize nitrogen-vacancy (NV) diamond center magnetometry and atomic-scale quantum sensors to non-invasively probe nanoscale spin configurations, stray magnetic fields, and spin currents with high spatial resolution and sensitivity. By integrating NV center quantum defects with magnetic heterostructures, 2D quantum materials, and spintronic devices, we investigate local spin-orbit torque switching, magnon dynamics, and topological spin textures (such as domain walls and skyrmions) from cryogenic to room temperatures.
 
 ```{=html}
@@ -286,8 +286,8 @@ We aim to utilize nitrogen-vacancy (NV) diamond center magnetometry and atomic-s
 <!-- ======================================================== -->
 
 <div id="collaborations" class="research-section-header">
-  <h2>Collaborations</h2>
-  <p>Our group actively collaborates with leading international and national research institutions, university departments, and industry partners</p>
+  <h2>Collaborations &amp; Academic Visits</h2>
+  <p>Our group actively collaborates with leading international and national research institutions, university departments, and research facilities worldwide</p>
 </div>
 
 ```{=html}
@@ -449,6 +449,148 @@ We aim to utilize nitrogen-vacancy (NV) diamond center magnetometry and atomic-s
   background: #0284c7;
   border: 2px solid #ffffff;
   box-shadow: 0 0 0 2px #0284c7;
+}
+.legend-dot.visit-dot {
+  background: #e67e22;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 0 2px #e67e22;
+}
+
+/* Academic Visits Styling */
+.visits-section {
+  max-width: 1020px;
+  margin: 3.5rem auto 3rem auto;
+}
+.visits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.85rem;
+  margin-top: 1.5rem;
+}
+@media (max-width: 768px) {
+  .visits-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+}
+.visit-item {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 0.85rem 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  text-decoration: none !important;
+  color: inherit !important;
+}
+.visit-item:hover,
+.visit-item.active-visit {
+  background: #fffbf5;
+  border-color: #e67e22;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(230, 126, 34, 0.12);
+}
+.visit-item-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+.visit-dot-badge {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #e67e22;
+  box-shadow: 0 0 0 2px rgba(230, 126, 34, 0.2);
+  flex-shrink: 0;
+}
+.visit-year-pill {
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: 12px;
+  background: #fef3c7;
+  color: #92400e;
+  letter-spacing: 0.02em;
+}
+.visit-item-content {
+  flex: 1;
+  min-width: 0;
+}
+.visit-title {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #1e293b;
+  line-height: 1.35;
+}
+.visit-meta {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-top: 0.15rem;
+  line-height: 1.3;
+}
+.visit-locate-hint {
+  font-size: 0.85rem;
+  opacity: 0.4;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  flex-shrink: 0;
+}
+.visit-item:hover .visit-locate-hint,
+.visit-item.active-visit .visit-locate-hint {
+  opacity: 1;
+  transform: scale(1.2);
+}
+.visit-marker-wrap {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+}
+.visit-marker-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #e67e22;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 0 1px #e67e22, 0 2px 6px rgba(230, 126, 34, 0.35);
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.2s, box-shadow 0.2s;
+  flex-shrink: 0;
+}
+.visit-marker-wrap:hover .visit-marker-dot,
+.visit-marker-wrap.active .visit-marker-dot {
+  transform: scale(1.5);
+  background: #d35400;
+  box-shadow: 0 0 0 2px #ffffff, 0 0 12px rgba(230, 126, 34, 0.7);
+}
+.map-zoomed-in .visit-marker-wrap .collab-marker-label,
+.visit-marker-wrap:hover .collab-marker-label,
+.show-all-labels .visit-marker-wrap .collab-marker-label {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+.visit-label-inst {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #d35400;
+  display: block;
+  line-height: 1.25;
+  margin-top: 1px;
+}
+.visit-popup-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #d35400;
+  margin-bottom: 0.2rem;
 }
 .collab-marker-wrap {
   position: relative;
@@ -669,21 +811,21 @@ We aim to utilize nitrogen-vacancy (NV) diamond center magnetometry and atomic-s
   <div class="collab-map-header">
     <div>
       <div class="collab-map-badge">
-        <span class="collab-pulse-dot"></span> Active Research Network
+        <span class="collab-pulse-dot"></span> Active Research &amp; Visit Network
       </div>
-      <h3 class="collab-map-title">Global Collaboration Network</h3>
+      <h3 class="collab-map-title">Global Collaboration &amp; Academic Network</h3>
       <p class="collab-map-subtitle">
-        Our research group maintains a vibrant network of collaborators across Europe, North America, and Asia. The map below visualizes our international partnerships, highlighting the locations of our collaborators and their respective institutions.
+        Our research group maintains a vibrant network of international collaborators, research visits, conferences, and advanced facilities across Europe, the Americas, and Asia.
       </p>
     </div>
     
     <!-- Region Preset Buttons and Label Toggle -->
     <div class="collab-map-actions">
       <button class="collab-region-btn active" id="btn-view-world" type="button" title="View Full World Map">🌍 World View</button>
-      <button class="collab-region-btn" id="btn-view-europe" type="button" title="Zoom into European Collaborators">🇪🇺 Europe</button>
-      <button class="collab-region-btn" id="btn-view-india" type="button" title="Zoom into Indian Collaborators">🇮🇳 India</button>
-      <button class="collab-region-btn" id="btn-view-usa" type="button" title="Zoom into US Collaborators">🇺🇸 USA</button>
-      <button class="collab-toggle-btn" id="btn-toggle-labels" type="button" title="Toggle Professor Names On/Off">🏷️ Show Names</button>
+      <button class="collab-region-btn" id="btn-view-europe" type="button" title="Zoom into European Collaborators &amp; Visits">🇪🇺 Europe</button>
+      <button class="collab-region-btn" id="btn-view-india" type="button" title="Zoom into Indian Institutions &amp; Visits">🇮🇳 India</button>
+      <button class="collab-region-btn" id="btn-view-usa" type="button" title="Zoom into US Collaborators &amp; Visits">🇺🇸 USA</button>
+      <button class="collab-toggle-btn" id="btn-toggle-labels" type="button" title="Toggle Names On/Off">🏷️ Show Names</button>
     </div>
   </div>
 
@@ -703,6 +845,10 @@ We aim to utilize nitrogen-vacancy (NV) diamond center magnetometry and atomic-s
       <div class="legend-item">
         <span class="legend-dot partner-dot"></span>
         <span><strong>Collaborators:</strong> Global Partners</span>
+      </div>
+      <div class="legend-item">
+        <span class="legend-dot visit-dot"></span>
+        <span><strong>Academic Visits:</strong> Workshops, Conferences &amp; Labs</span>
       </div>
     </div>
   </div>
@@ -809,6 +955,284 @@ We aim to utilize nitrogen-vacancy (NV) diamond center magnetometry and atomic-s
 
 </div>
 
+<!-- ======================================================================= -->
+<!-- ACADEMIC VISITS & SCIENTIFIC EXCHANGES                                   -->
+<!-- ======================================================================= -->
+<div class="visits-section" id="academic-visits">
+  <div style="text-align: center; margin-bottom: 1.75rem; margin-top: 3.5rem;">
+    <h3 style="font-size: 1.6rem; font-weight: 800; color: #1e293b; margin-bottom: 0.4rem;">
+      Academic Visits &amp; Scientific Exchanges
+    </h3>
+    <p style="color: #64748b; font-size: 0.95rem; max-width: 720px; margin: 0 auto;">
+      International research visits, conferences, advanced schools, and workshops. Click any visit to locate it on the map above.
+    </p>
+  </div>
+
+  <div class="visits-grid">
+
+    <!-- 1 -->
+    <div class="visit-item" id="visit-1" data-lat="42.3601" data-lng="-71.0942" data-title="The Rose Group" data-institution="Massachusetts Institute of Technology" data-city="Massachusetts" data-country="USA" data-year="2025">
+      <div class="visit-item-left">
+        <span class="visit-dot-badge"></span>
+        <span class="visit-year-pill">2025</span>
+      </div>
+      <div class="visit-item-content">
+        <div class="visit-title">The Rose Group, Massachusetts Institute of Technology</div>
+        <div class="visit-meta">Massachusetts, USA</div>
+      </div>
+      <span class="visit-locate-hint" title="Locate on Map">📍</span>
+    </div>
+
+    <!-- 2 -->
+    <div class="visit-item" id="visit-2" data-lat="40.7295" data-lng="-73.9965" data-title="Kent Laboratory" data-institution="New York University" data-city="New York" data-country="USA" data-year="2025">
+      <div class="visit-item-left">
+        <span class="visit-dot-badge"></span>
+        <span class="visit-year-pill">2025</span>
+      </div>
+      <div class="visit-item-content">
+        <div class="visit-title">Kent Laboratory, New York University</div>
+        <div class="visit-meta">New York, USA</div>
+      </div>
+      <span class="visit-locate-hint" title="Locate on Map">📍</span>
+    </div>
+
+    <!-- 3 -->
+    <div class="visit-item" id="visit-3" data-lat="26.7153" data-lng="-80.0534" data-title="MMM Conference" data-institution="Conference on Magnetism &amp; Magnetic Materials" data-city="West Palm Beach, Florida" data-country="USA" data-year="2025">
+      <div class="visit-item-left">
+        <span class="visit-dot-badge"></span>
+        <span class="visit-year-pill">2025</span>
+      </div>
+      <div class="visit-item-content">
+        <div class="visit-title">MMM Conference</div>
+        <div class="visit-meta">West Palm Beach, Florida, USA</div>
+      </div>
+      <span class="visit-locate-hint" title="Locate on Map">📍</span>
+    </div>
+
+    <!-- 4 -->
+    <div class="visit-item" id="visit-4" data-lat="59.6173" data-lng="17.7237" data-title="Orbitronics Workshop" data-institution="International Orbitronics Workshop" data-city="Sigtuna / Stockholm" data-country="Sweden" data-year="2025">
+      <div class="visit-item-left">
+        <span class="visit-dot-badge"></span>
+        <span class="visit-year-pill">2025</span>
+      </div>
+      <div class="visit-item-content">
+        <div class="visit-title">Orbitronics Workshop</div>
+        <div class="visit-meta">Sweden</div>
+      </div>
+      <span class="visit-locate-hint" title="Locate on Map">📍</span>
+    </div>
+
+    <!-- 5 -->
+    <div class="visit-item" id="visit-5" data-lat="59.8540" data-lng="17.6320" data-title="Trends in Magnetism Workshop" data-institution="Uppsala University" data-city="Uppsala" data-country="Sweden" data-year="2025">
+      <div class="visit-item-left">
+        <span class="visit-dot-badge"></span>
+        <span class="visit-year-pill">2025</span>
+      </div>
+      <div class="visit-item-content">
+        <div class="visit-title">Trends in Magnetism Workshop</div>
+        <div class="visit-meta">Uppsala, Sweden</div>
+      </div>
+      <span class="visit-locate-hint" title="Locate on Map">📍</span>
+    </div>
+
+    <!-- 6 -->
+    <div class="visit-item" id="visit-6" data-lat="36.6217" data-lng="29.1164" data-title="ICSM Conference" data-institution="International Conference on Superconductivity &amp; Magnetism" data-city="Fethiye" data-country="Turkey" data-year="2025">
+      <div class="visit-item-left">
+        <span class="visit-dot-badge"></span>
+        <span class="visit-year-pill">2025</span>
+      </div>
+      <div class="visit-item-content">
+        <div class="visit-title">ICSM Conference</div>
+        <div class="visit-meta">Turkey</div>
+      </div>
+      <span class="visit-locate-hint" title="Locate on Map">📍</span>
+    </div>
+
+    <!-- 7 -->
+    <div class="visit-item" id="visit-7" data-lat="-22.9068" data-lng="-43.1729" data-title="Intermag Conference" data-institution="IEEE International Magnetics Conference" data-city="Rio de Janeiro" data-country="Brazil" data-year="2024">
+      <div class="visit-item-left">
+        <span class="visit-dot-badge"></span>
+        <span class="visit-year-pill">2024</span>
+      </div>
+      <div class="visit-item-content">
+        <div class="visit-title">Intermag Conference</div>
+        <div class="visit-meta">Rio de Janeiro, Brazil</div>
+      </div>
+      <span class="visit-locate-hint" title="Locate on Map">📍</span>
+    </div>
+
+    <!-- 8 -->
+    <div class="visit-item" id="visit-8" data-lat="50.6450" data-lng="7.2267" data-title="WE-Heraeus Seminar" data-institution="Physikzentrum Bad Honnef" data-city="Bad Honnef" data-country="Germany" data-year="2024">
+      <div class="visit-item-left">
+        <span class="visit-dot-badge"></span>
+        <span class="visit-year-pill">2024</span>
+      </div>
+      <div class="visit-item-content">
+        <div class="visit-title">WE-Heraeus Seminar, Physikzentrum Bad Honnef</div>
+        <div class="visit-meta">Bad Honnef, Germany</div>
+      </div>
+      <span class="visit-locate-hint" title="Locate on Map">📍</span>
+    </div>
+
+    <!-- 9 -->
+    <div class="visit-item" id="visit-9" data-lat="41.5005" data-lng="2.1102" data-title="Orbital Current 2023" data-institution="Institute of Materials Science of Barcelona (ICMAB-CSIC)" data-city="Barcelona" data-country="Spain" data-year="2023">
+      <div class="visit-item-left">
+        <span class="visit-dot-badge"></span>
+        <span class="visit-year-pill">2023</span>
+      </div>
+      <div class="visit-item-content">
+        <div class="visit-title">Orbital Current 2023, Institute of Materials Science of Barcelona</div>
+        <div class="visit-meta">Spain</div>
+      </div>
+      <span class="visit-locate-hint" title="Locate on Map">📍</span>
+    </div>
+
+    <!-- 10 -->
+    <div class="visit-item" id="visit-10" data-lat="51.0269" data-lng="13.7268" data-title="DPG Spring Meeting" data-institution="German Physical Society &bull; TU Dresden" data-city="Dresden" data-country="Germany" data-year="2023">
+      <div class="visit-item-left">
+        <span class="visit-dot-badge"></span>
+        <span class="visit-year-pill">2023</span>
+      </div>
+      <div class="visit-item-content">
+        <div class="visit-title">DPG Spring Meeting</div>
+        <div class="visit-meta">Dresden, Germany</div>
+      </div>
+      <span class="visit-locate-hint" title="Locate on Map">📍</span>
+    </div>
+
+    <!-- 11 -->
+    <div class="visit-item" id="visit-11" data-lat="49.9748" data-lng="8.0556" data-title="Ultrafast Antiferromagnetic Writing Workshop" data-institution="International Workshop" data-city="Ingelheim" data-country="Germany" data-year="2022">
+      <div class="visit-item-left">
+        <span class="visit-dot-badge"></span>
+        <span class="visit-year-pill">2022</span>
+      </div>
+      <div class="visit-item-content">
+        <div class="visit-title">Ultrafast Antiferromagnetic Writing Workshop</div>
+        <div class="visit-meta">Ingelheim, Germany</div>
+      </div>
+      <span class="visit-locate-hint" title="Locate on Map">📍</span>
+    </div>
+
+    <!-- 12 -->
+    <div class="visit-item" id="visit-12" data-lat="59.3650" data-lng="18.0588" data-title="Stefano Bonetti’s Laboratory" data-institution="Stockholm University" data-city="Stockholm" data-country="Sweden" data-year="2021">
+      <div class="visit-item-left">
+        <span class="visit-dot-badge"></span>
+        <span class="visit-year-pill">2021</span>
+      </div>
+      <div class="visit-item-content">
+        <div class="visit-title">Stefano Bonetti’s Laboratory, Stockholm University</div>
+        <div class="visit-meta">Stockholm, Sweden</div>
+      </div>
+      <span class="visit-locate-hint" title="Locate on Map">📍</span>
+    </div>
+
+    <!-- 13 -->
+    <div class="visit-item" id="visit-13" data-lat="43.4623" data-lng="-3.8099" data-title="ESpinRed School on Spintronics" data-institution="Spanish Spintronics Network" data-city="Santander / Madrid" data-country="Spain" data-year="2021">
+      <div class="visit-item-left">
+        <span class="visit-dot-badge"></span>
+        <span class="visit-year-pill">2021</span>
+      </div>
+      <div class="visit-item-content">
+        <div class="visit-title">ESpinRed School on Spintronics</div>
+        <div class="visit-meta">Spain</div>
+      </div>
+      <span class="visit-locate-hint" title="Locate on Map">📍</span>
+    </div>
+
+    <!-- 14 -->
+    <div class="visit-item" id="visit-14" data-lat="59.8620" data-lng="17.6450" data-title="Joint European Magnetic Symposia (JEMS)" data-institution="Uppsala University" data-city="Uppsala" data-country="Sweden" data-year="2019">
+      <div class="visit-item-left">
+        <span class="visit-dot-badge"></span>
+        <span class="visit-year-pill">2019</span>
+      </div>
+      <div class="visit-item-content">
+        <div class="visit-title">Joint European Magnetic Symposia (JEMS)</div>
+        <div class="visit-meta">Uppsala, Sweden</div>
+      </div>
+      <span class="visit-locate-hint" title="Locate on Map">📍</span>
+    </div>
+
+    <!-- 15 -->
+    <div class="visit-item" id="visit-15" data-lat="37.5407" data-lng="-77.4360" data-title="IEEE Magnetics Summer School" data-institution="Virginia Commonwealth University" data-city="Richmond, Virginia" data-country="USA" data-year="2019">
+      <div class="visit-item-left">
+        <span class="visit-dot-badge"></span>
+        <span class="visit-year-pill">2019</span>
+      </div>
+      <div class="visit-item-content">
+        <div class="visit-title">IEEE Magnetics Summer School</div>
+        <div class="visit-meta">Virginia, USA</div>
+      </div>
+      <span class="visit-locate-hint" title="Locate on Map">📍</span>
+    </div>
+
+    <!-- 16 -->
+    <div class="visit-item" id="visit-16" data-lat="39.1434" data-lng="-77.2014" data-title="NIST" data-institution="National Institute of Standards and Technology" data-city="Gaithersburg, Maryland" data-country="USA" data-year="2019">
+      <div class="visit-item-left">
+        <span class="visit-dot-badge"></span>
+        <span class="visit-year-pill">2019</span>
+      </div>
+      <div class="visit-item-content">
+        <div class="visit-title">NIST (National Institute of Standards and Technology)</div>
+        <div class="visit-meta">Gaithersburg, USA</div>
+      </div>
+      <span class="visit-locate-hint" title="Locate on Map">📍</span>
+    </div>
+
+    <!-- 17 -->
+    <div class="visit-item" id="visit-17" data-lat="45.2066" data-lng="5.6917" data-title="Institut Laue-Langevin (ILL) Neutron Facility" data-institution="European Neutron Source" data-city="Grenoble" data-country="France" data-year="2019">
+      <div class="visit-item-left">
+        <span class="visit-dot-badge"></span>
+        <span class="visit-year-pill">2019</span>
+      </div>
+      <div class="visit-item-content">
+        <div class="visit-title">Institut Laue-Langevin (ILL) Neutron Facility</div>
+        <div class="visit-meta">Grenoble, France</div>
+      </div>
+      <span class="visit-locate-hint" title="Locate on Map">📍</span>
+    </div>
+
+    <!-- 18 -->
+    <div class="visit-item" id="visit-18" data-lat="50.0647" data-lng="19.9450" data-title="European School of Magnetism" data-institution="ESM &bull; AGH / Jagiellonian University" data-city="Krakow" data-country="Poland" data-year="2018">
+      <div class="visit-item-left">
+        <span class="visit-dot-badge"></span>
+        <span class="visit-year-pill">2018</span>
+      </div>
+      <div class="visit-item-content">
+        <div class="visit-title">European School of Magnetism (ESM)</div>
+        <div class="visit-meta">Krakow, Poland</div>
+      </div>
+      <span class="visit-locate-hint" title="Locate on Map">📍</span>
+    </div>
+
+    <!-- 19 -->
+    <div class="visit-item" id="visit-19" data-lat="48.7107" data-lng="2.1558" data-title="Laboratoire Léon Brillouin (LLB) Neutron Facility" data-institution="CEA Paris-Saclay / CNRS" data-city="Saclay" data-country="France" data-year="2018">
+      <div class="visit-item-left">
+        <span class="visit-dot-badge"></span>
+        <span class="visit-year-pill">2018</span>
+      </div>
+      <div class="visit-item-content">
+        <div class="visit-title">Laboratoire Léon Brillouin (LLB) Neutron Facility</div>
+        <div class="visit-meta">Saclay, France</div>
+      </div>
+      <span class="visit-locate-hint" title="Locate on Map">📍</span>
+    </div>
+
+    <!-- 20 -->
+    <div class="visit-item" id="visit-20" data-lat="30.3398" data-lng="76.3869" data-title="Summer School on Magnetism" data-institution="Department of Physics" data-city="Patiala, Punjab" data-country="India" data-year="2016">
+      <div class="visit-item-left">
+        <span class="visit-dot-badge"></span>
+        <span class="visit-year-pill">2016</span>
+      </div>
+      <div class="visit-item-content">
+        <div class="visit-title">Summer School on Magnetism</div>
+        <div class="visit-meta">Patiala, India</div>
+      </div>
+      <span class="visit-locate-hint" title="Locate on Map">📍</span>
+    </div>
+
+  </div>
+</div>
+
 <!-- World Map Script with Zoom-Dependent Labels and Auto-Arrow Generator -->
 <script>
 (function() {
@@ -873,6 +1297,7 @@ We aim to utilize nitrogen-vacancy (NV) diamond center magnetometry and atomic-s
   let mapInstance = null;
   let arcPaths = [];
   let partnerMarkers = [];
+  let visitMarkers = [];
   let homeMarker = null;
   let worldBounds = null;
   let forceShowLabels = false;
@@ -1014,6 +1439,8 @@ We aim to utilize nitrogen-vacancy (NV) diamond center magnetometry and atomic-s
 
     partnerMarkers.forEach(m => mapInstance.removeLayer(m));
     partnerMarkers = [];
+    visitMarkers.forEach(m => mapInstance.removeLayer(m));
+    visitMarkers = [];
     arcPaths = [];
 
     const arcsGroup = document.getElementById('collab-arcs-group');
@@ -1101,6 +1528,72 @@ We aim to utilize nitrogen-vacancy (NV) diamond center magnetometry and atomic-s
         if (pair) highlightNode(card, marker, pair.element, false);
       });
       card.addEventListener('click', () => {
+        mapInstance.flyTo(coords, Math.max(mapInstance.getZoom(), 4.5), { duration: 1 });
+        marker.openPopup();
+      });
+    });
+
+    // Parse all Academic Visits items and generate amber dot markers + popups
+    const visitItems = document.querySelectorAll('.visits-grid .visit-item');
+    visitItems.forEach((item, idx) => {
+      const lat = parseFloat(item.getAttribute('data-lat'));
+      const lng = parseFloat(item.getAttribute('data-lng'));
+      if (isNaN(lat) || isNaN(lng)) return;
+      const coords = [lat, lng];
+      bounds.extend(coords);
+
+      const title = item.getAttribute('data-title') || '';
+      const institution = item.getAttribute('data-institution') || '';
+      const city = item.getAttribute('data-city') || '';
+      const country = item.getAttribute('data-country') || '';
+      const year = item.getAttribute('data-year') || '';
+
+      const dotHtml = `
+        <div class="visit-marker-wrap" id="marker-wrap-${item.id || ('visit-' + (idx + 1))}">
+          <div class="visit-marker-dot" title="${title} (${year})"></div>
+          <div class="collab-marker-label pos-top">
+            <span class="collab-label-name">${title} (${year})</span>
+            <span class="visit-label-inst">${institution}${country ? ' &bull; ' + country : ''}</span>
+          </div>
+        </div>
+      `;
+
+      const visitIcon = L.divIcon({
+        className: '',
+        html: dotHtml,
+        iconSize: [14, 14],
+        iconAnchor: [7, 7]
+      });
+
+      const marker = L.marker(coords, { icon: visitIcon }).addTo(mapInstance);
+      visitMarkers.push(marker);
+
+      marker.bindPopup(`
+        <div class="collab-popup-card">
+          <div class="visit-popup-tag">Academic Visit &bull; ${year}</div>
+          <h4 class="collab-popup-title" style="color: #d35400;">${title}</h4>
+          <div class="collab-popup-group">${institution}</div>
+          <div style="font-size: 0.8rem; color: #64748b; margin-top: 0.25rem;">${city ? city + ', ' : ''}${country}</div>
+          <a href="#${item.id || ('visit-' + (idx + 1))}" class="collab-popup-link" style="color: #d35400;">Scroll to visit details &darr;</a>
+        </div>
+      `);
+
+      // Item Click/Hover Interactivity
+      item.addEventListener('mouseenter', () => {
+        item.classList.add('active-visit');
+        if (marker._icon) {
+          const wrap = marker._icon.querySelector('.visit-marker-wrap');
+          if (wrap) wrap.classList.add('active');
+        }
+      });
+      item.addEventListener('mouseleave', () => {
+        item.classList.remove('active-visit');
+        if (marker._icon) {
+          const wrap = marker._icon.querySelector('.visit-marker-wrap');
+          if (wrap) wrap.classList.remove('active');
+        }
+      });
+      item.addEventListener('click', () => {
         mapInstance.flyTo(coords, Math.max(mapInstance.getZoom(), 4.5), { duration: 1 });
         marker.openPopup();
       });
@@ -1220,8 +1713,8 @@ We aim to utilize nitrogen-vacancy (NV) diamond center magnetometry and atomic-s
       btnEurope.onclick = function() {
         setActiveBtn(btnEurope);
         if (mapInstance) {
-          // Zooms into European cluster (Sweden, Germany, France, Austria, Switzerland)
-          mapInstance.fitBounds([[41.5, -4.5], [61.5, 21.5]], { padding: [40, 40] });
+          // Zooms into European cluster (Sweden, Germany, France, Austria, Switzerland, Spain, Poland, Turkey)
+          mapInstance.fitBounds([[35.5, -9.5], [62.0, 31.5]], { padding: [40, 40] });
         }
       };
     }
@@ -1230,8 +1723,8 @@ We aim to utilize nitrogen-vacancy (NV) diamond center magnetometry and atomic-s
       btnIndia.onclick = function() {
         setActiveBtn(btnIndia);
         if (mapInstance) {
-          // Zooms into Indian institutions (IIT Delhi, Dhanbad, Kolkata)
-          mapInstance.fitBounds([[21.0, 75.0], [30.5, 89.5]], { padding: [40, 40] });
+          // Zooms into Indian institutions (IIT Delhi, Dhanbad, Kolkata, Patiala)
+          mapInstance.fitBounds([[21.0, 75.0], [31.5, 89.5]], { padding: [40, 40] });
         }
       };
     }
@@ -1240,8 +1733,8 @@ We aim to utilize nitrogen-vacancy (NV) diamond center magnetometry and atomic-s
       btnUSA.onclick = function() {
         setActiveBtn(btnUSA);
         if (mapInstance) {
-          // Zooms into US collaborators (UCF Orlando, USF Tampa)
-          mapInstance.fitBounds([[26.5, -84.5], [30.5, -79.5]], { padding: [50, 50] });
+          // Zooms into US collaborators & visits (Florida, Virginia, Maryland, New York, Massachusetts)
+          mapInstance.fitBounds([[25.0, -84.5], [43.5, -70.0]], { padding: [50, 50] });
         }
       };
     }
@@ -1270,11 +1763,13 @@ We aim to utilize nitrogen-vacancy (NV) diamond center magnetometry and atomic-s
   // the map automatically detects it, places a dot, and draws the arrow from Dhanbad!
   function setupAutoObserver() {
     const grid = document.querySelector('.collab-grid');
-    if (!grid || !window.MutationObserver) return;
+    const visitsGrid = document.querySelector('.visits-grid');
+    if (!window.MutationObserver) return;
     const observer = new MutationObserver(() => {
       syncCollaborators();
     });
-    observer.observe(grid, { childList: true, subtree: true });
+    if (grid) observer.observe(grid, { childList: true, subtree: true });
+    if (visitsGrid) observer.observe(visitsGrid, { childList: true, subtree: true });
   }
 
   function start() {

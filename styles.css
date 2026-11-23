@@ -1800,3 +1800,167 @@ h1, h2, h3, h4, h5 {
   box-shadow: 0 6px 16px rgba(194, 106, 75, 0.35);
 }
 
+
+
+/* ==========================================================================
+   Academic Visits Section & Map Styling
+   ========================================================================== */
+.legend-dot.visit-dot {
+  background: #e67e22;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 0 2px #e67e22;
+}
+
+.visits-section {
+  max-width: 1020px;
+  margin: 3.5rem auto 3rem auto;
+}
+
+.visits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.85rem;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .visits-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+}
+
+.visit-item {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 0.85rem 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+.visit-item:hover,
+.visit-item.active-visit {
+  background: #fffbf5;
+  border-color: #e67e22;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(230, 126, 34, 0.12);
+}
+
+.visit-item-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.visit-dot-badge {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #e67e22;
+  box-shadow: 0 0 0 2px rgba(230, 126, 34, 0.2);
+  flex-shrink: 0;
+}
+
+.visit-year-pill {
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: 12px;
+  background: #fef3c7;
+  color: #92400e;
+  letter-spacing: 0.02em;
+}
+
+.visit-item-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.visit-title {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #1e293b;
+  line-height: 1.35;
+}
+
+.visit-meta {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-top: 0.15rem;
+  line-height: 1.3;
+}
+
+.visit-locate-hint {
+  font-size: 0.85rem;
+  opacity: 0.4;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.visit-item:hover .visit-locate-hint,
+.visit-item.active-visit .visit-locate-hint {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.visit-marker-wrap {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+}
+
+.visit-marker-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #e67e22;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 0 1px #e67e22, 0 2px 6px rgba(230, 126, 34, 0.35);
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.2s, box-shadow 0.2s;
+  flex-shrink: 0;
+}
+
+.visit-marker-wrap:hover .visit-marker-dot,
+.visit-marker-wrap.active .visit-marker-dot {
+  transform: scale(1.5);
+  background: #d35400;
+  box-shadow: 0 0 0 2px #ffffff, 0 0 12px rgba(230, 126, 34, 0.7);
+}
+
+.map-zoomed-in .visit-marker-wrap .collab-marker-label,
+.visit-marker-wrap:hover .collab-marker-label,
+.show-all-labels .visit-marker-wrap .collab-marker-label {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+.visit-label-inst {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #d35400;
+  display: block;
+  line-height: 1.25;
+  margin-top: 1px;
+}
+
+.visit-popup-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #d35400;
+  margin-bottom: 0.2rem;
+}
