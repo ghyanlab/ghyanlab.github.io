@@ -178,7 +178,7 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <a href="#collaborations" class="section-jump-link">
       <svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
-      Collaborations &amp; Visits
+      Collaborations, Talks &amp; Visits
     </a>
   </div>
 </div>
@@ -291,8 +291,8 @@ Core experimental thrust areas investigating quantum angular momentum, ultrafast
 </div>
 </div>
 <div class="research-row">
-<section id="quantum-sensing-spin-orbit-torque-sot-and-nitrogen-vacancy-nv-centers" class="level3 research-text">
-<h3 class="anchored" data-anchor-id="quantum-sensing-spin-orbit-torque-sot-and-nitrogen-vacancy-nv-centers">Quantum Sensing: Spin-Orbit Torque (SOT) and Nitrogen-Vacancy (NV) Centers</h3>
+<section id="quantum-sensing-spin-orbitorbital-torque-and-nitrogen-vacancy-nv-centers" class="level3 research-text">
+<h3 class="anchored" data-anchor-id="quantum-sensing-spin-orbitorbital-torque-and-nitrogen-vacancy-nv-centers">Quantum Sensing: Spin-Orbit/Orbital Torque and Nitrogen-Vacancy (NV) Centers</h3>
 <p>We aim to utilize nitrogen-vacancy (NV) diamond center magnetometry and atomic-scale quantum sensors to non-invasively probe nanoscale spin configurations, stray magnetic fields, and spin currents with high spatial resolution and sensitivity. By integrating NV center quantum defects with magnetic heterostructures, 2D quantum materials, and spintronic devices, we investigate local spin-orbit torque switching, magnon dynamics, and topological spin textures (such as domain walls and skyrmions) from cryogenic to room temperatures.</p>
 <div class="research-pubs">
   <div class="research-pubs-heading">Key Publications in Quantum-Enabled Spintronic Sensing</div>
@@ -424,10 +424,10 @@ External and institutional sponsored research projects supporting our experiment
 <!-- ======================================================== -->
 <div id="collaborations" class="research-section-header">
 <h2 class="anchored">
-Collaborations &amp; Academic Visits
+Collaborations, Talks &amp; Academic Visits
 </h2>
 <p>
-Our group actively collaborates with leading international and national research institutions, university departments, and research facilities worldwide
+Our group actively engages with leading research institutions, international conferences, and scientific facilities worldwide
 </p>
 </div>
 <!-- Leaflet CSS and JS CDN -->
@@ -589,10 +589,177 @@ Our group actively collaborates with leading international and national research
   border: 2px solid #ffffff;
   box-shadow: 0 0 0 2px #0284c7;
 }
+.legend-dot.talk-dot {
+  background: #8b5cf6;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 0 2px #8b5cf6;
+}
 .legend-dot.visit-dot {
   background: #e67e22;
   border: 2px solid #ffffff;
   box-shadow: 0 0 0 2px #e67e22;
+}
+
+/* Invited & Oral Talks Styling */
+.talks-section {
+  max-width: 1020px;
+  margin: 3.5rem auto 3rem auto;
+}
+.talks-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.85rem;
+  margin-top: 1.5rem;
+}
+@media (max-width: 768px) {
+  .talks-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+}
+.talk-item {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 0.85rem 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  text-decoration: none !important;
+  color: inherit !important;
+}
+.talk-item:hover,
+.talk-item.active-talk {
+  background: #fbf9ff;
+  border-color: #8b5cf6;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.12);
+}
+.talk-item-left {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+.talk-dot-badge {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #8b5cf6;
+  box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.2);
+  flex-shrink: 0;
+}
+.talk-year-pill {
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: 12px;
+  background: #ede9fe;
+  color: #6d28d9;
+  letter-spacing: 0.02em;
+}
+.talk-type-pill {
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.18rem 0.45rem;
+  border-radius: 6px;
+  line-height: 1;
+}
+.talk-type-pill.invited {
+  background: #fae8ff;
+  color: #a21caf;
+  border: 1px solid rgba(162, 28, 175, 0.25);
+}
+.talk-type-pill.oral {
+  background: #e0e7ff;
+  color: #4338ca;
+  border: 1px solid rgba(67, 56, 202, 0.25);
+}
+.talk-type-pill.poster {
+  background: #ccfbf1;
+  color: #0f766e;
+  border: 1px solid rgba(15, 118, 110, 0.25);
+}
+.talk-item-content {
+  flex: 1;
+  min-width: 0;
+}
+.talk-title {
+  font-size: 0.90rem;
+  font-weight: 600;
+  color: #1e293b;
+  line-height: 1.35;
+}
+.talk-meta {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-top: 0.15rem;
+  line-height: 1.3;
+}
+.talk-locate-hint {
+  font-size: 0.85rem;
+  opacity: 0.4;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  flex-shrink: 0;
+}
+.talk-item:hover .talk-locate-hint,
+.talk-item.active-talk .talk-locate-hint {
+  opacity: 1;
+  transform: scale(1.2);
+}
+.talk-marker-wrap {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+}
+.talk-marker-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #8b5cf6;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 0 1px #8b5cf6, 0 2px 6px rgba(139, 92, 246, 0.35);
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.2s, box-shadow 0.2s;
+  flex-shrink: 0;
+}
+.talk-marker-wrap:hover .talk-marker-dot,
+.talk-marker-wrap.active .talk-marker-dot {
+  transform: scale(1.5);
+  background: #7c3aed;
+  box-shadow: 0 0 0 2px #ffffff, 0 0 12px rgba(124, 58, 237, 0.7);
+}
+.map-zoomed-in .talk-marker-wrap .collab-marker-label,
+.talk-marker-wrap:hover .collab-marker-label,
+.show-all-labels .talk-marker-wrap .collab-marker-label {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+.talk-label-forum {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #7c3aed;
+  display: block;
+  line-height: 1.25;
+  margin-top: 1px;
+}
+.talk-popup-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #7c3aed;
+  margin-bottom: 0.2rem;
 }
 
 /* Academic Visits Styling */
@@ -950,20 +1117,20 @@ Our group actively collaborates with leading international and national research
   <div class="collab-map-header">
     <div>
       <div class="collab-map-badge">
-        <span class="collab-pulse-dot"></span> Active Research &amp; Visit Network
+        <span class="collab-pulse-dot"></span> Active Research, Talks &amp; Network
       </div>
-      <h3 class="collab-map-title anchored">Global Collaboration &amp; Academic Network</h3>
+      <h3 class="collab-map-title anchored">Global Collaboration, Talks &amp; Academic Network</h3>
       <p class="collab-map-subtitle">
-        Our research group maintains a vibrant network of international collaborators, research visits, conferences, and advanced facilities across Europe, the Americas, and Asia.
+        Our research group maintains a vibrant network of international collaborators, keynote and invited lectures, oral presentations, conferences, and advanced facilities across Europe, the Americas, and Asia.
       </p>
     </div>
     
     <!-- Region Preset Buttons and Label Toggle -->
     <div class="collab-map-actions">
       <button class="collab-region-btn active" id="btn-view-world" type="button" title="View Full World Map">🌍 World View</button>
-      <button class="collab-region-btn" id="btn-view-europe" type="button" title="Zoom into European Collaborators &amp; Visits">🇪🇺 Europe</button>
-      <button class="collab-region-btn" id="btn-view-india" type="button" title="Zoom into Indian Institutions &amp; Visits">🇮🇳 India</button>
-      <button class="collab-region-btn" id="btn-view-usa" type="button" title="Zoom into US Collaborators &amp; Visits">🇺🇸 USA</button>
+      <button class="collab-region-btn" id="btn-view-europe" type="button" title="Zoom into European Collaborators, Talks &amp; Visits">🇪🇺 Europe</button>
+      <button class="collab-region-btn" id="btn-view-india" type="button" title="Zoom into Indian Institutions, Talks &amp; Visits">🇮🇳 India</button>
+      <button class="collab-region-btn" id="btn-view-usa" type="button" title="Zoom into US Collaborators, Talks &amp; Visits">🇺🇸 USA</button>
       <button class="collab-toggle-btn" id="btn-toggle-labels" type="button" title="Toggle Names On/Off">🏷️ Show Names</button>
     </div>
   </div>
@@ -984,6 +1151,10 @@ Our group actively collaborates with leading international and national research
       <div class="legend-item">
         <span class="legend-dot partner-dot"></span>
         <span><strong>Collaborators:</strong> Global Partners</span>
+      </div>
+      <div class="legend-item">
+        <span class="legend-dot talk-dot"></span>
+        <span><strong>Invited &amp; Oral Talks:</strong> Keynotes &amp; Seminars</span>
       </div>
       <div class="legend-item">
         <span class="legend-dot visit-dot"></span>
@@ -1095,7 +1266,302 @@ Our group actively collaborates with leading international and national research
 </div>
 
 <!-- ======================================================================= -->
-<!-- ACADEMIC VISITS & SCIENTIFIC EXCHANGES                                   -->
+<!-- INVITED & ORAL TALKS                                                    -->
+<!-- ======================================================================= -->
+<div class="talks-section" id="invited-talks">
+  <div style="text-align: center; margin-bottom: 1.75rem; margin-top: 3.5rem;">
+    <h3 style="font-size: 1.6rem; font-weight: 800; color: #1e293b; margin-bottom: 0.4rem;" class="anchored">
+      Invited &amp; Oral Talks
+    </h3>
+    <p style="color: #64748b; font-size: 0.95rem; max-width: 720px; margin: 0 auto;">
+      Invited keynotes, oral presentations, and seminars delivered at international conferences, university colloquia, and advanced workshops. Click any talk to locate it on the map above.
+    </p>
+  </div>
+
+  <div class="talks-grid">
+
+    <!-- 1 -->
+    <div class="talk-item" id="talk-1" data-lat="52.4064" data-lng="16.9252" data-year="2026" data-type="Invited" data-title="Orbital Angular Momentum–Driven Memory, Nano-Oscillators, and Terahertz Devices" data-event="3rd Transnational Round Table on Magnonics, High-Frequency Spintronics, and Ultrafast Magnetism" data-city="Poland" data-country="Poland">
+      <div class="talk-item-left">
+        <span class="talk-dot-badge"></span>
+        <span class="talk-year-pill">2026</span>
+        <span class="talk-type-pill invited">Invited</span>
+      </div>
+      <div class="talk-item-content">
+        <div class="talk-title">Orbital Angular Momentum–Driven Memory, Nano-Oscillators, and Terahertz Devices</div>
+        <div class="talk-meta">3rd Transnational Round Table on Magnonics, High-Frequency Spintronics, and Ultrafast Magnetism • Poland</div>
+      </div>
+      <span class="talk-locate-hint" title="Locate on Map">📍</span>
+    </div>
+
+    <!-- 2 -->
+    <div class="talk-item" id="talk-2" data-lat="40.1020" data-lng="-88.2272" data-year="2026" data-type="Invited" data-title="Orbitronics: Orbital Angular Momentum for Next-Generation Devices" data-event="Prof. Axel Hoffmann’s Group, University of Illinois Urbana-Champaign" data-city="Urbana-Champaign, Illinois" data-country="USA">
+      <div class="talk-item-left">
+        <span class="talk-dot-badge"></span>
+        <span class="talk-year-pill">2026</span>
+        <span class="talk-type-pill invited">Invited</span>
+      </div>
+      <div class="talk-item-content">
+        <div class="talk-title">Orbitronics: Orbital Angular Momentum for Next-Generation Devices</div>
+        <div class="talk-meta">Prof. Axel Hoffmann’s Group, University of Illinois Urbana-Champaign, USA</div>
+      </div>
+      <span class="talk-locate-hint" title="Locate on Map">📍</span>
+    </div>
+
+    <!-- 3 -->
+    <div class="talk-item" id="talk-3" data-lat="40.7300" data-lng="-73.9950" data-year="2025" data-type="Invited" data-title="Harnessing Orbital Angular Momentum for Next-Generation Devices: Oscillator, Memory, and Terahertz Emitters" data-event="Prof. Andrew Kent’s Group, New York University" data-city="New York" data-country="USA">
+      <div class="talk-item-left">
+        <span class="talk-dot-badge"></span>
+        <span class="talk-year-pill">2025</span>
+        <span class="talk-type-pill invited">Invited</span>
+      </div>
+      <div class="talk-item-content">
+        <div class="talk-title">Harnessing Orbital Angular Momentum for Next-Generation Devices: Oscillator, Memory, and Terahertz Emitters</div>
+        <div class="talk-meta">Prof. Andrew Kent’s Group, New York University, USA</div>
+      </div>
+      <span class="talk-locate-hint" title="Locate on Map">📍</span>
+    </div>
+
+    <!-- 4 -->
+    <div class="talk-item" id="talk-4" data-lat="26.7160" data-lng="-80.0520" data-year="2025" data-type="Invited" data-title="Orbital-Spin Hall Nano Oscillator" data-event="MMM Conference" data-city="West Palm Beach, Florida" data-country="USA">
+      <div class="talk-item-left">
+        <span class="talk-dot-badge"></span>
+        <span class="talk-year-pill">2025</span>
+        <span class="talk-type-pill invited">Invited</span>
+      </div>
+      <div class="talk-item-content">
+        <div class="talk-title">Orbital-Spin Hall Nano Oscillator</div>
+        <div class="talk-meta">MMM Conference • West Palm Beach, Florida, USA</div>
+      </div>
+      <span class="talk-locate-hint" title="Locate on Map">📍</span>
+    </div>
+
+    <!-- 5 -->
+    <div class="talk-item" id="talk-5" data-lat="59.6190" data-lng="17.7210" data-year="2025" data-type="Oral" data-title="Orbital Current-Assisted Spin Hall Nano Oscillator" data-event="Swedish–Korean Orbitronics Workshop (SKOW)" data-city="Sigtuna / Stockholm" data-country="Sweden">
+      <div class="talk-item-left">
+        <span class="talk-dot-badge"></span>
+        <span class="talk-year-pill">2025</span>
+        <span class="talk-type-pill oral">Oral</span>
+      </div>
+      <div class="talk-item-content">
+        <div class="talk-title">Orbital Current-Assisted Spin Hall Nano Oscillator</div>
+        <div class="talk-meta">Swedish–Korean Orbitronics Workshop (SKOW), Sweden</div>
+      </div>
+      <span class="talk-locate-hint" title="Locate on Map">📍</span>
+    </div>
+
+    <!-- 6 -->
+    <div class="talk-item" id="talk-6" data-lat="59.8560" data-lng="17.6350" data-year="2025" data-type="Invited" data-title="Towards Sustainable Spintronics: Exploring the Orbital Hall Effect in Spin Hall Nano-Oscillators and Spin-Orbit Torque Memory" data-event="Trends in Magnetism" data-city="Uppsala" data-country="Sweden">
+      <div class="talk-item-left">
+        <span class="talk-dot-badge"></span>
+        <span class="talk-year-pill">2025</span>
+        <span class="talk-type-pill invited">Invited</span>
+      </div>
+      <div class="talk-item-content">
+        <div class="talk-title">Towards Sustainable Spintronics: Exploring the Orbital Hall Effect in Spin Hall Nano-Oscillators and Spin-Orbit Torque Memory</div>
+        <div class="talk-meta">Trends in Magnetism, Sweden</div>
+      </div>
+      <span class="talk-locate-hint" title="Locate on Map">📍</span>
+    </div>
+
+    <!-- 7 -->
+    <div class="talk-item" id="talk-7" data-lat="36.6230" data-lng="29.1180" data-year="2025" data-type="Invited" data-title="Orbital-Assisted Spin Torque Memory and Spin Hall Nano Oscillator" data-event="International Conference on Superconductivity &amp; Magnetism (ICSM)" data-city="Fethiye" data-country="Turkey">
+      <div class="talk-item-left">
+        <span class="talk-dot-badge"></span>
+        <span class="talk-year-pill">2025</span>
+        <span class="talk-type-pill invited">Invited</span>
+      </div>
+      <div class="talk-item-content">
+        <div class="talk-title">Orbital-Assisted Spin Torque Memory and Spin Hall Nano Oscillator</div>
+        <div class="talk-meta">ICSM Conference, Turkey</div>
+      </div>
+      <span class="talk-locate-hint" title="Locate on Map">📍</span>
+    </div>
+
+    <!-- 8 -->
+    <div class="talk-item" id="talk-8" data-lat="59.8520" data-lng="17.6300" data-year="2024" data-type="Invited" data-title="Orbitronics: An Approach for a Sustainable Future" data-event="Trends in Magnetism Online Meeting" data-city="Uppsala" data-country="Sweden">
+      <div class="talk-item-left">
+        <span class="talk-dot-badge"></span>
+        <span class="talk-year-pill">2024</span>
+        <span class="talk-type-pill invited">Invited</span>
+      </div>
+      <div class="talk-item-content">
+        <div class="talk-title">Orbitronics: An Approach for a Sustainable Future</div>
+        <div class="talk-meta">Trends in Magnetism Online Meeting, Sweden</div>
+      </div>
+      <span class="talk-locate-hint" title="Locate on Map">📍</span>
+    </div>
+
+    <!-- 9 -->
+    <div class="talk-item" id="talk-9" data-lat="32.6186" data-lng="75.0345" data-year="2024" data-type="Invited" data-title="Harnessing Orbital Hall Effect in Spin-Orbit Torque Magnetic Memory for a Sustainable Future" data-event="ICMSDT • Central University of Jammu" data-city="Jammu" data-country="India">
+      <div class="talk-item-left">
+        <span class="talk-dot-badge"></span>
+        <span class="talk-year-pill">2024</span>
+        <span class="talk-type-pill invited">Invited</span>
+      </div>
+      <div class="talk-item-content">
+        <div class="talk-title">Harnessing Orbital Hall Effect in Spin-Orbit Torque Magnetic Memory for a Sustainable Future</div>
+        <div class="talk-meta">ICMSDT • Central University of Jammu, Jammu, India</div>
+      </div>
+      <span class="talk-locate-hint" title="Locate on Map">📍</span>
+    </div>
+
+    <!-- 10 -->
+    <div class="talk-item" id="talk-10" data-lat="-22.9120" data-lng="-43.1800" data-year="2024" data-type="Invited" data-title="From Discovery to Application: Orbital Hall Materials for Cutting-Edge SOT-MRAM Devices" data-event="IEEE International Magnetics Conference (INTERMAG)" data-city="Rio de Janeiro" data-country="Brazil">
+      <div class="talk-item-left">
+        <span class="talk-dot-badge"></span>
+        <span class="talk-year-pill">2024</span>
+        <span class="talk-type-pill invited">Invited</span>
+      </div>
+      <div class="talk-item-content">
+        <div class="talk-title">From Discovery to Application: Orbital Hall Materials for Cutting-Edge SOT-MRAM Devices</div>
+        <div class="talk-meta">INTERMAG • Rio de Janeiro, Brazil</div>
+      </div>
+      <span class="talk-locate-hint" title="Locate on Map">📍</span>
+    </div>
+
+    <!-- 11 -->
+    <div class="talk-item" id="talk-11" data-lat="50.6460" data-lng="7.2280" data-year="2024" data-type="Poster" data-title="Harnessing Orbital Hall Effect Materials for Efficient Magnetization Control with In-Plane and Perpendicular Magnetic Anisotropic Ferromagnets" data-event="803 WE-Heraeus Seminar" data-city="Bad Honnef" data-country="Germany">
+      <div class="talk-item-left">
+        <span class="talk-dot-badge"></span>
+        <span class="talk-year-pill">2024</span>
+        <span class="talk-type-pill poster">Poster</span>
+      </div>
+      <div class="talk-item-content">
+        <div class="talk-title">Harnessing Orbital Hall Effect Materials for Efficient Magnetization Control with In-Plane and Perpendicular Magnetic Anisotropic Ferromagnets</div>
+        <div class="talk-meta">803 WE-Heraeus Seminar, Germany</div>
+      </div>
+      <span class="talk-locate-hint" title="Locate on Map">📍</span>
+    </div>
+
+    <!-- 12 -->
+    <div class="talk-item" id="talk-12" data-lat="32.7767" data-lng="-96.7970" data-year="2023" data-type="Oral" data-title="Investigating Orbital Hall Effect Materials for Efficient Magnetization Control with In-Plane and Perpendicular Magnetic Anisotropic Ferromagnets" data-event="Conference on Magnetism &amp; Magnetic Materials (MMM)" data-city="Dallas, Texas" data-country="USA">
+      <div class="talk-item-left">
+        <span class="talk-dot-badge"></span>
+        <span class="talk-year-pill">2023</span>
+        <span class="talk-type-pill oral">Oral</span>
+      </div>
+      <div class="talk-item-content">
+        <div class="talk-title">Investigating Orbital Hall Effect Materials for Efficient Magnetization Control with In-Plane and Perpendicular Magnetic Anisotropic Ferromagnets</div>
+        <div class="talk-meta">MMM Conference, USA</div>
+      </div>
+      <span class="talk-locate-hint" title="Locate on Map">📍</span>
+    </div>
+
+    <!-- 13 -->
+    <div class="talk-item" id="talk-13" data-lat="51.0280" data-lng="13.7280" data-year="2023" data-type="Oral" data-title="Experimental Evidence of Long-Range Orbital Hall Torque" data-event="DPG Spring Meeting" data-city="Dresden" data-country="Germany">
+      <div class="talk-item-left">
+        <span class="talk-dot-badge"></span>
+        <span class="talk-year-pill">2023</span>
+        <span class="talk-type-pill oral">Oral</span>
+      </div>
+      <div class="talk-item-content">
+        <div class="talk-title">Experimental Evidence of Long-Range Orbital Hall Torque</div>
+        <div class="talk-meta">DPG Spring Meeting, Germany</div>
+      </div>
+      <span class="talk-locate-hint" title="Locate on Map">📍</span>
+    </div>
+
+    <!-- 14 -->
+    <div class="talk-item" id="talk-14" data-lat="28.5440" data-lng="77.1910" data-year="2022" data-type="Invited" data-title="Spintronic Terahertz Emitter" data-event="Online Spintronics Workshop, IIT Delhi" data-city="New Delhi" data-country="India">
+      <div class="talk-item-left">
+        <span class="talk-dot-badge"></span>
+        <span class="talk-year-pill">2022</span>
+        <span class="talk-type-pill invited">Invited</span>
+      </div>
+      <div class="talk-item-content">
+        <div class="talk-title">Spintronic Terahertz Emitter</div>
+        <div class="talk-meta">Online Spintronics Workshop, IIT Delhi, India</div>
+      </div>
+      <span class="talk-locate-hint" title="Locate on Map">📍</span>
+    </div>
+
+    <!-- 15 -->
+    <div class="talk-item" id="talk-15" data-lat="30.6586" data-lng="104.0648" data-year="2021" data-type="Oral" data-title="Substrate Effect on Terahertz Emission in Spintronic Emitters" data-event="IRMMW-THz Conference • China (Online Mode)" data-city="China (Online)" data-country="China">
+      <div class="talk-item-left">
+        <span class="talk-dot-badge"></span>
+        <span class="talk-year-pill">2021</span>
+        <span class="talk-type-pill oral">Oral</span>
+      </div>
+      <div class="talk-item-content">
+        <div class="talk-title">Substrate Effect on Terahertz Emission in Spintronic Emitters</div>
+        <div class="talk-meta">IRMMW-THz • China (Online Mode)</div>
+      </div>
+      <span class="talk-locate-hint" title="Locate on Map">📍</span>
+    </div>
+
+    <!-- 16 -->
+    <div class="talk-item" id="talk-16" data-lat="59.8590" data-lng="17.6410" data-year="2021" data-type="Oral" data-title="Co2FeAl−Based Spintronic Terahertz Emitter" data-event="Trends in Magnetism" data-city="Uppsala" data-country="Sweden">
+      <div class="talk-item-left">
+        <span class="talk-dot-badge"></span>
+        <span class="talk-year-pill">2021</span>
+        <span class="talk-type-pill oral">Oral</span>
+      </div>
+      <div class="talk-item-content">
+        <div class="talk-title">Co2FeAl−Based Spintronic Terahertz Emitter</div>
+        <div class="talk-meta">Trends in Magnetism, Sweden</div>
+      </div>
+      <span class="talk-locate-hint" title="Locate on Map">📍</span>
+    </div>
+
+    <!-- 17 -->
+    <div class="talk-item" id="talk-17" data-lat="59.8600" data-lng="17.6370" data-year="2021" data-type="Oral" data-title="An Overview of Spin-Based Terahertz Emitters" data-event="Departmental Seminar, Uppsala University" data-city="Uppsala" data-country="Sweden">
+      <div class="talk-item-left">
+        <span class="talk-dot-badge"></span>
+        <span class="talk-year-pill">2021</span>
+        <span class="talk-type-pill oral">Oral</span>
+      </div>
+      <div class="talk-item-content">
+        <div class="talk-title">An Overview of Spin-Based Terahertz Emitters</div>
+        <div class="talk-meta">Departmental Seminar, Uppsala University, Sweden</div>
+      </div>
+      <span class="talk-locate-hint" title="Locate on Map">📍</span>
+    </div>
+
+    <!-- 18 -->
+    <div class="talk-item" id="talk-18" data-lat="59.8510" data-lng="17.6340" data-year="2020" data-type="Oral" data-title="Effect of Re Doping on Spin Mixing Conductance in Ru/FeCo/Ru Interfaces" data-event="AtC–AtG Magnetics Conference" data-city="Online" data-country="Online">
+      <div class="talk-item-left">
+        <span class="talk-dot-badge"></span>
+        <span class="talk-year-pill">2020</span>
+        <span class="talk-type-pill oral">Oral</span>
+      </div>
+      <div class="talk-item-content">
+        <div class="talk-title">Effect of Re Doping on Spin Mixing Conductance in Ru/FeCo/Ru Interfaces</div>
+        <div class="talk-meta">AtC–AtG Magnetics Conference • Online</div>
+      </div>
+      <span class="talk-locate-hint" title="Locate on Map">📍</span>
+    </div>
+
+    <!-- 19 -->
+    <div class="talk-item" id="talk-19" data-lat="59.8570" data-lng="17.6430" data-year="2020" data-type="Oral" data-title="Engineering Spin Mixing Conductance in Ru/FeCo/Ru Heterostructures" data-event="Trends in Magnetism" data-city="Uppsala" data-country="Sweden">
+      <div class="talk-item-left">
+        <span class="talk-dot-badge"></span>
+        <span class="talk-year-pill">2020</span>
+        <span class="talk-type-pill oral">Oral</span>
+      </div>
+      <div class="talk-item-content">
+        <div class="talk-title">Engineering Spin Mixing Conductance in Ru/FeCo/Ru Heterostructures</div>
+        <div class="talk-meta">Trends in Magnetism, Sweden</div>
+      </div>
+      <span class="talk-locate-hint" title="Locate on Map">📍</span>
+    </div>
+
+    <!-- 20 -->
+    <div class="talk-item" id="talk-20" data-lat="59.8630" data-lng="17.6470" data-year="2019" data-type="Oral" data-title="Enhancement of Spin Mixing Conductance in FeCo Thin Films: Effect of Re Doping" data-event="Joint European Magnetic Symposia (JEMS)" data-city="Uppsala" data-country="Sweden">
+      <div class="talk-item-left">
+        <span class="talk-dot-badge"></span>
+        <span class="talk-year-pill">2019</span>
+        <span class="talk-type-pill oral">Oral</span>
+      </div>
+      <div class="talk-item-content">
+        <div class="talk-title">Enhancement of Spin Mixing Conductance in FeCo Thin Films: Effect of Re Doping</div>
+        <div class="talk-meta">JEMS, Uppsala, Sweden</div>
+      </div>
+      <span class="talk-locate-hint" title="Locate on Map">📍</span>
+    </div>
+
+  </div>
+</div>
 <!-- ======================================================================= -->
 <div class="visits-section" id="academic-visits">
   <div style="text-align: center; margin-bottom: 1.75rem; margin-top: 3.5rem;">
@@ -1436,6 +1902,7 @@ Our group actively collaborates with leading international and national research
   let mapInstance = null;
   let arcPaths = [];
   let partnerMarkers = [];
+  let talkMarkers = [];
   let visitMarkers = [];
   let homeMarker = null;
   let worldBounds = null;
@@ -1578,6 +2045,8 @@ Our group actively collaborates with leading international and national research
 
     partnerMarkers.forEach(m => mapInstance.removeLayer(m));
     partnerMarkers = [];
+    talkMarkers.forEach(m => mapInstance.removeLayer(m));
+    talkMarkers = [];
     visitMarkers.forEach(m => mapInstance.removeLayer(m));
     visitMarkers = [];
     arcPaths = [];
@@ -1667,6 +2136,73 @@ Our group actively collaborates with leading international and national research
         if (pair) highlightNode(card, marker, pair.element, false);
       });
       card.addEventListener('click', () => {
+        mapInstance.flyTo(coords, Math.max(mapInstance.getZoom(), 4.5), { duration: 1 });
+        marker.openPopup();
+      });
+    });
+
+    // Parse all Invited & Oral Talks items and generate purple dot markers + popups
+    const talkItems = document.querySelectorAll('.talks-grid .talk-item');
+    talkItems.forEach((item, idx) => {
+      const lat = parseFloat(item.getAttribute('data-lat'));
+      const lng = parseFloat(item.getAttribute('data-lng'));
+      if (isNaN(lat) || isNaN(lng)) return;
+      const coords = [lat, lng];
+      bounds.extend(coords);
+
+      const title = item.getAttribute('data-title') || '';
+      const event = item.getAttribute('data-event') || '';
+      const city = item.getAttribute('data-city') || '';
+      const country = item.getAttribute('data-country') || '';
+      const year = item.getAttribute('data-year') || '';
+      const type = item.getAttribute('data-type') || 'Talk';
+
+      const dotHtml = `
+        <div class="talk-marker-wrap" id="marker-wrap-${item.id || ('talk-' + (idx + 1))}">
+          <div class="talk-marker-dot" title="${title} (${type}, ${year})"></div>
+          <div class="collab-marker-label pos-top">
+            <span class="collab-label-name">${title} (${year})</span>
+            <span class="talk-label-forum">${type} &bull; ${event}</span>
+          </div>
+        </div>
+      `;
+
+      const talkIcon = L.divIcon({
+        className: '',
+        html: dotHtml,
+        iconSize: [14, 14],
+        iconAnchor: [7, 7]
+      });
+
+      const marker = L.marker(coords, { icon: talkIcon }).addTo(mapInstance);
+      talkMarkers.push(marker);
+
+      marker.bindPopup(`
+        <div class="collab-popup-card">
+          <div class="talk-popup-tag">${type} Presentation &bull; ${year}</div>
+          <h4 class="collab-popup-title" style="color: #7c3aed; font-size: 0.95rem;">${title}</h4>
+          <div class="collab-popup-group">${event}</div>
+          <div style="font-size: 0.8rem; color: #64748b; margin-top: 0.25rem;">${city ? city + ', ' : ''}${country}</div>
+          <a href="#${item.id || ('talk-' + (idx + 1))}" class="collab-popup-link" style="color: #7c3aed;">Scroll to talk details &darr;</a>
+        </div>
+      `);
+
+      // Item Click/Hover Interactivity
+      item.addEventListener('mouseenter', () => {
+        item.classList.add('active-talk');
+        if (marker._icon) {
+          const wrap = marker._icon.querySelector('.talk-marker-wrap');
+          if (wrap) wrap.classList.add('active');
+        }
+      });
+      item.addEventListener('mouseleave', () => {
+        item.classList.remove('active-talk');
+        if (marker._icon) {
+          const wrap = marker._icon.querySelector('.talk-marker-wrap');
+          if (wrap) wrap.classList.remove('active');
+        }
+      });
+      item.addEventListener('click', () => {
         mapInstance.flyTo(coords, Math.max(mapInstance.getZoom(), 4.5), { duration: 1 });
         marker.openPopup();
       });
@@ -1853,7 +2389,7 @@ Our group actively collaborates with leading international and national research
         setActiveBtn(btnEurope);
         if (mapInstance) {
           // Zooms into European cluster (Sweden, Germany, France, Austria, Switzerland, Spain, Poland, Turkey)
-          mapInstance.fitBounds([[35.5, -9.5], [62.0, 31.5]], { padding: [40, 40] });
+          mapInstance.fitBounds([[35.0, -10.0], [62.5, 32.0]], { padding: [40, 40] });
         }
       };
     }
@@ -1862,8 +2398,8 @@ Our group actively collaborates with leading international and national research
       btnIndia.onclick = function() {
         setActiveBtn(btnIndia);
         if (mapInstance) {
-          // Zooms into Indian institutions (IIT Delhi, Dhanbad, Kolkata, Patiala)
-          mapInstance.fitBounds([[21.0, 75.0], [31.5, 89.5]], { padding: [40, 40] });
+          // Zooms into Indian institutions, talks & visits (Jammu, Patiala, IIT Delhi, Dhanbad, Kolkata)
+          mapInstance.fitBounds([[20.0, 73.0], [34.0, 89.5]], { padding: [40, 40] });
         }
       };
     }
@@ -1872,8 +2408,8 @@ Our group actively collaborates with leading international and national research
       btnUSA.onclick = function() {
         setActiveBtn(btnUSA);
         if (mapInstance) {
-          // Zooms into US collaborators & visits (Florida, Virginia, Maryland, New York, Massachusetts)
-          mapInstance.fitBounds([[25.0, -84.5], [43.5, -70.0]], { padding: [50, 50] });
+          // Zooms into US collaborators, talks & visits (California, Texas, Illinois, Florida, Virginia, Maryland, New York, Massachusetts)
+          mapInstance.fitBounds([[24.0, -125.0], [45.0, -68.0]], { padding: [40, 40] });
         }
       };
     }
@@ -1902,12 +2438,14 @@ Our group actively collaborates with leading international and national research
   // the map automatically detects it, places a dot, and draws the arrow from Dhanbad!
   function setupAutoObserver() {
     const grid = document.querySelector('.collab-grid');
+    const talksGrid = document.querySelector('.talks-grid');
     const visitsGrid = document.querySelector('.visits-grid');
     if (!window.MutationObserver) return;
     const observer = new MutationObserver(() => {
       syncCollaborators();
     });
     if (grid) observer.observe(grid, { childList: true, subtree: true });
+    if (talksGrid) observer.observe(talksGrid, { childList: true, subtree: true });
     if (visitsGrid) observer.observe(visitsGrid, { childList: true, subtree: true });
   }
 
