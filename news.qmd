@@ -10,13 +10,78 @@ The latest updates, publications, and announcements from the group.
 ```{=html}
 <div style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.75rem;">
   
+  <!-- November 2026: TRTM Advisory Board -->
+  <div style="background: #fff; padding: 2.25rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border: 1px solid #eaeaea; display: flex; flex-direction: column; gap: 1rem; border-left: 4px solid #8b5cf6;">
+    <div style="color: #666; font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.05em;">
+      November 2026 &nbsp;&bull;&nbsp; <span style="color: #8b5cf6;">Scientific Advisory Board &amp; Honor</span>
+    </div>
+    <div>
+      <h3 style="margin: 0 0 0.5rem 0; font-size: 1.35rem; color: #111;">Dr. Rahul Gupta Elected as Scientific Advisory Board Member for TRTM (2027 &amp; 2028)</h3>
+      <p style="color: #444; margin: 0; line-height: 1.7;">
+        Dr. Rahul Gupta has been elected as a Scientific Advisory Board member for the Transnational Round Table on Magnonics, High-Frequency Spintronics, and Ultrafast Magnetism (TRTM) conference for 2027 and 2028.
+      </p>
+    </div>
+  </div>
+
+  <!-- Autumn 2026: Dr. Chandan Vishwakarma -->
+  <div style="background: #fff; padding: 2.25rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border: 1px solid #eaeaea; display: flex; flex-direction: column; gap: 1rem; border-left: 4px solid #0284c7;">
+    <div style="color: #666; font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.05em;">
+      Autumn 2026 &nbsp;&bull;&nbsp; <span style="color: #0284c7;">Visiting Scientist</span>
+    </div>
+    <div>
+      <h3 style="margin: 0 0 0.5rem 0; font-size: 1.35rem; color: #111;">Dr. Chandan Vishwakarma Joins GHYAN Lab as Visiting Scientist</h3>
+      <p style="color: #444; margin: 0; line-height: 1.7;">
+        Dr. Chandan Vishwakarma (Postdoctoral Researcher at UC Santa Barbara) has joined GHYAN Lab as a Visiting Scientist. His research focuses on first-principles DFT calculations, electronic structure, and solid-state NV sensing in diamond.
+      </p>
+    </div>
+  </div>
+
+  <!-- Autumn 2026: Dr. Amar Kumar -->
+  <div style="background: #fff; padding: 2.25rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border: 1px solid #eaeaea; display: flex; flex-direction: column; gap: 1rem; border-left: 4px solid #2563eb;">
+    <div style="color: #666; font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.05em;">
+      Autumn 2026 &nbsp;&bull;&nbsp; <span style="color: #2563eb;">Faculty Fellow</span>
+    </div>
+    <div>
+      <h3 style="margin: 0 0 0.5rem 0; font-size: 1.35rem; color: #111;">Dr. Amar Kumar Joins GHYAN Lab as Centenary Early Faculty Fellow</h3>
+      <p style="color: #444; margin: 0; line-height: 1.7;">
+        Dr. Amar Kumar (Ph.D. from IIT Delhi) has joined GHYAN Lab as a Centenary Early Faculty Fellow. His research focuses on computational condensed matter physics and multifunctional materials (Heusler alloys, perovskites, altermagnets) for next-generation spintronic memories and AI hardware.
+      </p>
+    </div>
+  </div>
+
+  <!-- Monsoon 2026: Mr. Aditya Kumar -->
+  <div style="background: #fff; padding: 2.25rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border: 1px solid #eaeaea; display: flex; flex-direction: column; gap: 1rem; border-left: 4px solid #10b981;">
+    <div style="color: #666; font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.05em;">
+      Monsoon Semester 2026 &nbsp;&bull;&nbsp; <span style="color: #10b981;">Student Welcome</span>
+    </div>
+    <div>
+      <h3 style="margin: 0 0 0.5rem 0; font-size: 1.35rem; color: #111;">Mr. Aditya Kumar Joins GHYAN Lab for Internship &amp; M.Sc. Project Thesis</h3>
+      <p style="color: #444; margin: 0; line-height: 1.7;">
+        Mr. Aditya Kumar has joined GHYAN Lab for his internship and Master's (M.Sc.) dissertation thesis research, focusing on the designing of resonators and antennas for spin-orbitronic and quantum technology.
+      </p>
+    </div>
+  </div>
+
+  <!-- Monsoon 2026: Mr. Aniruddha Rana -->
+  <div style="background: #fff; padding: 2.25rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border: 1px solid #eaeaea; display: flex; flex-direction: column; gap: 1rem; border-left: 4px solid #059669;">
+    <div style="color: #666; font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.05em;">
+      Monsoon Semester 2026 &nbsp;&bull;&nbsp; <span style="color: #059669;">PhD Researcher</span>
+    </div>
+    <div>
+      <h3 style="margin: 0 0 0.5rem 0; font-size: 1.35rem; color: #111;">Mr. Aniruddha Rana Joins GHYAN Lab as PhD Student</h3>
+      <p style="color: #444; margin: 0; line-height: 1.7;">
+        Mr. Aniruddha Rana has joined GHYAN Lab as a Ph.D. research scholar in the Department of Physics at IIT (ISM) Dhanbad, focusing on spin-orbitronics and thin-film heterostructures.
+      </p>
+    </div>
+  </div>
+
   <!-- August 2026 -->
   <div style="background: #fff; padding: 2.25rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border: 1px solid #eaeaea; display: flex; flex-direction: column; gap: 1rem; border-left: 4px solid #3498db;">
     <div style="color: #666; font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.05em;">
       August 2026 &nbsp;&bull;&nbsp; <span style="color: #3498db;">Lab Update</span>
     </div>
     <div>
-      <h3 style="margin: 0 0 0.5rem 0; font-size: 1.35rem; color: #111;">GHYAN is Established at IIT (ISM) Dhanbad</h3>
+      <h3 style="margin: 0 0 0.5rem 0; font-size: 1.35rem; color: #111;">GHYAN Lab is Established at IIT (ISM) Dhanbad</h3>
       <p style="color: #444; margin: 0; line-height: 1.7;">
         The Gupta Laboratory for Hybrid Quantum Systems &amp; Spintronics is officially established at the Department of Physics, Indian Institute of Technology (Indian School of Mines) Dhanbad. We are looking forward to building our experimental capabilities and welcoming new researchers to the group.
       </p>
