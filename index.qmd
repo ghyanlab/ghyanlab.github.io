@@ -237,26 +237,31 @@ toc: false
       <div class="row g-4 justify-content-center mx-auto" style="max-width: 1000px;">
         <div class="col-md-10">
           <div id="galleryCarousel" class="carousel slide carousel-fade rounded-4 shadow-sm overflow-hidden border border-subtle" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
             <div class="carousel-inner">
               <div class="carousel-item active" data-bs-interval="4000">
-                <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=1200&q=80" class="d-block w-100" alt="Lab Research" style="height: 450px; object-fit: cover;">
+                <img src="images/Gallery/GroupPhoto.JPG" class="d-block w-100" alt="GHYAN Lab Group" style="height: 480px; object-fit: cover; object-position: center;">
                 <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-3 mb-4 mx-4">
-                  <h5 class="text-white fw-bold mb-1">State-of-the-Art Research</h5>
-                  <p class="text-light mb-0">Exploring spin and quantum degrees of freedom in our facility.</p>
+                  <h5 class="text-white fw-bold mb-1">Group Members of GHYAN Laboratory</h5>
+                  <p class="text-light mb-0">Exploring spin and quantum degrees of freedom at IIT (ISM) Dhanbad.</p>
                 </div>
               </div>
               <div class="carousel-item" data-bs-interval="4000">
-                <img src="https://images.unsplash.com/photo-1456324504439-367cee3b3c32?auto=format&fit=crop&w=1200&q=80" class="d-block w-100" alt="Publications" style="height: 450px; object-fit: cover;">
+                <img src="images/Gallery/ClassPhoto.JPG" class="d-block w-100" alt="Class of Monsoon Semester 2026" style="height: 480px; object-fit: cover; object-position: center;">
                 <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-3 mb-4 mx-4">
-                  <h5 class="text-white fw-bold mb-1">Breakthrough Publications</h5>
-                  <p class="text-light mb-0">Bridging fundamental physics and next-generation device concepts.</p>
+                  <h5 class="text-white fw-bold mb-1">Class of Monsoon Semester 2026</h5>
+                  <p class="text-light mb-0">Course: Foundation of Physics &bull; IIT (ISM) Dhanbad</p>
                 </div>
               </div>
               <div class="carousel-item" data-bs-interval="4000">
-                <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=80" class="d-block w-100" alt="Team Work" style="height: 450px; object-fit: cover;">
+                <img src="images/Gallery/ClassPhoto2.JPG" class="d-block w-100" alt="Class of Monsoon Semester 2026" style="height: 480px; object-fit: cover; object-position: center;">
                 <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-3 mb-4 mx-4">
-                  <h5 class="text-white fw-bold mb-1">Collaborative Environment</h5>
-                  <p class="text-light mb-0">Working at the interface of quantum materials and emerging tech.</p>
+                  <h5 class="text-white fw-bold mb-1">Class of Monsoon Semester 2026</h5>
+                  <p class="text-light mb-0">Course: Foundation of Physics &bull; IIT (ISM) Dhanbad</p>
                 </div>
               </div>
             </div>

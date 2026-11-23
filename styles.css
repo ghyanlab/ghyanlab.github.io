@@ -479,16 +479,23 @@ h1, h2, h3, h4, h5 {
 
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 1200px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 680px) {
   .team-grid {
     grid-template-columns: 1fr !important;
     max-width: 380px;
     margin: 0 auto;
-    gap: 1.5rem;
+    gap: 1.25rem;
   }
 }
 
@@ -814,6 +821,28 @@ h1, h2, h3, h4, h5 {
   background: #eff6ff;
   border-color: #3b82f6;
   color: #1e40af;
+}
+
+.orcid-link {
+  color: #4d7c0f;
+  border-color: #d9f99d;
+}
+
+.orcid-link:hover {
+  background: #f7fee7;
+  border-color: #a6ce39;
+  color: #365314;
+}
+
+.wos-link {
+  color: #4f46e5;
+  border-color: #c7d2fe;
+}
+
+.wos-link:hover {
+  background: #eef2ff;
+  border-color: #6366f1;
+  color: #3730a3;
 }
 
 #publications-list,
