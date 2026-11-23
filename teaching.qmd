@@ -242,7 +242,7 @@ page-layout: full
     <div class="course-badges">
       <span class="badge-code">NBEP103</span>
       <span class="badge-term">Monsoon Semester 2026</span>
-      <span class="badge-level">Undergraduate Core</span>
+      <span class="badge-level">Undergraduate Level</span>
     </div>
 
     <h3 class="course-title">Foundation of Physics</h3>

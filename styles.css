@@ -479,23 +479,16 @@ h1, h2, h3, h4, h5 {
 
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
 }
 
-@media (max-width: 1200px) {
-  .team-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.25rem;
-  }
-}
-
-@media (max-width: 680px) {
+@media (max-width: 900px) {
   .team-grid {
     grid-template-columns: 1fr !important;
-    max-width: 380px;
+    max-width: 450px;
     margin: 0 auto;
-    gap: 1.25rem;
+    gap: 1.5rem;
   }
 }
 
