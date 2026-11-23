@@ -738,6 +738,14 @@ Our group actively engages with leading research institutions, international con
   background: #7c3aed;
   box-shadow: 0 0 0 2px #ffffff, 0 0 12px rgba(124, 58, 237, 0.7);
 }
+.collab-marker-wrap:hover,
+.collab-marker-wrap.active,
+.talk-marker-wrap:hover,
+.talk-marker-wrap.active,
+.visit-marker-wrap:hover,
+.visit-marker-wrap.active {
+  z-index: 1000 !important;
+}
 .map-zoomed-in .talk-marker-wrap .collab-marker-label,
 .talk-marker-wrap:hover .collab-marker-label,
 .show-all-labels .talk-marker-wrap .collab-marker-label {
@@ -2054,94 +2062,35 @@ Our group actively engages with leading research institutions, international con
     const arcsGroup = document.getElementById('collab-arcs-group');
     if (arcsGroup) arcsGroup.innerHTML = '';
 
-    const cards = document.querySelectorAll('.collab-grid .collab-card');
     const bounds = L.latLngBounds([DHANBAD]);
+    const allNodes = [];
 
+    // 1. Collect Collaborator Cards
+    const cards = document.querySelectorAll('.collab-grid .collab-card');
     cards.forEach((card, idx) => {
       if (!card.id) card.id = 'collab-card-' + idx;
-
       const coords = resolveCoords(card);
       if (!coords) return;
+      bounds.extend(coords);
 
       const country = (card.getAttribute('data-country') || card.querySelector('.collab-country-tag')?.textContent || '').trim();
       const institution = (card.getAttribute('data-institution') || card.querySelector('.collab-institution')?.textContent || '').trim();
       const group = (card.getAttribute('data-group') || card.querySelector('.collab-group')?.textContent || '').trim();
       const labelPos = card.getAttribute('data-label-pos') ? `pos-${card.getAttribute('data-label-pos')}` : '';
 
-      const distFromHome = Math.hypot(coords[0] - DHANBAD[0], coords[1] - DHANBAD[1]);
-      bounds.extend(coords);
-
-      // Create Collaborator Dot Marker with Dynamic Floating Label
-      const dotHtml = `
-        <div class="collab-marker-wrap" id="marker-wrap-${card.id}">
-          <div class="collab-marker-dot" title="${group} (${institution})"></div>
-          <div class="collab-marker-label ${labelPos}">
-            <span class="collab-label-name">${group}</span>
-            <span class="collab-label-inst">${institution}</span>
-          </div>
-        </div>
-      `;
-
-      const partnerIcon = L.divIcon({
-        className: '',
-        html: dotHtml,
-        iconSize: [14, 14],
-        iconAnchor: [7, 7]
-      });
-
-      const marker = L.marker(coords, { icon: partnerIcon }).addTo(mapInstance);
-      partnerMarkers.push(marker);
-
-      // Popup
-      marker.bindPopup(`
-        <div class="collab-popup-card">
-          <div class="collab-popup-country">${country}</div>
-          <h4 class="collab-popup-title">${institution}</h4>
-          <div class="collab-popup-group">${group}</div>
-          <a href="#${card.id}" class="collab-popup-link">Scroll to collaborator card &darr;</a>
-        </div>
-      `);
-
-      // Draw curved arrow from Dhanbad if location is outside Dhanbad
-      if (distFromHome > 0.1 && arcsGroup) {
-        const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-        path.setAttribute('class', 'collab-arc-path');
-        path.setAttribute('id', 'arc-' + card.id);
-        path.setAttribute('marker-end', 'url(#collab-arrow-head)');
-        arcsGroup.appendChild(path);
-
-        arcPaths.push({
-          element: path,
-          targetCoords: coords,
-          cardId: card.id,
-          marker: marker
-        });
-
-        // Hover events on Arc
-        path.addEventListener('mouseenter', () => highlightNode(card, marker, path, true));
-        path.addEventListener('mouseleave', () => highlightNode(card, marker, path, false));
-        path.addEventListener('click', () => {
-          marker.openPopup();
-          card.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        });
-      }
-
-      // Card Click/Hover Interactivity
-      card.addEventListener('mouseenter', () => {
-        const pair = arcPaths.find(p => p.cardId === card.id);
-        if (pair) highlightNode(card, marker, pair.element, true);
-      });
-      card.addEventListener('mouseleave', () => {
-        const pair = arcPaths.find(p => p.cardId === card.id);
-        if (pair) highlightNode(card, marker, pair.element, false);
-      });
-      card.addEventListener('click', () => {
-        mapInstance.flyTo(coords, Math.max(mapInstance.getZoom(), 4.5), { duration: 1 });
-        marker.openPopup();
+      allNodes.push({
+        type: 'collab',
+        element: card,
+        id: card.id,
+        coords: coords,
+        country: country,
+        institution: institution,
+        group: group,
+        labelPos: labelPos
       });
     });
 
-    // Parse all Invited & Oral Talks items and generate purple dot markers + popups
+    // 2. Collect Invited & Oral Talks
     const talkItems = document.querySelectorAll('.talks-grid .talk-item');
     talkItems.forEach((item, idx) => {
       const lat = parseFloat(item.getAttribute('data-lat'));
@@ -2150,65 +2099,21 @@ Our group actively engages with leading research institutions, international con
       const coords = [lat, lng];
       bounds.extend(coords);
 
-      const title = item.getAttribute('data-title') || '';
-      const event = item.getAttribute('data-event') || '';
-      const city = item.getAttribute('data-city') || '';
-      const country = item.getAttribute('data-country') || '';
-      const year = item.getAttribute('data-year') || '';
-      const type = item.getAttribute('data-type') || 'Talk';
-
-      const dotHtml = `
-        <div class="talk-marker-wrap" id="marker-wrap-${item.id || ('talk-' + (idx + 1))}">
-          <div class="talk-marker-dot" title="${title} (${type}, ${year})"></div>
-          <div class="collab-marker-label pos-top">
-            <span class="collab-label-name">${title} (${year})</span>
-            <span class="talk-label-forum">${type} &bull; ${event}</span>
-          </div>
-        </div>
-      `;
-
-      const talkIcon = L.divIcon({
-        className: '',
-        html: dotHtml,
-        iconSize: [14, 14],
-        iconAnchor: [7, 7]
-      });
-
-      const marker = L.marker(coords, { icon: talkIcon }).addTo(mapInstance);
-      talkMarkers.push(marker);
-
-      marker.bindPopup(`
-        <div class="collab-popup-card">
-          <div class="talk-popup-tag">${type} Presentation &bull; ${year}</div>
-          <h4 class="collab-popup-title" style="color: #7c3aed; font-size: 0.95rem;">${title}</h4>
-          <div class="collab-popup-group">${event}</div>
-          <div style="font-size: 0.8rem; color: #64748b; margin-top: 0.25rem;">${city ? city + ', ' : ''}${country}</div>
-          <a href="#${item.id || ('talk-' + (idx + 1))}" class="collab-popup-link" style="color: #7c3aed;">Scroll to talk details &darr;</a>
-        </div>
-      `);
-
-      // Item Click/Hover Interactivity
-      item.addEventListener('mouseenter', () => {
-        item.classList.add('active-talk');
-        if (marker._icon) {
-          const wrap = marker._icon.querySelector('.talk-marker-wrap');
-          if (wrap) wrap.classList.add('active');
-        }
-      });
-      item.addEventListener('mouseleave', () => {
-        item.classList.remove('active-talk');
-        if (marker._icon) {
-          const wrap = marker._icon.querySelector('.talk-marker-wrap');
-          if (wrap) wrap.classList.remove('active');
-        }
-      });
-      item.addEventListener('click', () => {
-        mapInstance.flyTo(coords, Math.max(mapInstance.getZoom(), 4.5), { duration: 1 });
-        marker.openPopup();
+      allNodes.push({
+        type: 'talk',
+        element: item,
+        id: item.id || ('talk-' + (idx + 1)),
+        coords: coords,
+        title: item.getAttribute('data-title') || '',
+        event: item.getAttribute('data-event') || '',
+        city: item.getAttribute('data-city') || '',
+        country: item.getAttribute('data-country') || '',
+        year: item.getAttribute('data-year') || '',
+        talkType: item.getAttribute('data-type') || 'Talk'
       });
     });
 
-    // Parse all Academic Visits items and generate amber dot markers + popups
+    // 3. Collect Academic Visits
     const visitItems = document.querySelectorAll('.visits-grid .visit-item');
     visitItems.forEach((item, idx) => {
       const lat = parseFloat(item.getAttribute('data-lat'));
@@ -2217,61 +2122,243 @@ Our group actively engages with leading research institutions, international con
       const coords = [lat, lng];
       bounds.extend(coords);
 
-      const title = item.getAttribute('data-title') || '';
-      const institution = item.getAttribute('data-institution') || '';
-      const city = item.getAttribute('data-city') || '';
-      const country = item.getAttribute('data-country') || '';
-      const year = item.getAttribute('data-year') || '';
+      allNodes.push({
+        type: 'visit',
+        element: item,
+        id: item.id || ('visit-' + (idx + 1)),
+        coords: coords,
+        title: item.getAttribute('data-title') || '',
+        institution: item.getAttribute('data-institution') || '',
+        city: item.getAttribute('data-city') || '',
+        country: item.getAttribute('data-country') || '',
+        year: item.getAttribute('data-year') || ''
+      });
+    });
 
-      const dotHtml = `
-        <div class="visit-marker-wrap" id="marker-wrap-${item.id || ('visit-' + (idx + 1))}">
-          <div class="visit-marker-dot" title="${title} (${year})"></div>
-          <div class="collab-marker-label pos-top">
-            <span class="collab-label-name">${title} (${year})</span>
-            <span class="visit-label-inst">${institution}${country ? ' &bull; ' + country : ''}</span>
+    // Spatial clustering: Group co-located markers (within 0.25 degrees)
+    // so no dot ever obscures another dot!
+    const clusters = [];
+    allNodes.forEach(node => {
+      let foundCluster = null;
+      for (let c of clusters) {
+        const dLat = node.coords[0] - c[0].coords[0];
+        const dLng = node.coords[1] - c[0].coords[1];
+        if (Math.hypot(dLat, dLng) < 0.25) {
+          foundCluster = c;
+          break;
+        }
+      }
+      if (foundCluster) {
+        foundCluster.push(node);
+      } else {
+        clusters.push([node]);
+      }
+    });
+
+    // Assign screen pixel offsets for each node in a cluster
+    clusters.forEach(c => {
+      const k = c.length;
+      if (k === 1) {
+        c[0].dx = 0;
+        c[0].dy = 0;
+      } else if (k === 2) {
+        // Two co-located markers (e.g. Talk + Visit at MMM, Bad Honnef, Rio, Dresden, etc.)
+        // Place talk dot on the left, visit dot on the right
+        c[0].dx = -9;
+        c[0].dy = 0;
+        c[1].dx = 9;
+        c[1].dy = 0;
+      } else if (k === 3) {
+        c[0].dx = -13;
+        c[0].dy = 0;
+        c[1].dx = 0;
+        c[1].dy = 0;
+        c[2].dx = 13;
+        c[2].dy = 0;
+      } else {
+        // 4+ markers (e.g. Sweden cluster): arrange in a clean circle
+        const R = Math.min(13 + (k - 4) * 2, 22);
+        c.forEach((node, idx) => {
+          const angle = (2 * Math.PI * idx) / k - (Math.PI / 2);
+          node.dx = Math.round(R * Math.cos(angle));
+          node.dy = Math.round(R * Math.sin(angle));
+        });
+      }
+    });
+
+    // Render each marker with its individual pixel offset
+    allNodes.forEach(node => {
+      const dx = node.dx || 0;
+      const dy = node.dy || 0;
+      const anchorX = 7 - dx;
+      const anchorY = 7 - dy;
+
+      let dotHtml = '';
+      let popupHtml = '';
+
+      if (node.type === 'collab') {
+        dotHtml = `
+          <div class="collab-marker-wrap" id="marker-wrap-${node.id}">
+            <div class="collab-marker-dot" title="${node.group} (${node.institution})"></div>
+            <div class="collab-marker-label ${node.labelPos || ''}">
+              <span class="collab-label-name">${node.group}</span>
+              <span class="collab-label-inst">${node.institution}</span>
+            </div>
           </div>
-        </div>
-      `;
+        `;
+        popupHtml = `
+          <div class="collab-popup-card">
+            <div class="collab-popup-country">${node.country}</div>
+            <h4 class="collab-popup-title">${node.institution}</h4>
+            <div class="collab-popup-group">${node.group}</div>
+            <a href="#${node.id}" class="collab-popup-link">Scroll to collaborator card &darr;</a>
+          </div>
+        `;
+      } else if (node.type === 'talk') {
+        dotHtml = `
+          <div class="talk-marker-wrap" id="marker-wrap-${node.id}">
+            <div class="talk-marker-dot" title="${node.title} (${node.talkType}, ${node.year})"></div>
+            <div class="collab-marker-label pos-top">
+              <span class="collab-label-name">${node.title} (${node.year})</span>
+              <span class="talk-label-forum">${node.talkType} &bull; ${node.event}</span>
+            </div>
+          </div>
+        `;
+        popupHtml = `
+          <div class="collab-popup-card">
+            <div class="talk-popup-tag">${node.talkType} Presentation &bull; ${node.year}</div>
+            <h4 class="collab-popup-title" style="color: #7c3aed; font-size: 0.95rem;">${node.title}</h4>
+            <div class="collab-popup-group">${node.event}</div>
+            <div style="font-size: 0.8rem; color: #64748b; margin-top: 0.25rem;">${node.city ? node.city + ', ' : ''}${node.country}</div>
+            <a href="#${node.id}" class="collab-popup-link" style="color: #7c3aed;">Scroll to talk details &darr;</a>
+          </div>
+        `;
+      } else if (node.type === 'visit') {
+        dotHtml = `
+          <div class="visit-marker-wrap" id="marker-wrap-${node.id}">
+            <div class="visit-marker-dot" title="${node.title} (${node.year})"></div>
+            <div class="collab-marker-label pos-top">
+              <span class="collab-label-name">${node.title} (${node.year})</span>
+              <span class="visit-label-inst">${node.institution}${node.country ? ' &bull; ' + node.country : ''}</span>
+            </div>
+          </div>
+        `;
+        popupHtml = `
+          <div class="collab-popup-card">
+            <div class="visit-popup-tag">Academic Visit &bull; ${node.year}</div>
+            <h4 class="collab-popup-title" style="color: #d35400;">${node.title}</h4>
+            <div class="collab-popup-group">${node.institution}</div>
+            <div style="font-size: 0.8rem; color: #64748b; margin-top: 0.25rem;">${node.city ? node.city + ', ' : ''}${node.country}</div>
+            <a href="#${node.id}" class="collab-popup-link" style="color: #d35400;">Scroll to visit details &darr;</a>
+          </div>
+        `;
+      }
 
-      const visitIcon = L.divIcon({
+      const icon = L.divIcon({
         className: '',
         html: dotHtml,
         iconSize: [14, 14],
-        iconAnchor: [7, 7]
+        iconAnchor: [anchorX, anchorY]
       });
 
-      const marker = L.marker(coords, { icon: visitIcon }).addTo(mapInstance);
-      visitMarkers.push(marker);
+      const marker = L.marker(node.coords, { icon: icon }).addTo(mapInstance);
+      marker.bindPopup(popupHtml);
 
-      marker.bindPopup(`
-        <div class="collab-popup-card">
-          <div class="visit-popup-tag">Academic Visit &bull; ${year}</div>
-          <h4 class="collab-popup-title" style="color: #d35400;">${title}</h4>
-          <div class="collab-popup-group">${institution}</div>
-          <div style="font-size: 0.8rem; color: #64748b; margin-top: 0.25rem;">${city ? city + ', ' : ''}${country}</div>
-          <a href="#${item.id || ('visit-' + (idx + 1))}" class="collab-popup-link" style="color: #d35400;">Scroll to visit details &darr;</a>
-        </div>
-      `);
+      if (node.type === 'collab') {
+        partnerMarkers.push(marker);
 
-      // Item Click/Hover Interactivity
-      item.addEventListener('mouseenter', () => {
-        item.classList.add('active-visit');
-        if (marker._icon) {
-          const wrap = marker._icon.querySelector('.visit-marker-wrap');
-          if (wrap) wrap.classList.add('active');
+        // Arrow from Dhanbad
+        const distFromHome = Math.hypot(node.coords[0] - DHANBAD[0], node.coords[1] - DHANBAD[1]);
+        if (distFromHome > 0.1 && arcsGroup) {
+          const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+          path.setAttribute('class', 'collab-arc-path');
+          path.setAttribute('id', 'arc-' + node.id);
+          path.setAttribute('marker-end', 'url(#collab-arrow-head)');
+          arcsGroup.appendChild(path);
+
+          arcPaths.push({
+            element: path,
+            targetCoords: node.coords,
+            dx: dx,
+            dy: dy,
+            cardId: node.id,
+            marker: marker
+          });
+
+          path.addEventListener('mouseenter', () => highlightNode(node.element, marker, path, true));
+          path.addEventListener('mouseleave', () => highlightNode(node.element, marker, path, false));
+          path.addEventListener('click', () => {
+            marker.openPopup();
+            node.element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          });
         }
-      });
-      item.addEventListener('mouseleave', () => {
-        item.classList.remove('active-visit');
-        if (marker._icon) {
-          const wrap = marker._icon.querySelector('.visit-marker-wrap');
-          if (wrap) wrap.classList.remove('active');
-        }
-      });
-      item.addEventListener('click', () => {
-        mapInstance.flyTo(coords, Math.max(mapInstance.getZoom(), 4.5), { duration: 1 });
-        marker.openPopup();
-      });
+
+        // Collaborator Card hover & click
+        node.element.addEventListener('mouseenter', () => {
+          const pair = arcPaths.find(p => p.cardId === node.id);
+          if (pair) highlightNode(node.element, marker, pair.element, true);
+          marker.setZIndexOffset(1000);
+        });
+        node.element.addEventListener('mouseleave', () => {
+          const pair = arcPaths.find(p => p.cardId === node.id);
+          if (pair) highlightNode(node.element, marker, pair.element, false);
+          marker.setZIndexOffset(0);
+        });
+        node.element.addEventListener('click', () => {
+          mapInstance.flyTo(node.coords, Math.max(mapInstance.getZoom(), 4.5), { duration: 1 });
+          marker.openPopup();
+        });
+
+      } else if (node.type === 'talk') {
+        talkMarkers.push(marker);
+
+        // Talk row hover & click
+        node.element.addEventListener('mouseenter', () => {
+          node.element.classList.add('active-talk');
+          if (marker._icon) {
+            const wrap = marker._icon.querySelector('.talk-marker-wrap');
+            if (wrap) wrap.classList.add('active');
+          }
+          marker.setZIndexOffset(1000);
+        });
+        node.element.addEventListener('mouseleave', () => {
+          node.element.classList.remove('active-talk');
+          if (marker._icon) {
+            const wrap = marker._icon.querySelector('.talk-marker-wrap');
+            if (wrap) wrap.classList.remove('active');
+          }
+          marker.setZIndexOffset(0);
+        });
+        node.element.addEventListener('click', () => {
+          mapInstance.flyTo(node.coords, Math.max(mapInstance.getZoom(), 4.5), { duration: 1 });
+          marker.openPopup();
+        });
+
+      } else if (node.type === 'visit') {
+        visitMarkers.push(marker);
+
+        // Visit row hover & click
+        node.element.addEventListener('mouseenter', () => {
+          node.element.classList.add('active-visit');
+          if (marker._icon) {
+            const wrap = marker._icon.querySelector('.visit-marker-wrap');
+            if (wrap) wrap.classList.add('active');
+          }
+          marker.setZIndexOffset(1000);
+        });
+        node.element.addEventListener('mouseleave', () => {
+          node.element.classList.remove('active-visit');
+          if (marker._icon) {
+            const wrap = marker._icon.querySelector('.visit-marker-wrap');
+            if (wrap) wrap.classList.remove('active');
+          }
+          marker.setZIndexOffset(0);
+        });
+        node.element.addEventListener('click', () => {
+          mapInstance.flyTo(node.coords, Math.max(mapInstance.getZoom(), 4.5), { duration: 1 });
+          marker.openPopup();
+        });
+      }
     });
 
     worldBounds = bounds;
@@ -2318,6 +2405,8 @@ Our group actively engages with leading research institutions, international con
 
     arcPaths.forEach(arc => {
       const pTarget = mapInstance.latLngToLayerPoint(arc.targetCoords);
+      if (arc.dx) pTarget.x += arc.dx;
+      if (arc.dy) pTarget.y += arc.dy;
       const dx = pTarget.x - pHome.x;
       const dy = pTarget.y - pHome.y;
       const dist = Math.hypot(dx, dy);

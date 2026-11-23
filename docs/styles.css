@@ -2157,3 +2157,13 @@ h1, h2, h3, h4, h5 {
   color: #7c3aed;
   margin-bottom: 0.2rem;
 }
+
+
+.collab-marker-wrap:hover,
+.collab-marker-wrap.active,
+.talk-marker-wrap:hover,
+.talk-marker-wrap.active,
+.visit-marker-wrap:hover,
+.visit-marker-wrap.active {
+  z-index: 1000 !important;
+}
