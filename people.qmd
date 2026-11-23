@@ -5,46 +5,43 @@ page-layout: full
 ---
 
 ```{=html}
-<style>
-/* Responsive 2-column layout for team members (2 per row) */
-.team-grid {
-  display: grid !important;
-  grid-template-columns: repeat(2, 1fr) !important;
-  gap: 1.5rem !important;
-}
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 
-@media (max-width: 900px) {
-  .team-grid {
-    grid-template-columns: 1fr !important;
-    max-width: 450px;
-    margin: 0 auto;
-    gap: 1.5rem !important;
-  }
+<style>
+/* Vertical sequence of rows: 1 member per row */
+.team-grid {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1.75rem !important;
 }
 
 .member-card {
-  display: flex;
-  flex-direction: column;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-start !important;
   background: #ffffff;
   border-radius: 14px;
   border: 1px solid #e2e8f0;
+  padding: 1.75rem 2rem;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
-  overflow: hidden;
+  gap: 1.75rem;
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-  height: 100%;
 }
 
 .member-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
   border-color: #cbd5e1;
 }
 
 .member-photo {
-  width: 125px !important;
-  height: 125px !important;
+  width: 130px !important;
+  height: 130px !important;
+  min-width: 130px !important;
   padding-bottom: 0 !important;
-  margin: 1.5rem auto 0 auto !important;
+  margin: 0 !important;
   position: relative;
   border: 3px solid #f1f5f9;
   border-radius: 50% !important;
@@ -64,56 +61,56 @@ page-layout: full
 }
 
 .member-info {
-  padding: 1.25rem 1.4rem 1.4rem 1.4rem;
+  padding: 0 !important;
   display: flex;
   flex-direction: column;
   flex: 1;
 }
 
 .member-info h3 {
-  margin: 0 0 0.35rem 0;
-  font-size: 1.15rem;
+  margin: 0 0 0.25rem 0;
+  font-size: 1.35rem;
   font-weight: 700;
   color: #1e293b;
-  text-align: center;
+  text-align: left !important;
 }
 
 .member-position {
-  font-size: 0.88rem;
+  font-size: 0.95rem;
   color: #2563eb;
   font-weight: 600;
-  margin: 0 0 0.25rem 0;
-  text-align: center;
+  margin: 0 0 0.2rem 0;
+  text-align: left !important;
 }
 
 .member-department {
-  font-size: 0.82rem;
+  font-size: 0.86rem;
   color: #64748b;
   margin: 0 0 0.75rem 0;
-  text-align: center;
+  text-align: left !important;
   line-height: 1.35;
 }
 
 .member-bio {
-  font-size: 0.85rem;
+  font-size: 0.92rem;
   color: #475569;
-  line-height: 1.6;
-  margin: 0.25rem 0 0.85rem 0;
-  text-align: justify;
+  line-height: 1.65;
+  margin: 0 0 1rem 0;
+  text-align: left !important;
 }
 
 .member-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.35rem;
-  margin-bottom: 1.1rem;
-  margin-top: auto;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+  justify-content: flex-start !important;
 }
 
 .member-tag {
-  font-size: 0.73rem;
+  font-size: 0.78rem;
   font-weight: 600;
-  padding: 0.22rem 0.55rem;
+  padding: 0.25rem 0.65rem;
   border-radius: 12px;
   background: #f1f5f9;
   color: #334155;
@@ -124,19 +121,19 @@ page-layout: full
 .member-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.85rem;
+  gap: 1rem;
   align-items: center;
-  justify-content: center;
-  padding-top: 0.85rem;
-  border-top: 1px solid #f1f5f9;
-  margin-top: auto;
+  justify-content: flex-start !important;
+  padding-top: 0.75rem;
+  border-top: 1px dashed #e2e8f0;
+  margin-top: 0 !important;
 }
 
 .member-link-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
-  font-size: 0.84rem;
+  gap: 0.4rem;
+  font-size: 0.88rem;
   font-weight: 600;
   color: #0284c7 !important;
   text-decoration: none !important;
@@ -146,6 +143,28 @@ page-layout: full
 .member-link-btn:hover {
   color: #0369a1 !important;
   text-decoration: underline !important;
+}
+
+@media (max-width: 700px) {
+  .member-card {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center;
+    padding: 1.5rem;
+  }
+  .member-photo {
+    margin: 0 auto 1rem auto !important;
+  }
+  .member-info h3,
+  .member-position,
+  .member-department,
+  .member-bio {
+    text-align: center !important;
+  }
+  .member-tags,
+  .member-links {
+    justify-content: center !important;
+  }
 }
 </style>
 
@@ -271,7 +290,7 @@ page-layout: full
           <p class="member-position">PhD Researcher</p>
           <p class="member-department">Department of Physics &bull; IIT (ISM) Dhanbad</p>
           <p class="member-bio">
-            Conducting experimental and computational research in condensed matter physics, focusing on spin-orbit torque (SOT) phenomena, thin-film heterostructures, and device engineering.
+            Aniruddha completed his Master's from Jadavpur University. He is conducting experimental and computational research in condensed matter physics, focusing on spin-orbit torque (SOT) phenomena, thin-film heterostructures, and device engineering.
           </p>
           <div class="member-tags">
             <span class="member-tag">Spin-Orbitronics</span>
@@ -295,7 +314,7 @@ page-layout: full
           <p class="member-position">MSc Student</p>
           <p class="member-department">Department of Physics &bull; IIT (ISM) Dhanbad</p>
           <p class="member-bio">
-            Engaged in master's thesis research exploring high-frequency and microwave electromagnetic design for advanced spintronic devices and quantum systems.
+            Aditya completed his Bachelor's from the University of Delhi. He is engaged in master's thesis research exploring high-frequency and microwave electromagnetic design for advanced spintronic devices and quantum systems.
           </p>
           <div class="member-tags">
             <span class="member-tag">Desiging of resonator/antenna for spin-orbitronic and quantum technology</span>

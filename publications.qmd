@@ -104,7 +104,7 @@ page-layout: full
   </div>
   <div class="pub-content">
     <h3 class="pub-title">Terahertz emission from α-W/CoFe epitaxial spintronic emitters</h3>
-    <div class="pub-journal">Scientific Reports (Accepted, In Press, 2026)</div>
+    <div class="pub-journal">Scientific Reports (Accepted, 2026)</div>
     <p class="pub-authors">V. Mottamchetty, R. Brucas, A. L. Ravensburg, R. Maciel, D. Thonig, J. Henk, <strong style="color: #27ae60;">R. Gupta</strong>, M. A. Roos, C. W. Tai, V. Kapaklis, and Peter Svedlindh</p>
   </div>
 </a>
