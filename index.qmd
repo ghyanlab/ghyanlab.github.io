@@ -200,7 +200,7 @@ toc: false
 
         <!-- Right Column: Welcome and Bio -->
         <div class="home-right">
-          <h2 class="welcome-title mb-4" style="font-size: 2.5rem; font-weight: 700; color: #373531; letter-spacing: -0.02em;">Welcome to GHYAN (ज्ञान)</h2>
+          <h2 class="welcome-title mb-4" style="font-size: 2.5rem; font-weight: 700; color: #373531; letter-spacing: -0.02em;">Welcome to the GHYAN (ज्ञान) Laboratory</h2>
           
           <div class="welcome-text text-muted-foreground" style="font-size: 1.05rem; line-height: 1.7;">
             <p>The GHYAN (ज्ञान) Laboratory (Gupta laboratory for HYbrid quAntum systems and spintroNics) is a research group in the Department of Physics at IIT (ISM) Dhanbad.</p>

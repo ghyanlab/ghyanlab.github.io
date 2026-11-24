@@ -303,6 +303,109 @@ ul.task-list li input[type="checkbox"] {
   text-decoration: underline !important;
 }
 
+.leader-sidebar {
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+  .leader-sidebar {
+    flex: 0 0 350px !important;
+    max-width: 350px !important;
+    margin: 0 !important;
+    align-self: flex-start !important;
+  }
+}
+
+.leader-section-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #1e293b;
+  margin-bottom: 0.85rem;
+  display: flex;
+  align-items: center;
+}
+
+.leader-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0.95rem;
+  position: relative;
+  padding-left: 0.95rem;
+  border-left: 2px solid #e2e8f0;
+  margin-left: 0.35rem;
+  text-align: left;
+}
+
+.leader-timeline-item {
+  position: relative;
+  text-align: left;
+}
+
+.leader-timeline-item::before {
+  content: "";
+  position: absolute;
+  left: calc(-0.95rem - 5px);
+  top: 5px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2563eb;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 0 1px #93c5fd;
+}
+
+.timeline-period {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.2rem;
+}
+
+.timeline-role {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #0f172a;
+  line-height: 1.35;
+  margin-bottom: 0.2rem;
+}
+
+.timeline-specialization {
+  font-size: 0.78rem;
+  color: #475569;
+  line-height: 1.3;
+  margin-bottom: 0.2rem;
+}
+
+.timeline-inst {
+  font-size: 0.8rem;
+  color: #475569;
+  line-height: 1.35;
+}
+
+.timeline-inst strong {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.badge-grade {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.1rem 0.4rem;
+  border-radius: 6px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #dbeafe;
+  margin-left: 0.25rem;
+  vertical-align: 1px;
+}
+
 @media (max-width: 700px) {
   .member-card {
     flex-direction: column !important;
